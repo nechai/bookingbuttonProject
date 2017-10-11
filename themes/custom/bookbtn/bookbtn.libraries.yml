@@ -1,0 +1,8 @@
+global-styling:
+  css:
+    theme:
+      css/common.css: {}
+  js:
+    js/common.js: {}
+  dependencies:
+    - core/jquery
