@@ -1,0 +1,43 @@
+uuid: 652988c9-512f-4b88-8f5c-b9c77363ec3a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.site_name_languages
+    - field.field.block_content.site_name_languages.field_currency_language
+    - field.field.block_content.site_name_languages.field_site_name
+  module:
+    - field_layout
+    - layout_discovery
+    - link
+third_party_settings:
+  field_layout:
+    id: layout_onecol
+    settings: {  }
+id: block_content.site_name_languages.default
+targetEntityType: block_content
+bundle: site_name_languages
+mode: default
+content:
+  field_currency_language:
+    weight: 1
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_site_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+hidden:
+  langcode: true

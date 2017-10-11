@@ -1,0 +1,23 @@
+uuid: 5b70fb08-6cbf-49d6-9ed5-735091e8fb6e
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.site_name_languages
+    - field.storage.block_content.field_currency_language
+  module:
+    - link
+id: block_content.site_name_languages.field_currency_language
+field_name: field_currency_language
+entity_type: block_content
+bundle: site_name_languages
+label: 'Currency & Language'
+description: 'This link provides to show two different menus: Languages and Currencies.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link
