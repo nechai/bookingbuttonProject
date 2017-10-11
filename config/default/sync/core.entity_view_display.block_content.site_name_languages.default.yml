@@ -12,7 +12,7 @@ dependencies:
     - link
 third_party_settings:
   field_layout:
-    id: layout_onecol
+    id: layout_twocol
     settings: {  }
 id: block_content.site_name_languages.default
 targetEntityType: block_content
@@ -21,7 +21,7 @@ mode: default
 content:
   field_currency_language:
     weight: 1
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -30,14 +30,14 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
-    region: content
+    region: first
   field_site_name:
     weight: 0
-    label: above
+    label: hidden
     settings:
       link_to_entity: false
     third_party_settings: {  }
     type: string
-    region: content
+    region: first
 hidden:
   langcode: true

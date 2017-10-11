@@ -1,0 +1,25 @@
+uuid: aaf8454c-08bb-4d72-89df-2e7d5df562fe
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:site_name_languages:7a254e97-b530-4fb8-9d1b-e75446fba80d'
+  module:
+    - block_content
+  theme:
+    - bartik
+id: blockheadertop
+theme: bartik
+region: header
+weight: -6
+provider: null
+plugin: 'block_content:7a254e97-b530-4fb8-9d1b-e75446fba80d'
+settings:
+  id: 'block_content:7a254e97-b530-4fb8-9d1b-e75446fba80d'
+  label: Block-header-top
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }
