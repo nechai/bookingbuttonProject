@@ -1,8 +1,0 @@
-uuid: 1548f059-bcb5-4bd4-a0f6-53e20442a0c9
-langcode: en
-status: true
-dependencies: {  }
-id: site_name_languages
-label: 'Site name & languages'
-revision: 0
-description: 'The most higher block of header'
