@@ -11,5 +11,6 @@ regions:
   header_first: 'Header first'
   header_second: 'Header second'
   content: 'Content'
+  sidebar_right: 'Siderbar right'
   footer_first: 'Footer first'
   footer_second: 'Footer second'

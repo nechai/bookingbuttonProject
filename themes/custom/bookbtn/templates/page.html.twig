@@ -83,6 +83,12 @@
       </aside>
     {% endif %}
 
+    {# Custom markup #}
+    {% if page.sidebar_right %}
+      <aside class="layout-sidebar-second" role="complementary">
+          {{ page.sidebar_right }}
+      </aside>
+    {% endif %}
   </main>
 
   {# This block is rewrited for adding custom regions #}
