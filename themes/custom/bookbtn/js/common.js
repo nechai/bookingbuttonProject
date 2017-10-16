@@ -22,3 +22,16 @@
 //     }
 //   };
 // })(jQuery);
+(function ($) {
+    Drupal.behaviors.myBehavior = {
+        attach: function (context, settings) {
+
+            // Using once() with more complexity.
+            $('.field--name-field-currency-language', context).once('mySecondBehavior').each(function () {
+                $(this).click(function () {
+                    $('#block-languages').toggle();
+                })
+            })
+        }
+    }
+})(jQuery);
