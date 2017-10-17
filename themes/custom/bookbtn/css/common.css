@@ -156,6 +156,7 @@ main:after {
     margin-right: 20px;
     max-width: 70%;
     padding: 20px 20px;
+    padding-top: 0;
     padding-right: 10px;
     float: left;
 }
@@ -320,7 +321,7 @@ main:after {
 
 /* -------Product------- */
 article {
-    margin: 25px 0;
+    margin-bottom: 25px;
     padding-top: 10px;
     padding-left: 320px;
     min-height: 250px;
