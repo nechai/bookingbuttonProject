@@ -7,7 +7,9 @@
         "composer/installers": "^1.0.24",
         "wikimedia/composer-merge-plugin": "^1.4",
         "drupal/address": "~1.0",
-        "drupal/commerce": "^2.0"
+        "drupal/commerce": "^2.0",
+        "drupal/blazy": "^1.0@RC",
+        "drupal/slick": "^1.0"
     },
     "replace": {
         "drupal/core": "^8.4"

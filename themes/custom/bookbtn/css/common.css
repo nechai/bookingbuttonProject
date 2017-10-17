@@ -13,7 +13,7 @@ body {
 }
     /* BEGIN .block-bookbtn-blockheadertop */
     #block-bookbtn-blockheadertop {
-        padding: 0 200px;
+        padding: 0 100px;
         min-height: 60px;
         background: rgb(70, 71, 65);
         color: white;
@@ -46,11 +46,10 @@ body {
 
     /* BEGIN #block-languages */
     #block-languages {
-        padding: 10px;
-        height: 100px;
-        width: 286px;
+        height: 350px;
+        width: 100%;
         position: absolute;
-        top: 70%;
+        top: 100%;
         right: 0;
         display: none;
         background: #000;
@@ -143,6 +142,7 @@ body {
     /* END #block-bookbtn-webform*/
 
 main {
+    padding: 20px 100px;
     background: #eaeaea;
 }
 
@@ -153,23 +153,53 @@ main:after {
 }
 
 .layout-content {
-    max-width: 50%;
-    padding: 20px 100px;
+    margin-right: 20px;
+    max-width: 70%;
+    padding: 20px 20px;
     padding-right: 10px;
     float: left;
-    background: #fff;
 }
 
 .layout-sidebar-second {
-    max-width: 20%;
-    padding: 20px 100px;
-    padding-left: 10px;
-    float: right;
+    max-width: 25%;
+    float: left;
     background: #fff;
 }
+    #block-contactlocationv1 {
+        padding-bottom: 15px;
+        width: auto;
+        height: auto;
+    }
+
+        #block-contactlocationv1 h2 {
+            margin-bottom: 15px;
+            padding: 20px;
+            background-color: #464741;
+            font-weight: 700;
+            color: #fff;
+            line-height: 1.5;
+        }
+
+        #block-contactlocationv1 .field__item {
+            margin: 0 20px;
+            line-height: 2;
+         }
+
+        #block-contactlocationv1 .field--name-field-site-name {
+            font-size: 14px;
+            font-weight: bold;
+            line-height: 2.5;
+        }
+        #block-contactlocationv1 .field--name-field-google-maps {
+            min-height: 80px;
+            line-height: 70px;
+            vertical-align: middle;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+        }
 
 .region-footer-first {
-    padding: 20px 100px;
+    padding: 30px 100px;
     height: auto;
     background: #858889;
     color: white;
@@ -185,8 +215,8 @@ main:after {
 
     .region-footer-first .block-block-content:first-child {
         padding-right: 10px;
-        max-width: 60%;
-        border-right: 1px solid darkgray;
+        width: 70%;
+        border-right: 1px solid #979797;
     } /*This is about-us-block*/
 
     .region-footer-first .block-block-content:last-child {
@@ -196,11 +226,17 @@ main:after {
 
     .field--name-field-about-us p {
         margin: 15px auto;
+        margin-top: 0;
     }
 
     .field--name-field-main-menu-link {
         margin-bottom: 15px;
     }
+
+    .field--name-field-main-menu-link div {
+        display: inline-block;
+        margin-right: 5px;
+     }
 
     .field--name-field-image-gallery:after {
         content: '';
@@ -214,23 +250,45 @@ main:after {
             margin-bottom: 10px;
             width: 70px;
             height: 70px;
+            overflow: hidden;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
         }
 
         .field--name-field-image-gallery img {
-            width: 100%;
+            width: auto;
             height: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
         }
 
-    .field--name-field-features-list {
+        .field--name-field-image-gallery img:hover {
+            opacity: 0.85;
+        }
 
+    #block-features {
+        width: auto;
     }
-        .field--name-field-features-list .field__item {
-            display: table-row-group;
+
+        #block-features h2 {
+            margin-bottom: 5px;
+            text-transform: uppercase;
+        }
+
+        #block-features .field--type-list-string {
+            display: inline-block;
+            margin-right: 20px;
+        }
+
+        #block-features .field__item {
             padding: 0 4px 4px 0;
-            line-heigh: 1.9;
+            line-height: 1.5;
         }
 
 .region-footer-second {
+    height: 40px;
     padding: 20px 100px;
     background-color: #464741;
     color: white;
@@ -258,4 +316,73 @@ main:after {
 
         .region-footer-second .field--type-text-long {
             display: none;
+        }
+
+/* -------Product------- */
+article {
+    margin: 25px 0;
+    padding-top: 10px;
+    padding-left: 320px;
+    min-height: 250px;
+    height: auto;
+    position: relative;
+    background: #fff;
+}
+
+    article .field--name-title {
+        margin: 15px 0;
+        font-size: 22px;
+        font-weight: 400;
+        color: #603551;
+    }
+
+    .view-row {
+        margin: 20px 0;
+    }
+
+        /* -------Slick------- */
+        .slick {
+            margin: 0;
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 300px;
+        }
+
+        .field--name-variations .field__item .field,
+        .field--name-variations .field--label-inline .field__label,
+        .field--name-field-amenities .field__item {
+            display: inline-block;
+            float: none;
+        } /* Variations fields */
+
+        .field--name-field-description,
+        .field--name-variations .field--name-field-more-information.field__item,
+        .field--name-price {
+            display: block;
+        }/* Variations fields */
+
+        .field--name-field-amenities {
+            margin: 10px 0;
+        }
+
+        .field--name-variations .field--name-field-more-information.field__item {
+            margin: 10px 0;
+        }
+
+        .field--name-variations .field--label-inline .field__item {
+            display: none;
+        }
+
+        .field--name-field-description p:last-child,
+        .field--name-field-description p:nth-child(2){
+            display: none
+        } /* Must be deleted */
+
+        .field--name-price {
+            margin: 10px 0;
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 30px;
+            color: #603551;
         }
