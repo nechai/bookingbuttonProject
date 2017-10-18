@@ -41,5 +41,5 @@ sites/simpletest
 # Ignore SimpleTest multi-site environment.
 # simpletest
 
-.idea
+.idea/workspace.xml
 sites/default/hotel.dev.test

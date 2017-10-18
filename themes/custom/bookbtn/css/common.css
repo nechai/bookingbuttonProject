@@ -142,7 +142,7 @@ body {
     /* END #block-bookbtn-webform*/
 
 main {
-    padding: 20px 100px;
+    padding: 3% 5%;
     background: #eaeaea;
 }
 
@@ -155,7 +155,6 @@ main:after {
 .layout-content {
     margin-right: 20px;
     max-width: 70%;
-    padding: 20px 20px;
     padding-top: 0;
     padding-right: 10px;
     float: left;
@@ -200,7 +199,7 @@ main:after {
         }
 
 .region-footer-first {
-    padding: 30px 100px;
+    padding: 3% 5%;
     height: auto;
     background: #858889;
     color: white;
@@ -216,12 +215,14 @@ main:after {
 
     .region-footer-first .block-block-content:first-child {
         padding-right: 10px;
-        width: 70%;
+        max-width: 70%;
+        min-width: 40%;
         border-right: 1px solid #979797;
     } /*This is about-us-block*/
 
-    .region-footer-first .block-block-content:last-child {
-        padding-left: 15px;
+    .region-footer-first .block-block-content:first-child {
+        margin-right: 15px;
+        margin-bottom: 15px;
 
     } /*This is Feature-block*/
 
@@ -348,7 +349,7 @@ article {
             top: 0;
             left: 0;
             width: 300px;
-        }
+        }/* end Slick */
 
         .field--name-variations .field__item .field,
         .field--name-variations .field--label-inline .field__label,
