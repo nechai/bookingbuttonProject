@@ -351,6 +351,21 @@ article {
             width: 300px;
         }/* end Slick */
 
+        .field--name-field-square {
+            position: absolute;
+            bottom: 20px;
+            left: 320px;
+            padding: 0 5px;
+            border-right: 1px solid #bcc4c5;
+            font-weight: normal;
+            font-style: normal;
+            font-size: 16px;
+            display: inline-block;
+            line-height: 1;
+            text-transform: none;
+            direction: ltr;
+        }
+
         .field--name-variations .field__item .field,
         .field--name-variations .field--label-inline .field__label,
         .field--name-field-amenities .field__item {
@@ -372,6 +387,7 @@ article {
             margin: 10px 0;
         }
 
+        .field--name-variations .field--label-inline .field__label,
         .field--name-variations .field--label-inline .field__item {
             display: none;
         }
@@ -382,9 +398,12 @@ article {
         } /* Must be deleted */
 
         .field--name-price {
-            margin: 10px 0;
+            position: absolute;
+            top: 25px;
+            right: 20px;
             font-size: 22px;
             font-weight: 700;
             line-height: 30px;
             color: #603551;
         }
+        

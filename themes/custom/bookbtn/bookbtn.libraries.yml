@@ -2,7 +2,23 @@ global-styling:
   css:
     theme:
       css/common.css: {}
+      css/icons-style.css: {}
   js:
     js/common.js: {}
   dependencies:
     - core/jquery
+
+font-awesome:
+  css:
+    theme:
+      css/font-awesome/css/font-awesome.min.css: {}
+
+flaticon:
+  css:
+    theme:
+      css/flaticon/font/flaticon.css: {}
+
+material-icon:
+  css:
+    theme:
+      '//fonts.googleapis.com/icon?family=Material+Icons': {type: external}

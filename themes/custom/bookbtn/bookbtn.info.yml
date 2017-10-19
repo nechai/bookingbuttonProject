@@ -5,6 +5,9 @@ version: VERSION
 core: 8.x
 libraries:
   - bookbtn/global-styling
+  - bookbtn/font-awesome
+  - bookbtn/flaticon
+  - bookbtn/material-icon
 base theme: classy
 hidden: false
 regions:

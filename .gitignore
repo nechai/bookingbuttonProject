@@ -23,6 +23,9 @@ sites/*/services*.yml
 sites/*/files/js
 sites/*/files/css
 sites/*/files/php
+sites/*/files/styles
+sites/*/files/translations
+sites/*/files/.htaccess
 sites/*/private
 
 # Ignore SimpleTest multi-site environment.
