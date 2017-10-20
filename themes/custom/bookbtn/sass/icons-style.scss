@@ -1,0 +1,100 @@
+
+.field--name-field-queen-bed,
+.field--name-field-sofa-bed,
+.field--name-field-bathroom,
+.field--name-field-outside-view,
+.field--name-field-smoking {
+  &:before {
+    padding: 0 10px;
+
+    font-weight: normal;
+    font-style: normal;
+    font-size: 18px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+  }
+}
+
+.field--name-field-queen-bed {
+  &:before {
+    font-family: "Flaticon";
+    content: "\f106";
+    color: #000;
+
+    position: absolute;
+    bottom: 20px;
+    left: 370px;
+    border-right: 1px solid #bcc4c5;
+  }
+}
+
+.field--name-field-sofa-bed {
+  &:before {
+    font-family: "Flaticon";
+    content: "\f105";
+    color: #000;
+
+    position: absolute;
+    bottom: 20px;
+    left: 410px;
+    border-right: 1px solid #bcc4c5;
+  }
+}
+
+
+
+.field--name-field-bathroom {
+  &:before {
+    font-family: "Flaticon";
+    content: "\f109";
+    color: #000;
+
+    position: absolute;
+    bottom: 20px;
+    left: 450px;
+    border-right: 1px solid #bcc4c5;
+  }
+}
+
+.field--name-field-outside-view {
+  &:before {
+    font-family: "Flaticon";
+    content: "\f107";
+    color: #000;
+
+    position: absolute;
+    bottom: 20px;
+    left: 490px;
+    border-right: 1px solid #bcc4c5;
+  }
+}
+
+
+.field--name-field-smoking {
+  &:before {
+    font-family: "Flaticon";
+    content: "\f108";
+    color: #000;
+
+    position: absolute;
+    bottom: 20px;
+    left: 530px;
+  }
+}
+
