@@ -31,7 +31,67 @@
                 $(this).click(function () {
                     $('#block-languages').toggle();
                 })
-            })
+            });
+
+            // Inline popups
+
+
         }
-    }
+    };
+console.log('0000000000000000000000000000000000000----------------')
+
+    Drupal.behaviors.myBehavior_one = {
+        attach: function (context, settings) {
+
+            // $('.field--name-title').on('click', function () {
+            //     $('.room-conf').magnificPopup({
+            //         // type: 'inline'
+            //     });
+            // });
+
+            // $(".field--name-title").click(function(){
+            //     $(".field--name-field-bathroom").magnificPopup({ type:'inline', midClick: true})
+            // })
+
+            // $('.field--name-field-more-information').click(function () {
+            //     // var attrArticle = $(this).parent("article").attr("data-quickedit-entity-id");
+            //     // var attrArticle = 'data-quickedit-entity-id=' + attrArticle;
+            //     // $('article').hasAttribute(attrArticle).hasAttribute('data-quickedit-entity-instance-id="1"').;
+            //     $(this).closest("article").addClass('test');
+            //
+            //
+            // })
+            $( 'article[data-quickedit-entity-id="commerce_product/12"] .field--name-field-more-information').magnificPopup({
+                items: {
+                    src: 'article[data-quickedit-entity-id="commerce_product/12"]',
+                    type: 'inline',
+                },
+                // callbacks: {
+                //     beforeOpen: function() {
+                //         var elemToClass = $('article[data-quickedit-entity-id="commerce_product/12"]');
+                //         var $triggerEl = $(elemToClass.st.el),
+                //             newClass = $triggerEl.data("test");
+                //         if (newClass) {
+                //             elemToClass.st.mainClass = elemToClass.st.mainClass + ' ' + newClass;
+                //         }
+                //     }
+                // },
+                closeBtnInside: true
+            });
+            // $('article[data-quickedit-entity-id="commerce_product/12"]').css('display', 'block');
+
+            $( 'article[data-quickedit-entity-id="commerce_product/13"] .field--name-field-more-information').magnificPopup({
+                items: {
+                    src: 'article[data-quickedit-entity-id="commerce_product/13"]',
+                    type: 'inline',
+
+                },
+                mainClass: "test",
+                closeBtnInside: true
+            });
+            // $('article[data-quickedit-entity-id="commerce_product/13"]').removeClass('mfp-hide');
+
+        }
+    };
+
 })(jQuery);

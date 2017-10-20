@@ -185,7 +185,7 @@ main:after {
             line-height: 2;
          }
 
-        #block-contactlocationv1 .field--name-field-site-name {
+        #block-contactlocationv1 .field-field--name-field-site-name {
             font-size: 14px;
             font-weight: bold;
             line-height: 2.5;
@@ -325,10 +325,15 @@ article {
     margin-bottom: 25px;
     padding-top: 10px;
     padding-left: 320px;
+    padding-bottom: 40px;
     min-height: 250px;
     height: auto;
     position: relative;
     background: #fff;
+}
+
+article a {
+    pointer-events: none;
 }
 
     article .field--name-title {
@@ -366,12 +371,31 @@ article {
             direction: ltr;
         }
 
-        .field--name-variations .field__item .field,
-        .field--name-variations .field--label-inline .field__label,
+        /* Поля конфігурації кімнати */
+        .views-row .field__item .field,
+        .views-row .field--label-above .field__label,
+        .views-row .field--label-above .field__item,
         .field--name-field-amenities .field__item {
             display: inline-block;
             float: none;
-        } /* Variations fields */
+        }
+
+        .field--name-field-queen-bed.field--label-above .field__label,
+        .field--name-field-queen-bed.field--label-above .field__item,
+        .field--name-field-sofa-bed.field--label-above .field__label,
+        .field--name-field-sofa-bed.field--label-above .field__item,
+        .field--name-field-bathroom.field--label-above .field__label,
+        .field--name-field-bathroom.field--label-above .field__item,
+        .field--name-field-outside-view.field--label-above .field__label,
+        .field--name-field-outside-view.field--label-above .field__item,
+        .field--name-field-smoking.field--label-above .field__label,
+        .field--name-field-smoking.field--label-above .field__item {
+            display: none;
+        } /* ВИДАЛИТИ ОБОВЯЗКОВО */
+
+        .field--name-variations {
+            display: none;
+        }/* ВИДАЛИТИ ОБОВЯЗКОВО */
 
         .field--name-field-description,
         .field--name-variations .field--name-field-more-information.field__item,
@@ -383,8 +407,9 @@ article {
             margin: 10px 0;
         }
 
-        .field--name-variations .field--name-field-more-information.field__item {
-            margin: 10px 0;
+        .field--name-field-more-information {
+            margin: 15px 0;
+            margin-top: 5px;
         }
 
         .field--name-variations .field--label-inline .field__label,
@@ -392,10 +417,10 @@ article {
             display: none;
         }
 
-        .field--name-field-description p:last-child,
-        .field--name-field-description p:nth-child(2){
-            display: none
-        } /* Must be deleted */
+        /*.field--name-field-description p:last-child,*/
+        /*.field--name-field-description p:nth-child(2){*/
+            /*display: none*/
+        /*} !* Must be deleted *!*/
 
         .field--name-price {
             position: absolute;
@@ -406,4 +431,16 @@ article {
             line-height: 30px;
             color: #603551;
         }
-        
+
+/*.mfp-content article {*/
+    /*position: relative;*/
+    /*top: 25%;*/
+    /*left: 25%;*/
+    /*height: 60%;*/
+    /*width: 60%;*/
+    /*z-index: 100;*/
+/*}*/
+
+/*article[data-quickedit-entity-instance-id="1"] {*/
+    /*visibility: hidden;*/
+/*}*/

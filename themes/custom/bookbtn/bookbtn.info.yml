@@ -8,6 +8,7 @@ libraries:
   - bookbtn/font-awesome
   - bookbtn/flaticon
   - bookbtn/material-icon
+  - bookbtn/magnific-popup
 base theme: classy
 hidden: false
 regions:

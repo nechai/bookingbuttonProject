@@ -1,9 +1,9 @@
 
-.field--name-field-q:before,
-.field--name-field-so:before,
+.field--name-field-queen-bed:before,
+.field--name-field-sofa-bed:before,
 .field--name-field-bathroom:before,
-.field--name-field-garden-view:before,
-.field--name-field-non-smoking:before {
+.field--name-field-outside-view:before,
+.field--name-field-smoking:before {
     padding: 0 10px;
 
     font-weight: normal;
@@ -30,7 +30,7 @@
 }
 
 /**/
-.field--name-field-q:before {
+.field--name-field-queen-bed:before {
     font-family: "Flaticon";
     content: "\f106";
     color: #000;
@@ -41,7 +41,7 @@
     border-right: 1px solid #bcc4c5;
 }
 
-.field--name-field-so:before {
+.field--name-field-sofa-bed:before {
     font-family: "Flaticon";
     content: "\f105";
     color: #000;
@@ -64,7 +64,7 @@
     border-right: 1px solid #bcc4c5;
 }
 
-.field--name-field-garden-view:before {
+.field--name-field-outside-view:before {
     font-family: "Flaticon";
     content: "\f107";
     color: #000;
@@ -76,7 +76,7 @@
 }
 
 
-.field--name-field-non-smoking:before {
+.field--name-field-smoking:before {
     font-family: "Flaticon";
     content: "\f108";
     color: #000;

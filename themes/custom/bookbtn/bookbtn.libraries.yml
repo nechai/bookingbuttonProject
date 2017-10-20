@@ -22,3 +22,11 @@ material-icon:
   css:
     theme:
       '//fonts.googleapis.com/icon?family=Material+Icons': {type: external}
+
+magnific-popup:
+  css:
+    theme:
+      libs/magnific-popup/magnific-popup.css: {}
+  js:
+    libs/magnific-popup/jquery.magnific-popup.js: {}
+#    libs/magnific-popup/jquery/jquery.js: {}
