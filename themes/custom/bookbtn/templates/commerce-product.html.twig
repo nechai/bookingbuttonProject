@@ -39,7 +39,8 @@
 
   <div class="description-wrapper right-col">
       {{ product.title }}
-
+      {{ product.field_description }}
+      {{ product.field_more_information }}
       <div class="room-conf">
             {{ product.field_square }}
             {{ product.field_queen_bed }}
@@ -50,10 +51,10 @@
       </div>
 
       <div class="amenities">
-            {{ product.field_description }}
             {{ product.field_amenities }}
       </div>
 
+      {{ product.variations }}
   </div>
 
 

@@ -152,7 +152,7 @@ main .layout-content {
   float: left;
 }
 
-main .layout-content article {
+main .layout-content .views-row article {
   margin-bottom: 25px;
   padding-top: 10px;
   padding-bottom: 40px;
@@ -160,45 +160,55 @@ main .layout-content article {
   height: auto;
   position: relative;
   background: #fff;
-  /* -------Slick------- */
-  /* Поля конфігурації кімнати */
-  /* ВИДАЛИТИ ОБОВЯЗКОВО */
-  /* ВИДАЛИТИ ОБОВЯЗКОВО */
 }
 
-main .layout-content article a {
+main .layout-content .views-row article:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+main .layout-content .views-row article a {
   pointer-events: none;
 }
 
-main .layout-content article a:hover {
+main .layout-content .views-row article a:hover {
   color: grey;
 }
 
-main .layout-content article .field--name-title {
+main .layout-content .views-row article .image-wrapper {
+  float: left;
+}
+
+main .layout-content .views-row article .image-wrapper .field--name-field-image {
+  width: 350px;
+  height: auto;
+}
+
+main .layout-content .views-row article .image-wrapper .field--name-field-image img {
+  width: 100%;
+  height: auto;
+}
+
+main .layout-content .views-row article .right-col {
+  float: left;
+  width: auto;
+  /* Поля конфігурації кімнати */
+}
+
+main .layout-content .views-row article .right-col .field--name-title {
   margin: 15px 0;
   font-size: 22px;
   font-weight: 400;
   color: #603551;
 }
 
-main .layout-content article .view-row {
-  margin: 20px 0;
+main .layout-content .views-row article .right-col .field--name-field-more-information {
+  margin: 15px 0;
+  margin-top: 5px;
 }
 
-main .layout-content article .field--name-field-image {
-  margin: 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 300px;
-}
-
-main .layout-content article .field--name-field-image img {
-  width: 100%;
-  height: auto;
-}
-
-main .layout-content article .field--name-field-square {
+main .layout-content .views-row article .right-col .field--name-field-square {
   position: absolute;
   bottom: 20px;
   left: 320px;
@@ -213,56 +223,19 @@ main .layout-content article .field--name-field-square {
   direction: ltr;
 }
 
-main .layout-content article .field__item .field,
-main .layout-content article .field--label-above .field__label,
-main .layout-content article .field--label-above .field__item,
-main .layout-content article .field--name-field-amenities .field__item {
+main .layout-content .views-row article .right-col .field--label-above .field__label,
+main .layout-content .views-row article .right-col .field--label-above .field__item,
+main .layout-content .views-row article .right-col .field--name-field-amenities .field__item {
   display: inline-block;
   float: none;
 }
 
-main .layout-content article .field--name-field-queen-bed.field--label-above .field__label,
-main .layout-content article .field--name-field-queen-bed.field--label-above .field__item,
-main .layout-content article .field--name-field-sofa-bed.field--label-above .field__label,
-main .layout-content article .field--name-field-sofa-bed.field--label-above .field__item,
-main .layout-content article .field--name-field-bathroom.field--label-above .field__label,
-main .layout-content article .field--name-field-bathroom.field--label-above .field__item,
-main .layout-content article .field--name-field-outside-view.field--label-above .field__label,
-main .layout-content article .field--name-field-outside-view.field--label-above .field__item,
-main .layout-content article .field--name-field-smoking.field--label-above .field__label,
-main .layout-content article .field--name-field-smoking.field--label-above .field__item {
-  display: none;
-}
-
-main .layout-content article .field--name-variations {
-  display: none;
-}
-
-main .layout-content article .field--name-variations {
-  display: none;
-  /* <--------ВИДАЛИТИ ОБОВЯЗКОВО */
-}
-
-main .layout-content article .field--name-variations .field--label-inline .field__label,
-main .layout-content article .field--name-variations .field--label-inline .field__item {
-  display: none;
-}
-
-main .layout-content article .field--name-field-description,
-main .layout-content article .field--name-price {
-  display: block;
-}
-
-main .layout-content article .field--name-field-amenities {
+main .layout-content .views-row article .right-col .field--name-field-amenities {
   margin: 10px 0;
 }
 
-main .layout-content article .field--name-field-more-information {
-  margin: 15px 0;
-  margin-top: 5px;
-}
-
-main .layout-content article .field--name-price {
+main .layout-content .views-row article .right-col .field--name-price {
+  display: block;
   position: absolute;
   top: 25px;
   right: 20px;
