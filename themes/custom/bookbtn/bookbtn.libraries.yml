@@ -29,4 +29,11 @@ magnific-popup:
       libs/magnific-popup/magnific-popup.css: {}
   js:
     libs/magnific-popup/jquery.magnific-popup.js: {}
-#    libs/magnific-popup/jquery/jquery.js: {}
+
+slick:
+  css:
+    theme:
+      libs/slick/slick.css: {}
+      libs/slick/slick-theme.css: {}
+  js:
+    libs/slick/slick.js: {}

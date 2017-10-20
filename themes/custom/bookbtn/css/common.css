@@ -1,446 +1,434 @@
+@charset "UTF-8";
 * {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 body {
-    font-family: Open Sans,sans-serif;
-    font-size: 12px;
+  font-family: Open Sans,sans-serif;
+  font-size: 12px;
 }
 
 .region-header-first {
-    position: relative;
+  position: relative;
 }
-    /* BEGIN .block-bookbtn-blockheadertop */
-    #block-bookbtn-blockheadertop {
-        padding: 0 100px;
-        min-height: 60px;
-        background: rgb(70, 71, 65);
-        color: white;
-    }
 
-        #block-bookbtn-blockheadertop > .field {
-            float: left;
-            line-height: 50px;
-            font-size: 22px;
-            font-weight: 200;
-        }
+.region-header-first #block-bookbtn-blockheadertop {
+  padding: 0 100px;
+  min-height: 60px;
+  background: #464741;
+  color: white;
+}
 
-        #block-bookbtn-blockheadertop > .field:last-child {
-            float: right;
-            font-size: 12px;
-            font-weight: 700;
-        }
+.region-header-first #block-bookbtn-blockheadertop .field {
+  float: left;
+  line-height: 50px;
+  font-size: 22px;
+  font-weight: 200;
+}
 
-        #block-bookbtn-blockheadertop a {
-            text-decoration: none;
-            color: white;
-            pointer-events: none;
-        }
+.region-header-first #block-bookbtn-blockheadertop .field:last-child {
+  float: right;
+  font-size: 12px;
+  font-weight: 700;
+}
 
-        #block-bookbtn-blockheadertop a:hover {
-            color: gray;
-        }
-    /* END .block-bookbtn-blockheadertop */
+.region-header-first #block-bookbtn-blockheadertop a {
+  text-decoration: none;
+  color: white;
+  pointer-events: none;
+}
 
+.region-header-first #block-bookbtn-blockheadertop a:hover {
+  color: gray;
+}
 
-    /* BEGIN #block-languages */
-    #block-languages {
-        height: 350px;
-        width: 100%;
-        position: absolute;
-        top: 100%;
-        right: 0;
-        display: none;
-        background: #000;
-        z-index: 100;
-    }
+.region-header-first #block-languages {
+  height: 350px;
+  width: 100%;
+  position: absolute;
+  top: 100%;
+  right: 0;
+  display: none;
+  background: #000;
+  z-index: 100;
+}
 
-        #block-languages-menu {
-            color: white;
-            text-transform: uppercase;
-        }
+.region-header-first #block-languages #block-languages-menu {
+  color: white;
+  text-transform: uppercase;
+}
 
-        #block-languages a {
-            color: white;
-            text-decoration: none;
-            pointer-events: none;
-            cursor: pointer;
-        }
-    /* END #block-languages */
+.region-header-first #block-languages #block-languages-menu #block-languages a {
+  color: white;
+  text-decoration: none;
+  pointer-events: none;
+  cursor: pointer;
+}
 
-
-/* BEGIN .region-header-second */
 .region-header-second {
-    position: relative;
-    width: 100%;
-    height: 350px;
-    background-image: url('img/header-background-image.jpg');
-    background-position: 50%;
-    background-size: 100% auto;
-    background-repeat: no-repeat;
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url("img/header-background-image.jpg");
+  background-position: 50%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
 }
-/* END .region-header-second */
 
+.region-header-second #block-bookbtn-webform {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  min-height: 76px;
+  background-color: rgba(0, 0, 0, 0.6);
+}
 
-    /* BEGIN #block-bookbtn-webform*/
-    #block-bookbtn-webform {
-        width: 100%;
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        min-height: 76px;
-        background-color: rgba(0,0,0,.6);
-    }
-    .region-header-second form {
-            margin-left: 100px;
-        }
+.region-header-second form {
+  margin-left: 100px;
+}
 
-    .region-header-second .form-item {
-            margin-right: 5px;
-            display: inline-block;
-            font-size: 13px;
-        }
+.region-header-second .form-item {
+  margin-right: 5px;
+  display: inline-block;
+  font-size: 13px;
+}
 
-    .region-header-second label,
-    .region-header-second input {
-            display: block;
-        }
+.region-header-second label,
+.region-header-second input {
+  display: block;
+}
 
-    .region-header-second label {
-            margin-bottom: 2px;
-            color: white;
-        }
+.region-header-second label {
+  margin-bottom: 2px;
+  color: white;
+}
 
-    .region-header-second input,
-    .region-header-second select {
-            padding: 6px 12px;
-            width: 150px;
-            height: 35px;
-            border: 1px solid #ccc;
-            background-color: #eee;
-            box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
-            opacity: 1;
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
-            font-size: 14px;
-            color: #555;
-            box-sizing: border-box;
-        }
+.region-header-second input,
+.region-header-second select {
+  padding: 6px 12px;
+  width: 150px;
+  height: 35px;
+  border: 1px solid #ccc;
+  background-color: #eee;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
+  opacity: 1;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  font-size: 14px;
+  color: #555;
+  box-sizing: border-box;
+}
 
-    .region-header-second select {
-            width: 100px;
-            background-color: white;
-            align-items: center;
-            white-space: pre;
-        }
+.region-header-second select {
+  width: 100px;
+  background-color: white;
+  align-items: center;
+  white-space: pre;
+}
 
-    .region-header-second .form-submit {
-            display: none;
-        }
-    /* END #block-bookbtn-webform*/
+.region-header-second .form-submit {
+  display: none;
+}
 
 main {
-    padding: 3% 5%;
-    background: #eaeaea;
+  padding: 3% 5%;
+  background: #eaeaea;
 }
 
 main:after {
-    content: '';
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.layout-content {
-    margin-right: 20px;
-    max-width: 70%;
-    padding-top: 0;
-    padding-right: 10px;
-    float: left;
+main .layout-content {
+  margin-right: 20px;
+  max-width: 70%;
+  padding-top: 0;
+  padding-right: 10px;
+  float: left;
+}
+
+main .layout-content article {
+  margin-bottom: 25px;
+  padding-top: 10px;
+  padding-bottom: 40px;
+  min-height: 250px;
+  height: auto;
+  position: relative;
+  background: #fff;
+  /* -------Slick------- */
+  /* Поля конфігурації кімнати */
+  /* ВИДАЛИТИ ОБОВЯЗКОВО */
+  /* ВИДАЛИТИ ОБОВЯЗКОВО */
+}
+
+main .layout-content article a {
+  pointer-events: none;
+}
+
+main .layout-content article a:hover {
+  color: grey;
+}
+
+main .layout-content article .field--name-title {
+  margin: 15px 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: #603551;
+}
+
+main .layout-content article .view-row {
+  margin: 20px 0;
+}
+
+main .layout-content article .field--name-field-image {
+  margin: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+}
+
+main .layout-content article .field--name-field-image img {
+  width: 100%;
+  height: auto;
+}
+
+main .layout-content article .field--name-field-square {
+  position: absolute;
+  bottom: 20px;
+  left: 320px;
+  padding: 0 5px;
+  border-right: 1px solid #bcc4c5;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  direction: ltr;
+}
+
+main .layout-content article .field__item .field,
+main .layout-content article .field--label-above .field__label,
+main .layout-content article .field--label-above .field__item,
+main .layout-content article .field--name-field-amenities .field__item {
+  display: inline-block;
+  float: none;
+}
+
+main .layout-content article .field--name-field-queen-bed.field--label-above .field__label,
+main .layout-content article .field--name-field-queen-bed.field--label-above .field__item,
+main .layout-content article .field--name-field-sofa-bed.field--label-above .field__label,
+main .layout-content article .field--name-field-sofa-bed.field--label-above .field__item,
+main .layout-content article .field--name-field-bathroom.field--label-above .field__label,
+main .layout-content article .field--name-field-bathroom.field--label-above .field__item,
+main .layout-content article .field--name-field-outside-view.field--label-above .field__label,
+main .layout-content article .field--name-field-outside-view.field--label-above .field__item,
+main .layout-content article .field--name-field-smoking.field--label-above .field__label,
+main .layout-content article .field--name-field-smoking.field--label-above .field__item {
+  display: none;
+}
+
+main .layout-content article .field--name-variations {
+  display: none;
+}
+
+main .layout-content article .field--name-variations {
+  display: none;
+  /* <--------ВИДАЛИТИ ОБОВЯЗКОВО */
+}
+
+main .layout-content article .field--name-variations .field--label-inline .field__label,
+main .layout-content article .field--name-variations .field--label-inline .field__item {
+  display: none;
+}
+
+main .layout-content article .field--name-field-description,
+main .layout-content article .field--name-price {
+  display: block;
+}
+
+main .layout-content article .field--name-field-amenities {
+  margin: 10px 0;
+}
+
+main .layout-content article .field--name-field-more-information {
+  margin: 15px 0;
+  margin-top: 5px;
+}
+
+main .layout-content article .field--name-price {
+  position: absolute;
+  top: 25px;
+  right: 20px;
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #603551;
 }
 
 .layout-sidebar-second {
-    max-width: 25%;
-    float: left;
-    background: #fff;
+  max-width: 25%;
+  float: left;
+  background: #fff;
 }
-    #block-contactlocationv1 {
-        padding-bottom: 15px;
-        width: auto;
-        height: auto;
-    }
 
-        #block-contactlocationv1 h2 {
-            margin-bottom: 15px;
-            padding: 20px;
-            background-color: #464741;
-            font-weight: 700;
-            color: #fff;
-            line-height: 1.5;
-        }
+.layout-sidebar-second #block-contactlocationv1 {
+  padding-bottom: 15px;
+  width: auto;
+  height: auto;
+}
 
-        #block-contactlocationv1 .field__item {
-            margin: 0 20px;
-            line-height: 2;
-         }
+.layout-sidebar-second #block-contactlocationv1 h2 {
+  margin-bottom: 15px;
+  padding: 20px;
+  background-color: #464741;
+  font-weight: 700;
+  color: #fff;
+  line-height: 1.5;
+}
 
-        #block-contactlocationv1 .field-field--name-field-site-name {
-            font-size: 14px;
-            font-weight: bold;
-            line-height: 2.5;
-        }
-        #block-contactlocationv1 .field--name-field-google-maps {
-            min-height: 80px;
-            line-height: 70px;
-            vertical-align: middle;
-            border-top: 1px solid #eaeaea;
-            border-bottom: 1px solid #eaeaea;
-        }
+.layout-sidebar-second #block-contactlocationv1 .field__item {
+  margin: 0 20px;
+  line-height: 2;
+}
+
+.layout-sidebar-second #block-contactlocationv1 .field--name-field-site-name {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 2.5;
+}
+
+.layout-sidebar-second #block-contactlocationv1 .field--name-field-google-maps {
+  min-height: 80px;
+  line-height: 70px;
+  vertical-align: middle;
+  border-top: 1px solid #eaeaea;
+  border-bottom: 1px solid #eaeaea;
+}
 
 .region-footer-first {
-    padding: 3% 5%;
-    height: auto;
-    background: #858889;
-    color: white;
+  padding: 3% 5%;
+  height: auto;
+  background: #858889;
+  color: white;
 }
+
 .region-footer-first:after {
-    content: '';
-    display: table;
-    clear: both;
+  content: '';
+  display: table;
+  clear: both;
 }
-    .region-footer-first .block-block-content {
-        float: left;
-    } /*These are two block of region-footer-first*/
 
-    .region-footer-first .block-block-content:first-child {
-        padding-right: 10px;
-        max-width: 70%;
-        min-width: 40%;
-        border-right: 1px solid #979797;
-    } /*This is about-us-block*/
+.region-footer-first .block-block-content {
+  float: left;
+}
 
-    .region-footer-first .block-block-content:first-child {
-        margin-right: 15px;
-        margin-bottom: 15px;
+.region-footer-first .block-block-content:first-child {
+  margin-right: 15px;
+  margin-bottom: 15px;
+  padding-right: 10px;
+  max-width: 70%;
+  min-width: 40%;
+  border-right: 1px solid #979797;
+}
 
-    } /*This is Feature-block*/
+.region-footer-first .block-block-content .field--name-field-about-us p {
+  margin: 15px auto;
+  margin-top: 0;
+}
 
-    .field--name-field-about-us p {
-        margin: 15px auto;
-        margin-top: 0;
-    }
+.region-footer-first .block-block-content .field--name-field-main-menu-link {
+  margin-bottom: 15px;
+}
 
-    .field--name-field-main-menu-link {
-        margin-bottom: 15px;
-    }
+.region-footer-first .block-block-content .field--name-field-main-menu-link div {
+  display: inline-block;
+  margin-right: 5px;
+}
 
-    .field--name-field-main-menu-link div {
-        display: inline-block;
-        margin-right: 5px;
-     }
+.region-footer-first .block-block-content .field--name-field-image-gallery:after {
+  content: '';
+  display: table;
+  clear: both;
+}
 
-    .field--name-field-image-gallery:after {
-        content: '';
-        display: table;
-        clear: both;
-    }
-        .field--name-field-image-gallery .field__item {
-            display: block;
-            float: left;
-            margin-right: 10px;
-            margin-bottom: 10px;
-            width: 70px;
-            height: 70px;
-            overflow: hidden;
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
-        }
+.region-footer-first .block-block-content .field--name-field-image-gallery .field__item {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
 
-        .field--name-field-image-gallery img {
-            width: auto;
-            height: 100%;
-            -webkit-box-sizing: border-box;
-            -moz-box-sizing: border-box;
-            box-sizing: border-box;
-        }
+.region-footer-first .block-block-content .field--name-field-image-gallery img {
+  width: auto;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
 
-        .field--name-field-image-gallery img:hover {
-            opacity: 0.85;
-        }
+.region-footer-first .block-block-content .field--name-field-image-gallery img:hover {
+  opacity: 0.85;
+}
 
-    #block-features {
-        width: auto;
-    }
+.region-footer-first #block-features {
+  width: auto;
+}
 
-        #block-features h2 {
-            margin-bottom: 5px;
-            text-transform: uppercase;
-        }
+.region-footer-first #block-features h2 {
+  margin-bottom: 5px;
+  text-transform: uppercase;
+}
 
-        #block-features .field--type-list-string {
-            display: inline-block;
-            margin-right: 20px;
-        }
+.region-footer-first #block-features .field--type-list-string {
+  display: inline-block;
+  margin-right: 20px;
+}
 
-        #block-features .field__item {
-            padding: 0 4px 4px 0;
-            line-height: 1.5;
-        }
+.region-footer-first #block-features .field__item {
+  padding: 0 4px 4px 0;
+  line-height: 1.5;
+}
 
 .region-footer-second {
-    height: 40px;
-    padding: 20px 100px;
-    background-color: #464741;
-    color: white;
+  height: 40px;
+  padding: 20px 100px;
+  background-color: #464741;
+  color: white;
 }
 
-    .region-footer-second .field--type-link {
-        display: inline-block;
-    }
-
-        .region-footer-second .field--type-link a {
-            color: white;
-            text-decoration: none;
-            pointer-events: none;
-        }
-
-        .region-footer-second .field--type-link a:hover {
-            color: gray;
-        }
-
-        .field--name-field-cancellation-policies a {
-            margin-left: 10px;
-            padding-left: 10px;
-            border-left: 1px solid white;
-        }
-
-        .region-footer-second .field--type-text-long {
-            display: none;
-        }
-
-/* -------Product------- */
-article {
-    margin-bottom: 25px;
-    padding-top: 10px;
-    padding-left: 320px;
-    padding-bottom: 40px;
-    min-height: 250px;
-    height: auto;
-    position: relative;
-    background: #fff;
+.region-footer-second .field--type-link {
+  display: inline-block;
 }
 
-article a {
-    pointer-events: none;
+.region-footer-second .field--type-link a {
+  color: white;
+  text-decoration: none;
+  pointer-events: none;
 }
 
-    article .field--name-title {
-        margin: 15px 0;
-        font-size: 22px;
-        font-weight: 400;
-        color: #603551;
-    }
+.region-footer-second .field--type-link a:hover {
+  color: gray;
+}
 
-    .view-row {
-        margin: 20px 0;
-    }
+.region-footer-second .field--name-field-cancellation-policies a {
+  margin-left: 10px;
+  padding-left: 10px;
+  border-left: 1px solid white;
+}
 
-        /* -------Slick------- */
-        .slick {
-            margin: 0;
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 300px;
-        }/* end Slick */
-
-        .field--name-field-square {
-            position: absolute;
-            bottom: 20px;
-            left: 320px;
-            padding: 0 5px;
-            border-right: 1px solid #bcc4c5;
-            font-weight: normal;
-            font-style: normal;
-            font-size: 16px;
-            display: inline-block;
-            line-height: 1;
-            text-transform: none;
-            direction: ltr;
-        }
-
-        /* Поля конфігурації кімнати */
-        .views-row .field__item .field,
-        .views-row .field--label-above .field__label,
-        .views-row .field--label-above .field__item,
-        .field--name-field-amenities .field__item {
-            display: inline-block;
-            float: none;
-        }
-
-        .field--name-field-queen-bed.field--label-above .field__label,
-        .field--name-field-queen-bed.field--label-above .field__item,
-        .field--name-field-sofa-bed.field--label-above .field__label,
-        .field--name-field-sofa-bed.field--label-above .field__item,
-        .field--name-field-bathroom.field--label-above .field__label,
-        .field--name-field-bathroom.field--label-above .field__item,
-        .field--name-field-outside-view.field--label-above .field__label,
-        .field--name-field-outside-view.field--label-above .field__item,
-        .field--name-field-smoking.field--label-above .field__label,
-        .field--name-field-smoking.field--label-above .field__item {
-            display: none;
-        } /* ВИДАЛИТИ ОБОВЯЗКОВО */
-
-        .field--name-variations {
-            display: none;
-        }/* ВИДАЛИТИ ОБОВЯЗКОВО */
-
-        .field--name-field-description,
-        .field--name-variations .field--name-field-more-information.field__item,
-        .field--name-price {
-            display: block;
-        }/* Variations fields */
-
-        .field--name-field-amenities {
-            margin: 10px 0;
-        }
-
-        .field--name-field-more-information {
-            margin: 15px 0;
-            margin-top: 5px;
-        }
-
-        .field--name-variations .field--label-inline .field__label,
-        .field--name-variations .field--label-inline .field__item {
-            display: none;
-        }
-
-        /*.field--name-field-description p:last-child,*/
-        /*.field--name-field-description p:nth-child(2){*/
-            /*display: none*/
-        /*} !* Must be deleted *!*/
-
-        .field--name-price {
-            position: absolute;
-            top: 25px;
-            right: 20px;
-            font-size: 22px;
-            font-weight: 700;
-            line-height: 30px;
-            color: #603551;
-        }
-
-/*.mfp-content article {*/
-    /*position: relative;*/
-    /*top: 25%;*/
-    /*left: 25%;*/
-    /*height: 60%;*/
-    /*width: 60%;*/
-    /*z-index: 100;*/
-/*}*/
-
-/*article[data-quickedit-entity-instance-id="1"] {*/
-    /*visibility: hidden;*/
-/*}*/
+.region-footer-second .field--type-text-long {
+  display: none;
+}

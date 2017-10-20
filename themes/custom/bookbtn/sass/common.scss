@@ -1,0 +1,438 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Open Sans,sans-serif;
+  font-size: 12px;
+}
+
+.region-header-first {
+  position: relative;
+
+  #block-bookbtn-blockheadertop {
+    padding: 0 100px;
+    min-height: 60px;
+    background: rgb(70, 71, 65);
+    color: white;
+
+    .field {
+      float: left;
+      line-height: 50px;
+      font-size: 22px;
+      font-weight: 200;
+
+      &:last-child {
+        float: right;
+        font-size: 12px;
+        font-weight: 700;
+      }
+    }
+
+    a {
+      text-decoration: none;
+      color: white;
+      pointer-events: none;
+
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+
+  #block-languages {
+    height: 350px;
+    width: 100%;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    display: none;
+    background: #000;
+    z-index: 100;
+
+    #block-languages-menu {
+      color: white;
+      text-transform: uppercase;
+
+      #block-languages a {
+        color: white;
+        text-decoration: none;
+        pointer-events: none;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.region-header-second {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  background-image: url('img/header-background-image.jpg');
+  background-position: 50%;
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+
+  #block-bookbtn-webform {
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    min-height: 76px;
+    background-color: rgba(0, 0, 0, .6);
+  }
+
+  form {
+    margin-left: 100px;
+  }
+
+  .form-item {
+    margin-right: 5px;
+    display: inline-block;
+    font-size: 13px;
+  }
+
+  label,
+  input {
+    display: block;
+  }
+
+  label {
+    margin-bottom: 2px;
+    color: white;
+  }
+
+  input,
+  select {
+    padding: 6px 12px;
+    width: 150px;
+    height: 35px;
+    border: 1px solid #ccc;
+    background-color: #eee;
+    box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    opacity: 1;
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+    font-size: 14px;
+    color: #555;
+    box-sizing: border-box;
+  }
+
+  select {
+    width: 100px;
+    background-color: white;
+    align-items: center;
+    white-space: pre;
+  }
+
+  .form-submit {
+    display: none;
+  }
+}
+
+
+main {
+  padding: 3% 5%;
+  background: #eaeaea;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .layout-content {
+    margin-right: 20px;
+    max-width: 70%;
+    padding-top: 0;
+    padding-right: 10px;
+    float: left;
+
+    article {
+      margin-bottom: 25px;
+      padding-top: 10px;
+      padding-bottom: 40px;
+      min-height: 250px;
+      height: auto;
+      position: relative;
+      background: #fff;
+
+      a {
+        pointer-events: none;
+        &:hover {
+          color: grey;
+        }
+      }
+
+      .field--name-title {
+        margin: 15px 0;
+        font-size: 22px;
+        font-weight: 400;
+        color: #603551;
+      }
+
+      .view-row {
+        margin: 20px 0;
+      }
+
+      /* -------Slick------- */
+      .field--name-field-image {
+        margin: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 300px;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+
+      .field--name-field-square {
+        position: absolute;
+        bottom: 20px;
+        left: 320px;
+        padding: 0 5px;
+        border-right: 1px solid #bcc4c5;
+        font-weight: normal;
+        font-style: normal;
+        font-size: 16px;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        direction: ltr;
+      }
+
+      /* Поля конфігурації кімнати */
+      .field__item .field,
+      .field--label-above .field__label,
+      .field--label-above .field__item,
+      .field--name-field-amenities .field__item {
+        display: inline-block;
+        float: none;
+      }
+
+      .field--name-field-queen-bed,
+      .field--name-field-sofa-bed,
+      .field--name-field-bathroom,
+      .field--name-field-outside-view,
+      .field--name-field-smoking {
+        &.field--label-above {
+          .field__label,
+          .field__item {
+            display: none;
+          }
+        }
+      }
+      /* ВИДАЛИТИ ОБОВЯЗКОВО */
+
+      .field--name-variations {
+        display: none;
+      }
+      /* ВИДАЛИТИ ОБОВЯЗКОВО */
+
+      .field--name-variations {
+        display: none; /* <--------ВИДАЛИТИ ОБОВЯЗКОВО */
+
+        .field--label-inline {
+
+          .field__label,
+          .field__item {
+            display: none;
+          }
+        }
+      }
+
+      .field--name-field-description,
+      .field--name-price {
+        display: block;
+      }
+
+      .field--name-field-amenities {
+        margin: 10px 0;
+      }
+
+      .field--name-field-more-information {
+        margin: 15px 0;
+        margin-top: 5px;
+      }
+
+      .field--name-price {
+        position: absolute;
+        top: 25px;
+        right: 20px;
+        font-size: 22px;
+        font-weight: 700;
+        line-height: 30px;
+        color: #603551;
+      }
+    }
+  }
+}
+
+.layout-sidebar-second {
+  max-width: 25%;
+  float: left;
+  background: #fff;
+
+  #block-contactlocationv1 {
+    padding-bottom: 15px;
+    width: auto;
+    height: auto;
+
+    h2 {
+      margin-bottom: 15px;
+      padding: 20px;
+      background-color: #464741;
+      font-weight: 700;
+      color: #fff;
+      line-height: 1.5;
+    }
+
+    .field__item {
+      margin: 0 20px;
+      line-height: 2;
+    }
+
+    .field--name-field-site-name {
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 2.5;
+    }
+
+    .field--name-field-google-maps {
+      min-height: 80px;
+      line-height: 70px;
+      vertical-align: middle;
+      border-top: 1px solid #eaeaea;
+      border-bottom: 1px solid #eaeaea;
+    }
+  }
+}
+
+.region-footer-first {
+  padding: 3% 5%;
+  height: auto;
+  background: #858889;
+  color: white;
+
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
+  .block-block-content {
+    float: left;
+
+    &:first-child {
+      margin-right: 15px;
+      margin-bottom: 15px;
+      padding-right: 10px;
+      max-width: 70%;
+      min-width: 40%;
+      border-right: 1px solid #979797;
+    }
+
+    .field--name-field-about-us p {
+      margin: 15px auto;
+      margin-top: 0;
+    }
+
+    .field--name-field-main-menu-link {
+      margin-bottom: 15px;
+    }
+
+    .field--name-field-main-menu-link div {
+      display: inline-block;
+      margin-right: 5px;
+    }
+
+    .field--name-field-image-gallery {
+
+      &:after {
+        content: '';
+        display: table;
+        clear: both;
+      }
+
+      .field__item {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        width: 70px;
+        height: 70px;
+        overflow: hidden;
+        -webkit-border-radius: 2px;
+        -moz-border-radius: 2px;
+        border-radius: 2px;
+      }
+
+      img {
+        width: auto;
+        height: 100%;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+
+        &:hover {
+          opacity: 0.85;
+        }
+      }
+    }
+  }
+
+  #block-features {
+    width: auto;
+
+    h2 {
+      margin-bottom: 5px;
+      text-transform: uppercase;
+    }
+
+    .field--type-list-string {
+      display: inline-block;
+      margin-right: 20px;
+    }
+
+    .field__item {
+      padding: 0 4px 4px 0;
+      line-height: 1.5;
+    }
+  }
+}
+
+.region-footer-second {
+  height: 40px;
+  padding: 20px 100px;
+  background-color: #464741;
+  color: white;
+
+  .field--type-link {
+    display: inline-block;
+
+    a {
+      color: white;
+      text-decoration: none;
+      pointer-events: none;
+
+      &:hover {
+        color: gray;
+      }
+    }
+  }
+
+  .field--name-field-cancellation-policies a {
+    margin-left: 10px;
+    padding-left: 10px;
+    border-left: 1px solid white;
+  }
+
+  .field--type-text-long {
+    display: none;
+  }
+}

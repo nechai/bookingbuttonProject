@@ -9,6 +9,7 @@ libraries:
   - bookbtn/flaticon
   - bookbtn/material-icon
   - bookbtn/magnific-popup
+  - bookbtn/slick
 base theme: classy
 hidden: false
 regions:

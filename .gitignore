@@ -46,3 +46,11 @@ sites/simpletest
 
 .idea/workspace.xml
 sites/default/hotel.dev.test
+
+# Gulp files
+themes/custom/bookbtn/node_modules
+themes/custom/bookbtn/gulpfile.js
+themes/custom/bookbtn/package.json
+
+# I cant delete it
+themes/custom/bookbtn/bookbtn.libraries.yml___jb_old___

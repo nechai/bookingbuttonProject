@@ -38,7 +38,6 @@
 
         }
     };
-console.log('0000000000000000000000000000000000000----------------')
 
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
@@ -90,6 +89,24 @@ console.log('0000000000000000000000000000000000000----------------')
                 closeBtnInside: true
             });
             // $('article[data-quickedit-entity-id="commerce_product/13"]').removeClass('mfp-hide');
+
+        }
+    };
+
+
+    Drupal.behaviors.slickBehavior = {
+        attach: function (context, settings) {
+
+            // Using once() with more complexity.
+            $(context).once().each(function () {
+                $('.field--name-field-image').slick({
+                    dots: true,
+                    infinite: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear',
+                });
+            });
 
         }
     };
