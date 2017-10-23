@@ -29,9 +29,6 @@
   font-family: "Flaticon";
   content: "\f106";
   color: #000;
-  position: absolute;
-  bottom: 20px;
-  left: 370px;
   border-right: 1px solid #bcc4c5;
 }
 
@@ -39,9 +36,6 @@
   font-family: "Flaticon";
   content: "\f105";
   color: #000;
-  position: absolute;
-  bottom: 20px;
-  left: 410px;
   border-right: 1px solid #bcc4c5;
 }
 
@@ -49,9 +43,6 @@
   font-family: "Flaticon";
   content: "\f109";
   color: #000;
-  position: absolute;
-  bottom: 20px;
-  left: 450px;
   border-right: 1px solid #bcc4c5;
 }
 
@@ -59,9 +50,6 @@
   font-family: "Flaticon";
   content: "\f107";
   color: #000;
-  position: absolute;
-  bottom: 20px;
-  left: 490px;
   border-right: 1px solid #bcc4c5;
 }
 
@@ -69,7 +57,4 @@
   font-family: "Flaticon";
   content: "\f108";
   color: #000;
-  position: absolute;
-  bottom: 20px;
-  left: 530px;
 }

@@ -42,27 +42,9 @@
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
 
-            // $('.field--name-title').on('click', function () {
-            //     $('.room-conf').magnificPopup({
-            //         // type: 'inline'
-            //     });
-            // });
-
-            // $(".field--name-title").click(function(){
-            //     $(".field--name-field-bathroom").magnificPopup({ type:'inline', midClick: true})
-            // })
-
-            // $('.field--name-field-more-information').click(function () {
-            //     // var attrArticle = $(this).parent("article").attr("data-quickedit-entity-id");
-            //     // var attrArticle = 'data-quickedit-entity-id=' + attrArticle;
-            //     // $('article').hasAttribute(attrArticle).hasAttribute('data-quickedit-entity-instance-id="1"').;
-            //     $(this).closest("article").addClass('test');
-            //
-            //
-            // })
-            $( 'article[data-quickedit-entity-id="commerce_product/12"] .field--name-field-more-information').magnificPopup({
+            $('article[data-quickedit-entity-id="commerce_product/12"] .field--name-field-more-information').magnificPopup({
                 items: {
-                    src: 'article[data-quickedit-entity-id="commerce_product/12"]',
+                    src: 'article[data-quickedit-entity-id="commerce_product/12"].product-hidden',
                     type: 'inline',
                 },
                 // callbacks: {
@@ -75,31 +57,45 @@
                 //         }
                 //     }
                 // },
-                closeBtnInside: true
+                mainClass: 'popup-block',
+                closeOnBgClick: true
             });
+
             // $('article[data-quickedit-entity-id="commerce_product/12"]').css('display', 'block');
 
-            $( 'article[data-quickedit-entity-id="commerce_product/13"] .field--name-field-more-information').magnificPopup({
+            $('article[data-quickedit-entity-id="commerce_product/13"] .field--name-field-more-information').magnificPopup({
                 items: {
-                    src: 'article[data-quickedit-entity-id="commerce_product/13"]',
+                    src: 'article[data-quickedit-entity-id="commerce_product/13"].product-hidden',
                     type: 'inline',
-
                 },
-                mainClass: "test",
-                closeBtnInside: true
+                // callbacks: {
+                //     beforeOpen: function() {
+                //         // Will fire when this exact popup is opened
+                //         // this - is Magnific Popup object
+                //         $('.product-hidden').css('display', 'none');
+                //     },
+                // afterClose: function() {
+                //     // Will fire when popup is closed
+                //     $('.field--name-field-image').slick();
+                // }
+                // // e.t.c.
+                mainClass: 'popup-block',
+                closeOnBgClick: true
             });
             // $('article[data-quickedit-entity-id="commerce_product/13"]').removeClass('mfp-hide');
-
         }
     };
+
+
 
 
     Drupal.behaviors.slickBehavior = {
         attach: function (context, settings) {
 
             // Using once() with more complexity.
+
             $(context).once().each(function () {
-                $('.field--name-field-image').slick({
+                $('article:not(.product-hidden) .field--name-field-image').slick({
                     dots: true,
                     infinite: true,
                     speed: 500,
@@ -108,6 +104,22 @@
                 });
             });
 
+        }
+    }
+
+
+
+    Drupal.behaviors.popupBehavior = {
+        attach: function (context, settings) {
+
+            // Using once() with more complexity.
+            $('.product-hidden', context).once().each(function () {
+                // hide popup window
+                $(this).addClass('mfp-hide');
+
+                // remove slick slider
+                // $('.product-hidden .field--name-field-image').slick('unslick');
+            });
         }
     };
 

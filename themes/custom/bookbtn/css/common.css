@@ -176,24 +176,26 @@ main .layout-content .views-row article a:hover {
   color: grey;
 }
 
-main .layout-content .views-row article .image-wrapper {
+main .layout-content .views-row article .image-wrapper.left-col {
+  display: inline-block;
   float: left;
 }
 
-main .layout-content .views-row article .image-wrapper .field--name-field-image {
+main .layout-content .views-row article .image-wrapper.left-col .field--name-field-image {
   width: 350px;
   height: auto;
 }
 
-main .layout-content .views-row article .image-wrapper .field--name-field-image img {
+main .layout-content .views-row article .image-wrapper.left-col .field--name-field-image img {
   width: 100%;
   height: auto;
 }
 
 main .layout-content .views-row article .right-col {
+  margin-left: 10px;
+  display: inline-block;
   float: left;
-  width: auto;
-  /* Поля конфігурації кімнати */
+  width: 55%;
 }
 
 main .layout-content .views-row article .right-col .field--name-title {
@@ -208,10 +210,15 @@ main .layout-content .views-row article .right-col .field--name-field-more-infor
   margin-top: 5px;
 }
 
-main .layout-content .views-row article .right-col .field--name-field-square {
-  position: absolute;
-  bottom: 20px;
-  left: 320px;
+main .layout-content .views-row article .right-col .room-conf {
+  /* Поля конфігурації кімнати */
+}
+
+main .layout-content .views-row article .right-col .room-conf > div {
+  display: inline-block;
+}
+
+main .layout-content .views-row article .right-col .room-conf .field--name-field-square {
   padding: 0 5px;
   border-right: 1px solid #bcc4c5;
   font-weight: normal;
@@ -223,10 +230,9 @@ main .layout-content .views-row article .right-col .field--name-field-square {
   direction: ltr;
 }
 
-main .layout-content .views-row article .right-col .field--label-above .field__label,
-main .layout-content .views-row article .right-col .field--label-above .field__item,
-main .layout-content .views-row article .right-col .field--name-field-amenities .field__item {
-  display: inline-block;
+main .layout-content .views-row article .right-col .room-conf .field--label-inline .field__label,
+main .layout-content .views-row article .right-col .room-conf .field--label-inline .field__item {
+  display: none;
   float: none;
 }
 
@@ -234,17 +240,146 @@ main .layout-content .views-row article .right-col .field--name-field-amenities 
   margin: 10px 0;
 }
 
+main .layout-content .views-row article .right-col .field--name-field-amenities .field__item {
+  display: inline-block;
+  float: none;
+}
+
 main .layout-content .views-row article .right-col .field--name-price {
-  display: block;
-  position: absolute;
-  top: 25px;
-  right: 20px;
   font-size: 22px;
   font-weight: 700;
   line-height: 30px;
   color: #603551;
 }
 
+/* BEGIN Magnific pop-up */
+/* info http://dimsemenov.com/plugins/magnific-popup/documentation.html#mainclass */
+.popup-block article.product-hidden {
+  margin: 0 10%;
+  padding: 3%;
+  height: 80%;
+  width: 80%;
+  position: relative;
+  background: #fff;
+}
+
+.popup-block article.product-hidden:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.popup-block article.product-hidden a {
+  pointer-events: none;
+}
+
+.popup-block article.product-hidden a:hover {
+  color: grey;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col {
+  display: block;
+  width: 50%;
+  float: left;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image .field__item {
+  display: block;
+  float: left;
+  margin-right: 10px;
+  margin-bottom: 10px;
+  width: 70px;
+  height: 70px;
+  overflow: hidden;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image img {
+  width: auto;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image img:hover {
+  opacity: 0.85;
+}
+
+.popup-block article.product-hidden .right-col {
+  position: relative;
+  margin-left: 10px;
+  display: inline-block;
+  width: 40%;
+  float: left;
+}
+
+.popup-block article.product-hidden .right-col .field--name-title {
+  display: none;
+  margin: 15px 0;
+  font-size: 22px;
+  font-weight: 400;
+  color: #603551;
+}
+
+.popup-block article.product-hidden .right-col .field--name-field-more-information {
+  margin: 15px 0;
+  margin-top: 5px;
+}
+
+.popup-block article.product-hidden .right-col .room-conf {
+  position: absolute;
+  top: 0;
+  left: 0;
+  /* Поля конфігурації кімнати */
+}
+
+.popup-block article.product-hidden .right-col .room-conf > div {
+  display: inline-block;
+}
+
+.popup-block article.product-hidden .right-col .room-conf .field--name-field-square {
+  padding: 0 5px;
+  border-right: 1px solid #bcc4c5;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  direction: ltr;
+}
+
+.popup-block article.product-hidden .right-col .room-conf .field--label-inline .field__label,
+.popup-block article.product-hidden .right-col .room-conf .field--label-inline .field__item {
+  display: none;
+  float: none;
+}
+
+.popup-block article.product-hidden .right-col .field--name-field-description {
+  margin-top: 100px;
+}
+
+.popup-block article.product-hidden .right-col .field--name-field-amenities {
+  margin: 10px 0;
+}
+
+.popup-block article.product-hidden .right-col .field--name-field-amenities .field--name-price {
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 30px;
+  color: #603551;
+}
+
+/* END Magnific pop-up */
 .layout-sidebar-second {
   max-width: 25%;
   float: left;
