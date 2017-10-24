@@ -7,6 +7,7 @@ global-styling:
     js/common.js: {}
   dependencies:
     - core/jquery
+    - core/jquery.ui.datepicker
 
 font-awesome:
   css:
@@ -37,3 +38,17 @@ slick:
       libs/slick/slick-theme.css: {}
   js:
     libs/slick/slick.js: {}
+
+lightslider:
+  css:
+    theme:
+      libs/lightslider/css/lightslider.css: {}
+  js:
+    libs/lightslider/js/lightslider.js: {}
+
+air-datepicker:
+  css:
+    theme:
+      libs/air-datepicker/css/datepicker.css: {}
+  js:
+    libs/air-datepicker/js/datepicker.js: {}

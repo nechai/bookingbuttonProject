@@ -9,7 +9,8 @@
         "drupal/address": "~1.0",
         "drupal/commerce": "^2.0",
         "drupal/blazy": "^1.0@RC",
-        "drupal/slick": "^1.0"
+        "drupal/slick": "^1.0",
+        "drupal/paragraphs": "^1.2"
     },
     "replace": {
         "drupal/core": "^8.4"

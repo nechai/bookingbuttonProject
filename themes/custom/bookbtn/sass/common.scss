@@ -1,4 +1,10 @@
 $slider_width: 350px;
+$image-box: 450px;
+$color_pink: #603551;
+
+%field_vertical_margin {
+  margin: 15px 0;
+}
 
 * {
   margin: 0;
@@ -236,7 +242,12 @@ main {
           }
 
           .field--name-field-amenities {
+
             margin: 10px 0;
+
+            .field__label {
+              display: none;
+            }
 
             .field__item {
               display: inline-block;
@@ -266,11 +277,12 @@ main {
 .popup-block {
   article.product-hidden {
     margin: 0 10%;
-    padding: 3%;
+    padding: 2%;
     height: 80%;
     width: 80%;
     position: relative;
     background: #fff;
+
 
     &:after {
       content: '';
@@ -287,19 +299,12 @@ main {
 
     .image-wrapper.left-col {
       display: block;
-      width: 50%;
+      width: 45%;
       float: left;
 
-      //.field--name-field-image {
-      //  width: $slider_width;
-      //  height: auto;
-      //  img {
-      //    width: 100%;
-      //    height: auto;
-      //  }
-      //}
-
       .field--name-field-image {
+        width: $slider_width;
+        height: auto;
 
         &:after {
           content: '';
@@ -308,6 +313,7 @@ main {
         }
 
         .field__item {
+          position: relative;
           display: block;
           float: left;
           margin-right: 10px;
@@ -320,6 +326,7 @@ main {
           border-radius: 2px;
         }
 
+
         img {
           width: auto;
           height: 100%;
@@ -330,6 +337,24 @@ main {
           &:hover {
             opacity: 0.85;
           }
+
+        .image-box {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: $image-box;
+          border-bottom: 1px solid grey;
+
+          img {
+            width: auto;
+            height: 100%;
+            -webkit-box-sizing: border-box;
+            -moz-box-sizing: border-box;
+            box-sizing: border-box;
+
+          }
+        }
+
         }
       }
     }
@@ -338,29 +363,52 @@ main {
       position: relative;
       margin-left: 10px;
       display: inline-block;
-      width: 40%;
+      width: 50%;
       float: left;
 
-      .field--name-title {
-        display: none;
-        margin: 15px 0;
-        font-size: 22px;
-        font-weight: 400;
-        color: #603551;
+      fieldset {
+        padding: 0;
+        border: none;
+        border-top: 1px solid grey;
       }
 
-      .field--name-field-more-information {
-        margin: 15px 0;
-        margin-top: 5px;
+      legend {
+        text-align: center;
+        color: $color_pink;
       }
 
-      .room-conf {
-        position: absolute;
-        top: 0;
-        left: 0;
-        > div {
-          display: inline-block;
+      fieldset.description-fieldset {
+        border: none;
+        border-top: 1px solid grey;
 
+        .room-conf {
+          @extend %field_vertical_margin;
+          & > div {
+            display: inline-block;
+
+          }
+        }
+
+        .field--name-title {
+          display: none;
+          margin: 15px 0;
+          font-size: 22px;
+          font-weight: 400;
+          color: #603551;
+        }
+
+        .field--name-field-description {
+          @extend %field_vertical_margin;
+
+          .field__label {
+            display: none;
+          }
+        }
+
+        .field--name-field-more-information {
+          display: none;
+          margin: 15px 0;
+          margin-top: 5px;
         }
 
         .field--name-field-square {
@@ -383,33 +431,20 @@ main {
         }
       }
 
-      .field--name-field-description {
-        margin-top: 100px;
-      }
 
       .field--name-field-amenities {
+        display: block;
         margin: 10px 0;
-        //
-        //  .field__item {
-        //    display: inline-block;
-        //    float: none;
-        //  }
-        //}
+        height: auto;
 
-        .field--name-price {
-          //display: block;
-          //position: absolute;
-          //top: 25px;
-          //right: 20px;
-          font-size: 22px;
-          font-weight: 700;
-          line-height: 30px;
-          color: #603551;
+        .field__item {
+          display: block;
+          float: none;
         }
+      }
       }
     }
   }
-}
 /* END Magnific pop-up */
 
 

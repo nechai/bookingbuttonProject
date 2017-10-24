@@ -66,23 +66,27 @@
     </div>
 
     <div class="description-wrapper right-col">
-        {{ product.title }}
-        {{ product.field_description }}
-        {{ product.field_more_information }}
-        <div class="room-conf">
-            {{ product.field_square }}
-            {{ product.field_queen_bed }}
-            {{ product.field_sofa_bed }}
-            {{ product.field_bathroom }}
-            {{ product.field_outside_view }}
-            {{ product.field_smoking }}
-        </div>
+        <fieldset class="description-fieldset">
+            <legend>DESCRIPTION</legend>
+            <div class="room-conf">
+                {{ product.field_square }}
+                {{ product.field_queen_bed }}
+                {{ product.field_sofa_bed }}
+                {{ product.field_bathroom }}
+                {{ product.field_outside_view }}
+                {{ product.field_smoking }}
+            </div>
+            {{ product.title }}
+            {{ product.field_description }}
+            {{ product.field_more_information }}
+        </fieldset>
 
-        <div class="amenities">
-            {{ product.field_amenities }}
-        </div>
-        {{ product.variations }}
-        {{ product.price }}
+        <fieldset class="amenities-fieldset">
+            <legend>AMENITIES</legend>
+            <div class="amenities">
+                {{ product.field_amenities }}
+            </div>
+        </fieldset>
     </div>
 
 </article>

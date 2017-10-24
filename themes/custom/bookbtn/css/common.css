@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.popup-block article.product-hidden .right-col fieldset.description-fieldset .room-conf, .popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-description {
+  margin: 15px 0;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -240,6 +244,10 @@ main .layout-content .views-row article .right-col .field--name-field-amenities 
   margin: 10px 0;
 }
 
+main .layout-content .views-row article .right-col .field--name-field-amenities .field__label {
+  display: none;
+}
+
 main .layout-content .views-row article .right-col .field--name-field-amenities .field__item {
   display: inline-block;
   float: none;
@@ -256,7 +264,7 @@ main .layout-content .views-row article .right-col .field--name-price {
 /* info http://dimsemenov.com/plugins/magnific-popup/documentation.html#mainclass */
 .popup-block article.product-hidden {
   margin: 0 10%;
-  padding: 3%;
+  padding: 2%;
   height: 80%;
   width: 80%;
   position: relative;
@@ -279,8 +287,13 @@ main .layout-content .views-row article .right-col .field--name-price {
 
 .popup-block article.product-hidden .image-wrapper.left-col {
   display: block;
-  width: 50%;
+  width: 45%;
   float: left;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image {
+  width: 350px;
+  height: auto;
 }
 
 .popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image:after {
@@ -290,6 +303,7 @@ main .layout-content .views-row article .right-col .field--name-price {
 }
 
 .popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image .field__item {
+  position: relative;
   display: block;
   float: left;
   margin-right: 10px;
@@ -314,15 +328,52 @@ main .layout-content .views-row article .right-col .field--name-price {
   opacity: 0.85;
 }
 
+.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image img .image-box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 450px;
+  border-bottom: 1px solid grey;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image img .image-box img {
+  width: auto;
+  height: 100%;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
 .popup-block article.product-hidden .right-col {
   position: relative;
   margin-left: 10px;
   display: inline-block;
-  width: 40%;
+  width: 50%;
   float: left;
 }
 
-.popup-block article.product-hidden .right-col .field--name-title {
+.popup-block article.product-hidden .right-col fieldset {
+  padding: 0;
+  border: none;
+  border-top: 1px solid grey;
+}
+
+.popup-block article.product-hidden .right-col legend {
+  text-align: center;
+  color: #603551;
+}
+
+.popup-block article.product-hidden .right-col fieldset.description-fieldset {
+  border: none;
+  border-top: 1px solid grey;
+  /* Поля конфігурації кімнати */
+}
+
+.popup-block article.product-hidden .right-col fieldset.description-fieldset .room-conf > div {
+  display: inline-block;
+}
+
+.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-title {
   display: none;
   margin: 15px 0;
   font-size: 22px;
@@ -330,23 +381,17 @@ main .layout-content .views-row article .right-col .field--name-price {
   color: #603551;
 }
 
-.popup-block article.product-hidden .right-col .field--name-field-more-information {
+.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-description .field__label {
+  display: none;
+}
+
+.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-more-information {
+  display: none;
   margin: 15px 0;
   margin-top: 5px;
 }
 
-.popup-block article.product-hidden .right-col .room-conf {
-  position: absolute;
-  top: 0;
-  left: 0;
-  /* Поля конфігурації кімнати */
-}
-
-.popup-block article.product-hidden .right-col .room-conf > div {
-  display: inline-block;
-}
-
-.popup-block article.product-hidden .right-col .room-conf .field--name-field-square {
+.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-square {
   padding: 0 5px;
   border-right: 1px solid #bcc4c5;
   font-weight: normal;
@@ -358,25 +403,21 @@ main .layout-content .views-row article .right-col .field--name-price {
   direction: ltr;
 }
 
-.popup-block article.product-hidden .right-col .room-conf .field--label-inline .field__label,
-.popup-block article.product-hidden .right-col .room-conf .field--label-inline .field__item {
+.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--label-inline .field__label,
+.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--label-inline .field__item {
   display: none;
   float: none;
 }
 
-.popup-block article.product-hidden .right-col .field--name-field-description {
-  margin-top: 100px;
-}
-
 .popup-block article.product-hidden .right-col .field--name-field-amenities {
+  display: block;
   margin: 10px 0;
+  height: auto;
 }
 
-.popup-block article.product-hidden .right-col .field--name-field-amenities .field--name-price {
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #603551;
+.popup-block article.product-hidden .right-col .field--name-field-amenities .field__item {
+  display: block;
+  float: none;
 }
 
 /* END Magnific pop-up */

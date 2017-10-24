@@ -10,6 +10,8 @@ libraries:
   - bookbtn/material-icon
   - bookbtn/magnific-popup
   - bookbtn/slick
+  - bookbtn/lightslider
+#  - bookbtn/air-datepicker
 base theme: classy
 hidden: false
 regions:
