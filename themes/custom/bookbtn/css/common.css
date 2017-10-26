@@ -1,5 +1,5 @@
 @charset "UTF-8";
-.popup-block article.product-hidden .right-col fieldset.description-fieldset .room-conf, .popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-description {
+.popup-block div.product-hidden .right-col fieldset.description-fieldset .room-conf, .popup-block div.product-hidden .right-col fieldset.description-fieldset .field--name-field-description {
   margin: 15px 0;
 }
 
@@ -311,30 +311,33 @@ blockquote footer {
 
 /* BEGIN Magnific pop-up */
 /* info http://dimsemenov.com/plugins/magnific-popup/documentation.html#mainclass */
-.popup-block article.product-hidden {
+.popup-block div.product-hidden {
   margin: auto;
   padding: 2%;
   height: auto;
   width: 60%;
   position: relative;
   background: #fff;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
 }
 
-.popup-block article.product-hidden:after {
+.popup-block div.product-hidden:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.popup-block article.product-hidden a {
+.popup-block div.product-hidden a {
   pointer-events: none;
 }
 
-.popup-block article.product-hidden a:hover {
+.popup-block div.product-hidden a:hover {
   color: grey;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col {
+.popup-block div.product-hidden .image-wrapper.left-col {
   display: block;
   width: 40%;
   float: left;
@@ -344,18 +347,18 @@ blockquote footer {
   /* END W3school Image modal */
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image {
+.popup-block div.product-hidden .image-wrapper.left-col .field--name-field-image {
   width: 350px;
   height: auto;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image:after {
+.popup-block div.product-hidden .image-wrapper.left-col .field--name-field-image:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image .field__item {
+.popup-block div.product-hidden .image-wrapper.left-col .field--name-field-image .field__item {
   position: relative;
   display: block;
   float: left;
@@ -366,10 +369,10 @@ blockquote footer {
   overflow: hidden;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image img {
+.popup-block div.product-hidden .image-wrapper.left-col .field--name-field-image img {
   width: auto;
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -377,22 +380,22 @@ blockquote footer {
   box-sizing: border-box;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image img:hover {
+.popup-block div.product-hidden .image-wrapper.left-col .field--name-field-image img:hover {
   opacity: 0.85;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .myModal {
+.popup-block div.product-hidden .image-wrapper.left-col .myModal {
   border-bottom: 1px solid #b8b6b6;
   margin-bottom: 30px;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .modal-content {
+.popup-block div.product-hidden .image-wrapper.left-col .modal-content {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .modal-content {
+.popup-block div.product-hidden .image-wrapper.left-col .modal-content {
   margin-bottom: 30px;
   display: block;
   width: 450px;
@@ -400,7 +403,7 @@ blockquote footer {
   border-radius: 5px;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .modal-content {
+.popup-block div.product-hidden .image-wrapper.left-col .modal-content {
   -webkit-animation-name: zoom;
   -webkit-animation-duration: 0.6s;
   animation-name: zoom;
@@ -425,7 +428,7 @@ blockquote footer {
   }
 }
 
-.popup-block article.product-hidden .right-col {
+.popup-block div.product-hidden .right-col {
   position: relative;
   margin-left: 25px;
   display: inline-block;
@@ -433,28 +436,28 @@ blockquote footer {
   float: left;
 }
 
-.popup-block article.product-hidden .right-col fieldset {
+.popup-block div.product-hidden .right-col fieldset {
   padding: 0;
   border: none;
   border-top: 1px solid #b8b6b6;
 }
 
-.popup-block article.product-hidden .right-col legend {
+.popup-block div.product-hidden .right-col legend {
   text-align: center;
   color: #603551;
 }
 
-.popup-block article.product-hidden .right-col fieldset.description-fieldset {
+.popup-block div.product-hidden .right-col fieldset.description-fieldset {
   border: none;
   border-top: 1px solid grey;
   /* Поля конфігурації кімнати */
 }
 
-.popup-block article.product-hidden .right-col fieldset.description-fieldset .room-conf > div {
+.popup-block div.product-hidden .right-col fieldset.description-fieldset .room-conf > div {
   display: inline-block;
 }
 
-.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-title {
+.popup-block div.product-hidden .right-col fieldset.description-fieldset .field--name-title {
   display: none;
   margin: 15px 0;
   font-size: 22px;
@@ -462,16 +465,16 @@ blockquote footer {
   color: #603551;
 }
 
-.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-description .field__label {
+.popup-block div.product-hidden .right-col fieldset.description-fieldset .field--name-field-description .field__label {
   display: none;
 }
 
-.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-more-information {
+.popup-block div.product-hidden .right-col fieldset.description-fieldset .field--name-field-more-information {
   display: none;
   margin: 15px 0;
 }
 
-.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-square {
+.popup-block div.product-hidden .right-col fieldset.description-fieldset .field--name-field-square {
   padding: 0 5px;
   border-right: 1px solid #bcc4c5;
   font-weight: normal;
@@ -483,19 +486,19 @@ blockquote footer {
   direction: ltr;
 }
 
-.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--label-inline .field__label,
-.popup-block article.product-hidden .right-col fieldset.description-fieldset .field--label-inline .field__item {
+.popup-block div.product-hidden .right-col fieldset.description-fieldset .field--label-inline .field__label,
+.popup-block div.product-hidden .right-col fieldset.description-fieldset .field--label-inline .field__item {
   display: none;
   float: none;
 }
 
-.popup-block article.product-hidden .right-col .field--name-field-amenities {
+.popup-block div.product-hidden .right-col .field--name-field-amenities {
   display: block;
   margin: 10px 0;
   height: auto;
 }
 
-.popup-block article.product-hidden .right-col .field--name-field-amenities .field__item {
+.popup-block div.product-hidden .right-col .field--name-field-amenities .field__item {
   display: block;
   float: none;
 }

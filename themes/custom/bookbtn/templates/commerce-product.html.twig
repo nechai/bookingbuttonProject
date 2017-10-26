@@ -32,7 +32,7 @@
 {#</article>#}
 
 
-<article {{ attributes }}>
+<article {{ attributes }} class="product-item">
 
   <div class="image-wrapper left-col">
       {{ product.field_image }}
@@ -59,40 +59,42 @@
       {{ product.field_price }}
   </div>
 
-</article>
+    {# This div.product-hidden is copy of higher article.product-item and was created only for better layout #}
+    <div {{ attributes }} class="product-hidden">
 
-<article {{ attributes }} class="product-hidden">
-
-    <div class="image-wrapper left-col">
-        <!-- The Modal -->
-        <div class="myModal">
-            <img class="modal-content"/>
+        <div class="image-wrapper left-col">
+            <!-- The Modal -->
+            <div class="myModal">
+                <img class="modal-content"/>
+            </div>
+            {{ product.field_image }}
         </div>
-        {{ product.field_image }}
-    </div>
 
-    <div class="description-wrapper right-col">
-        <fieldset class="description-fieldset">
-            <legend>DESCRIPTION</legend>
-            <div class="room-conf">
-                {{ product.field_square }}
-                {{ product.field_queen_bed }}
-                {{ product.field_sofa_bed }}
-                {{ product.field_bathroom }}
-                {{ product.field_outside_view }}
-                {{ product.field_smoking }}
-            </div>
-            {{ product.title }}
-            {{ product.field_description }}
-            {{ product.field_more_information }}
-        </fieldset>
+        <div class="description-wrapper right-col">
+            <fieldset class="description-fieldset">
+                <legend>DESCRIPTION</legend>
+                <div class="room-conf">
+                    {{ product.field_square }}
+                    {{ product.field_queen_bed }}
+                    {{ product.field_sofa_bed }}
+                    {{ product.field_bathroom }}
+                    {{ product.field_outside_view }}
+                    {{ product.field_smoking }}
+                </div>
+                {{ product.title }}
+                {{ product.field_description }}
+                {{ product.field_more_information }}
+            </fieldset>
 
-        <fieldset class="amenities-fieldset">
-            <legend>AMENITIES</legend>
-            <div class="amenities">
-                {{ product.field_amenities }}
-            </div>
-        </fieldset>
+            <fieldset class="amenities-fieldset">
+                <legend>AMENITIES</legend>
+                <div class="amenities">
+                    {{ product.field_amenities }}
+                </div>
+            </fieldset>
+        </div>
+
     </div>
 
 </article>
+

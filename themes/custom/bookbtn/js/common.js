@@ -48,43 +48,66 @@
         }
     };
 
+    Drupal.behaviors.addFirstImageBehavior = {
+        attach: function (context, settings) {
+
+            // Using once() with more complexity.
+            $(function () {
+
+                $('.product-hidden').ready(function () {
+                    var attrImage = $(this).find('img').attr('src');
+                    $(this).find('.modal-content').attr('src', attrImage);
+                });
+
+                $('.product-hidden .field--name-field-image.field__items img').click(function () {
+                    var attrImage = $(this).attr('src');
+                    $(this).parent().parent().parent().find('.modal-content').attr('src', attrImage);
+
+                })
+
+            });
+        }
+    };
+
 
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
 
-            // $('article .field--name-field-more-information').click(function () {
-            //     var attr = $(this).attr('data-quickedit-entity-id');
-            //     var attrStr = 'article[data-quickedit-entity-id='+ attr + ']' + '[data-quickedit-entity-instance-id="1"]';
-            //     var attrNew = $(attrStr);
-            //     return attrStr;
+            $('article.product-item').each(function() {
+                var item = $(this);
+
+                item.magnificPopup({
+                    items: {
+                        src: item.find('div.product-hidden'),
+                        type: 'inline',
+                    },
+                    type: 'inline',
+                    mainClass: 'popup-block',
+                    closeOnBgClick: true,
+                });
+            });
+
+            // $('article.product-item').magnificPopup({
             //
-            // }
-
-            $('article[data-quickedit-entity-id="commerce_product/12"] .field--name-field-more-information').magnificPopup({
-                items: {
-                    src: 'article[data-quickedit-entity-id="commerce_product/12"].product-hidden',
-                    type: 'inline',
-                },
-
-                mainClass: 'popup-block',
-                closeOnBgClick: true
-            });
+            //     items: {
+            //         src: $('article.product-item').find('article.product-hidden'),
+            //         type: 'inline',
+            //     },
+            //
+            //     mainClass: 'popup-block',
+            //     closeOnBgClick: true
+            // });
 
 
-
-            //$('article[data-quickedit-entity-id="commerce_product/12"]').css('display', 'block');
-
-
-            $('article[data-quickedit-entity-id="commerce_product/13"] .field--name-field-more-information').magnificPopup({
-                items: {
-                    src: 'article[data-quickedit-entity-id="commerce_product/13"].product-hidden',
-                    type: 'inline',
-                },
-
-                mainClass: 'popup-block',
-                closeOnBgClick: true
-            });
-            // $('article[data-quickedit-entity-id="commerce_product/13"]').removeClass('mfp-hide');
+            // $('article[data-quickedit-entity-id="commerce_product/13"] .field--name-field-more-information').magnificPopup({
+            //     items: {
+            //         src: 'article[data-quickedit-entity-id="commerce_product/13"].product-hidden',
+            //         type: 'inline',
+            //     },
+            //
+            //     mainClass: 'popup-block',
+            //     closeOnBgClick: true
+            // });
         }
     };
 
@@ -95,7 +118,7 @@
             // Using once() with more complexity.
 
             $(context).once().each(function () {
-                $('article:not(.product-hidden) .field--name-field-image').slick({
+                $('article .field--name-field-image:first-child').slick({
                     dots: false,
                     infinite: true,
                     speed: 500,
@@ -300,26 +323,7 @@
     //     }
     // };
 
-    Drupal.behaviors.tensBehavior = {
-        attach: function (context, settings) {
 
-            // Using once() with more complexity.
-            $(function () {
-
-                $('.product-hidden').ready(function () {
-                    var attrImage = $(this).find('img').attr('src');
-                    $(this).find('.modal-content').attr('src', attrImage);
-                });
-
-                $('.product-hidden .field--name-field-image.field__items img').click(function () {
-                    var attrImage = $(this).attr('src');
-                    $(this).parent().parent().parent().find('.modal-content').attr('src', attrImage);
-
-                })
-
-            });
-        }
-    };
 
     // Drupal.behaviors.authoSubmitBehavior = {
     //     attach: function (context, settings) {
