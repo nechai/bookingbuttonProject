@@ -47,7 +47,7 @@ body {
   color: gray;
 }
 
-.region-header-first #block-languages {
+.region-header-first #block-languageswitcher {
   height: 350px;
   width: 100%;
   position: absolute;
@@ -56,14 +56,11 @@ body {
   display: none;
   background: #000;
   z-index: 100;
-}
-
-.region-header-first #block-languages #block-languages-menu {
   color: white;
   text-transform: uppercase;
 }
 
-.region-header-first #block-languages #block-languages-menu #block-languages a {
+.region-header-first #block-languageswitcher a {
   color: white;
   text-decoration: none;
   pointer-events: none;
@@ -75,12 +72,14 @@ body {
   width: 100%;
   height: 350px;
   background-image: url("img/header-background-image.jpg");
+  -webkit-background-image: url("img/header-background-image.jpg");
   background-position: 50%;
-  background-size: 100% auto;
+  background-size: auto 100%;
   background-repeat: no-repeat;
+  background-color: #220700;
 }
 
-.region-header-second #block-bookbtn-webform {
+.region-header-second #block-exposedformapartmentpage-1 {
   width: 100%;
   position: absolute;
   bottom: 0;
@@ -150,15 +149,19 @@ main:after {
 
 main .layout-content {
   margin-right: 20px;
-  max-width: 70%;
+  width: 70%;
   padding-top: 0;
   padding-right: 10px;
   float: left;
 }
 
+main .layout-content .region-content {
+  min-width: 100%;
+}
+
 main .layout-content .views-row article {
   margin-bottom: 25px;
-  padding-top: 10px;
+  padding-top: 0;
   padding-bottom: 40px;
   min-height: 250px;
   height: auto;
@@ -196,7 +199,7 @@ main .layout-content .views-row article .image-wrapper.left-col .field--name-fie
 }
 
 main .layout-content .views-row article .right-col {
-  margin-left: 10px;
+  margin-left: 25px;
   display: inline-block;
   float: left;
   width: 55%;
@@ -211,7 +214,6 @@ main .layout-content .views-row article .right-col .field--name-title {
 
 main .layout-content .views-row article .right-col .field--name-field-more-information {
   margin: 15px 0;
-  margin-top: 5px;
 }
 
 main .layout-content .views-row article .right-col .room-conf {
@@ -253,20 +255,68 @@ main .layout-content .views-row article .right-col .field--name-field-amenities 
   float: none;
 }
 
+main .layout-content .views-row article .right-col .field--name-variations .field__label {
+  display: none;
+}
+
 main .layout-content .views-row article .right-col .field--name-price {
+  display: block;
+  position: absolute;
+  top: 25px;
+  right: 20px;
   font-size: 22px;
   font-weight: 700;
   line-height: 30px;
   color: #603551;
 }
 
+.view-empty {
+  width: 100%;
+  height: 100%;
+  background: darkgrey;
+}
+
+blockquote {
+  margin: 0;
+  background: #fff;
+  color: #333334;
+  padding: 20px 30px;
+  position: relative;
+  border-left: 35px solid #3D0800;
+  font-family: 'Lato', sans-serif;
+}
+
+blockquote:before {
+  font-family: serif;
+  position: absolute;
+  left: -29px;
+  top: 5px;
+  color: #BCBCBC;
+  font-size: 50px;
+  text-shadow: 1px 2px 0 white;
+}
+
+blockquote p {
+  margin: 0 8px;
+  font-size: 18px;
+  line-height: 1.7;
+}
+
+blockquote footer {
+  margin: 0 8px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 2;
+}
+
 /* BEGIN Magnific pop-up */
 /* info http://dimsemenov.com/plugins/magnific-popup/documentation.html#mainclass */
 .popup-block article.product-hidden {
-  margin: 0 10%;
+  margin: auto;
   padding: 2%;
-  height: 80%;
-  width: 80%;
+  height: auto;
+  width: 60%;
   position: relative;
   background: #fff;
 }
@@ -287,8 +337,12 @@ main .layout-content .views-row article .right-col .field--name-price {
 
 .popup-block article.product-hidden .image-wrapper.left-col {
   display: block;
-  width: 45%;
+  width: 40%;
   float: left;
+  /* BEGIN Image modal */
+  /* Modal Content (image) */
+  /* Add Animation */
+  /* END W3school Image modal */
 }
 
 .popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image {
@@ -328,25 +382,53 @@ main .layout-content .views-row article .right-col .field--name-price {
   opacity: 0.85;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image img .image-box {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 450px;
-  border-bottom: 1px solid grey;
+.popup-block article.product-hidden .image-wrapper.left-col .myModal {
+  border-bottom: 1px solid #b8b6b6;
+  margin-bottom: 30px;
 }
 
-.popup-block article.product-hidden .image-wrapper.left-col .field--name-field-image img .image-box img {
-  width: auto;
+.popup-block article.product-hidden .image-wrapper.left-col .modal-content {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col .modal-content {
+  margin-bottom: 30px;
+  display: block;
+  width: 450px;
   height: 100%;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
+  border-radius: 5px;
+}
+
+.popup-block article.product-hidden .image-wrapper.left-col .modal-content {
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 .popup-block article.product-hidden .right-col {
   position: relative;
-  margin-left: 10px;
+  margin-left: 25px;
   display: inline-block;
   width: 50%;
   float: left;
@@ -355,7 +437,7 @@ main .layout-content .views-row article .right-col .field--name-price {
 .popup-block article.product-hidden .right-col fieldset {
   padding: 0;
   border: none;
-  border-top: 1px solid grey;
+  border-top: 1px solid #b8b6b6;
 }
 
 .popup-block article.product-hidden .right-col legend {
@@ -388,7 +470,6 @@ main .layout-content .views-row article .right-col .field--name-price {
 .popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-more-information {
   display: none;
   margin: 15px 0;
-  margin-top: 5px;
 }
 
 .popup-block article.product-hidden .right-col fieldset.description-fieldset .field--name-field-square {
@@ -422,7 +503,7 @@ main .layout-content .views-row article .right-col .field--name-price {
 
 /* END Magnific pop-up */
 .layout-sidebar-second {
-  max-width: 25%;
+  width: 25%;
   float: left;
   background: #fff;
 }
@@ -533,11 +614,11 @@ main .layout-content .views-row article .right-col .field--name-price {
 }
 
 .region-footer-first #block-features {
-  width: auto;
+  width: 25%;
 }
 
 .region-footer-first #block-features h2 {
-  margin-bottom: 5px;
+  margin: 5px 0 15px 0;
   text-transform: uppercase;
 }
 
@@ -549,6 +630,9 @@ main .layout-content .views-row article .right-col .field--name-price {
 .region-footer-first #block-features .field__item {
   padding: 0 4px 4px 0;
   line-height: 1.5;
+  float: left;
+  display: inline;
+  width: 44%;
 }
 
 .region-footer-second {
@@ -581,3 +665,163 @@ main .layout-content .views-row article .right-col .field--name-price {
 .region-footer-second .field--type-text-long {
   display: none;
 }
+
+/* --------Datepicker-------- */
+/* 1 variant: https://designmodo.com/calendar-jquery-css3/*/
+/*2 variant : http://www.9bitstudios.com/2012/11/how-to-style-your-own-jquery-ui-calendar/*/
+.ui-datepicker {
+  width: 300px;
+  height: 300px;
+  margin: 5px auto 0;
+  font: 12pt Arial, sans-serif;
+  /*-webkit-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+  -moz-box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);*/
+}
+
+.ui-datepicker table {
+  width: 100%;
+}
+
+.ui-datepicker-header {
+  background: #fff;
+  color: #363e40;
+  font-family: 'Times New Roman';
+}
+
+.ui-datepicker-title {
+  text-align: center;
+  font-size: 15px;
+}
+
+.ui-datepicker-prev {
+  float: left;
+  cursor: pointer;
+  background-position: center -30px;
+}
+
+.ui-datepicker-next {
+  float: right;
+  cursor: pointer;
+  background-position: center 0px;
+}
+
+.ui-datepicker thead {
+  background-color: #f7f7f7;
+  border-bottom: 1px solid #fff;
+}
+
+.ui-datepicker th {
+  background-color: #fff;
+  text-transform: uppercase;
+  font-size: 8pt;
+  color: #666666;
+  /*text-shadow: 1px 0px 0px #fff;*/
+  filter: dropshadow(color=#fff, offx=1, offy=0);
+}
+
+.ui-datepicker tbody td {
+  padding: 0;
+  border-right: 1px solid #fff;
+}
+
+.ui-datepicker tbody td:last-child {
+  border-right: 0px;
+}
+
+.ui-datepicker tbody tr:last-child {
+  border-bottom: 0px;
+}
+
+.ui-datepicker a {
+  text-decoration: none;
+}
+
+.ui-datepicker td span, .ui-datepicker td a {
+  display: inline-block;
+  /*font-weight: bold;*/
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  color: #ffffff;
+  /*text-shadow: 1px 1px 0px #fff;*/
+  filter: dropshadow(color=#fff, offx=1, offy=1);
+}
+
+.ui-datepicker-calendar .ui-state-default {
+  color: #ffffff;
+  height: 31px;
+  width: 31px;
+  padding: -1px -1px;
+}
+
+.ui-datepicker-calendar .ui-state-default.ui-state-hover {
+  background: green;
+  color: #000;
+}
+
+.ui-datepicker-calendar .ui-state-active {
+  background: green;
+  color: #000;
+  border: 1px solid #fff;
+  position: relative;
+}
+
+.ui-datepicker-unselectable .ui-state-default {
+  background: #D6E4BE;
+  color: #000;
+}
+
+#ui-datepicker-div {
+  width: 42em;
+}
+
+.ui-widget-header {
+  font-family: 'Open Sans', sans-serif;
+  border: none;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default,
+.ui-widget-header .ui-state-default,
+.ui-button,
+.ui-button.ui-state-disabled:hover,
+.ui-button.ui-state-disabled:active {
+  border: 1px solid white;
+  background: white;
+}
+
+.ui-button.ui-state-disabled:hover,
+.ui-button.ui-state-disabled:active {
+  border: 1px solid white;
+  background: green;
+}
+
+.ui-datepicker-calendar .ui-state-default {
+  color: #000;
+}
+
+.ui-datepicker-other-month {
+  color: white;
+  background: white;
+}
+
+a.ui-state-default.ui-state-highlight {
+  background: white;
+  text-decoration: underline;
+}
+
+.ui-icon-circle-triangle-w {
+  background-position: -98px 0px;
+}
+
+.ui-icon-circle-triangle-e {
+  background-position: -32px 0px;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  border: none;
+}
+
+/* --------END Datepicker-------- */

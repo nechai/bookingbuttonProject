@@ -28,6 +28,7 @@
   {#{% endfor %}#}
 
   {#{{- product|without('variation_attributes') -}}#}
+
 {#</article>#}
 
 
@@ -41,20 +42,21 @@
       {{ product.title }}
       {{ product.field_description }}
       {{ product.field_more_information }}
-      <div class="room-conf">
-            {{ product.field_square }}
-            {{ product.field_queen_bed }}
-            {{ product.field_sofa_bed }}
-            {{ product.field_bathroom }}
-            {{ product.field_outside_view }}
-            {{ product.field_smoking }}
-      </div>
 
       <div class="amenities">
             {{ product.field_amenities }}
       </div>
+
+      <div class="room-conf">
+          {{ product.field_square }}
+          {{ product.field_queen_bed }}
+          {{ product.field_sofa_bed }}
+          {{ product.field_bathroom }}
+          {{ product.field_outside_view }}
+          {{ product.field_smoking }}
+      </div>
       {{ product.variations }}
-      {{ product.price }}
+      {{ product.field_price }}
   </div>
 
 </article>
@@ -62,6 +64,10 @@
 <article {{ attributes }} class="product-hidden">
 
     <div class="image-wrapper left-col">
+        <!-- The Modal -->
+        <div class="myModal">
+            <img class="modal-content"/>
+        </div>
         {{ product.field_image }}
     </div>
 

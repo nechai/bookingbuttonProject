@@ -29,9 +29,18 @@
             // Using once() with more complexity.
             $('.field--name-field-currency-language', context).once('mySecondBehavior').each(function () {
                 $(this).click(function () {
-                    $('#block-languages').toggle();
+                    $('#block-languageswitcher').toggle();
                 })
             });
+
+            $('#edit-field-booking-dates-end-value', context).once().each(function () {
+                $(this).attr('readonly', 'readonly');
+            });
+
+            $('#edit-field-booking-dates-value', context).once().each(function () {
+                $(this).attr('readonly', 'readonly');
+            });
+
 
             // Inline popups
 
@@ -39,54 +48,45 @@
         }
     };
 
+
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
+
+            // $('article .field--name-field-more-information').click(function () {
+            //     var attr = $(this).attr('data-quickedit-entity-id');
+            //     var attrStr = 'article[data-quickedit-entity-id='+ attr + ']' + '[data-quickedit-entity-instance-id="1"]';
+            //     var attrNew = $(attrStr);
+            //     return attrStr;
+            //
+            // }
 
             $('article[data-quickedit-entity-id="commerce_product/12"] .field--name-field-more-information').magnificPopup({
                 items: {
                     src: 'article[data-quickedit-entity-id="commerce_product/12"].product-hidden',
                     type: 'inline',
                 },
-                // callbacks: {
-                //     beforeOpen: function() {
-                //         var elemToClass = $('article[data-quickedit-entity-id="commerce_product/12"]');
-                //         var $triggerEl = $(elemToClass.st.el),
-                //             newClass = $triggerEl.data("test");
-                //         if (newClass) {
-                //             elemToClass.st.mainClass = elemToClass.st.mainClass + ' ' + newClass;
-                //         }
-                //     }
-                // },
+
                 mainClass: 'popup-block',
                 closeOnBgClick: true
             });
 
-            // $('article[data-quickedit-entity-id="commerce_product/12"]').css('display', 'block');
+
+
+            //$('article[data-quickedit-entity-id="commerce_product/12"]').css('display', 'block');
+
 
             $('article[data-quickedit-entity-id="commerce_product/13"] .field--name-field-more-information').magnificPopup({
                 items: {
                     src: 'article[data-quickedit-entity-id="commerce_product/13"].product-hidden',
                     type: 'inline',
                 },
-                // callbacks: {
-                //     beforeOpen: function() {
-                //         // Will fire when this exact popup is opened
-                //         // this - is Magnific Popup object
-                //         $('.product-hidden').css('display', 'none');
-                //     },
-                // afterClose: function() {
-                //     // Will fire when popup is closed
-                //     $('.field--name-field-image').slick();
-                // }
-                // // e.t.c.
+
                 mainClass: 'popup-block',
                 closeOnBgClick: true
             });
             // $('article[data-quickedit-entity-id="commerce_product/13"]').removeClass('mfp-hide');
         }
     };
-
-
 
 
     Drupal.behaviors.slickBehavior = {
@@ -96,11 +96,12 @@
 
             $(context).once().each(function () {
                 $('article:not(.product-hidden) .field--name-field-image').slick({
-                    dots: true,
+                    dots: false,
                     infinite: true,
                     speed: 500,
                     fade: true,
                     cssEase: 'linear',
+                    arrows : false,
                 });
             });
         }
@@ -177,7 +178,6 @@
     // };
 
 
-
     Drupal.behaviors.popupBehavior = {
         attach: function (context, settings) {
 
@@ -202,33 +202,33 @@
                 // $('#edit-field-booking-dates-end-value').datepicker();
                 var currDate = new Date();
                 var dateFormat = "yy-mm-dd";
-                    from = $( "#edit-field-booking-dates-value" )
-                        .datepicker({
-                            minDate: currDate,
-                            dateFormat: dateFormat,
-                            defaultDate: new Date(),
-                            changeMonth: true,
-                            numberOfMonths: 2
-                        }).datepicker("setDate", currDate)
-                        .on( "change", function() {
-                            to.datepicker( "option", "minDate", getDate( this ) );
-                        }),
-                    to = $( "#edit-field-booking-dates-end-value" ).datepicker({
+                from = $("#edit-field-booking-dates-value")
+                    .datepicker({
+                        minDate: currDate,
+                        dateFormat: dateFormat,
+                        // defaultDate: new Date(),
+                        // changeMonth: true,
+                        numberOfMonths: 2
+                    }).datepicker("setDate", currDate)
+                    .on("change", function () {
+                        to.datepicker("option", "minDate", getDate(this));
+                    }),
+                    to = $("#edit-field-booking-dates-end-value").datepicker({
                         minDate: currDate,
                         dateFormat: dateFormat,
                         defaultDate: "+1w",
-                        changeMonth: true,
+                        // changeMonth: true,
                         numberOfMonths: 2
                     }).datepicker("setDate", "+1d")
-                        .on( "change", function() {
-                            from.datepicker( "option", "maxDate", getDate( this ) );
+                        .on("change", function () {
+                            from.datepicker("option", "maxDate", getDate(this));
                         });
 
-                function getDate( element ) {
+                function getDate(element) {
                     var date;
                     try {
-                        date = $.datepicker.parseDate( dateFormat, element.value );
-                    } catch( error ) {
+                        date = $.datepicker.parseDate(dateFormat, element.value);
+                    } catch (error) {
                         date = null;
                     }
 
@@ -262,21 +262,42 @@
     //     }
     // };
 
-    Drupal.behaviors.imageBoxBehavior = {
+    // Drupal.behaviors.imageBoxBehavior = {
+    //     attach: function (context, settings) {
+    //
+    //         // Using once() with more complexity.
+    //         $(function () {
+    //             $('.field--name-field-image .field__item').click(function () {
+    //                 if (!$(this).hasClass('image-box') && !$('.field--name-field-image .field__item').hasClass('image-box')) {
+    //                     $(this).addClass('image-box');
+    //                 } else if (!$(this).hasClass('image-box') && $('.field--name-field-image .field__item').hasClass('image-box')) {
+    //                     $('.field--name-field-image .field__item').removeClass('image-box');
+    //                     $(this).addClass('image-box');
+    //                 } else {
+    //                     //do nothing
+    //                 }
+    //             })
+    //         });
+    //     }
+    // };
+
+    Drupal.behaviors.tensBehavior = {
         attach: function (context, settings) {
 
             // Using once() with more complexity.
             $(function () {
-                $('.field--name-field-image .field__item').click(function () {
-                    if (!$(this).hasClass('image-box') && !$('.field--name-field-image .field__item').hasClass('image-box')) {
-                        $(this).addClass('image-box');
-                    } else if (!$(this).hasClass('image-box') && $('.field--name-field-image .field__item').hasClass('image-box')) {
-                        $('.field--name-field-image .field__item').removeClass('image-box');
-                        $(this).addClass('image-box');
-                    } else {
-                        //do nothing
-                    }
+
+                $('.product-hidden').ready(function () {
+                    var attrImage = $(this).find('img').attr('src');
+                    $(this).find('.modal-content').attr('src', attrImage);
+                });
+
+                $('.product-hidden .field--name-field-image.field__items img').click(function () {
+                    var attrImage = $(this).attr('src');
+                    $(this).parent().parent().parent().find('.modal-content').attr('src', attrImage);
+
                 })
+
             });
         }
     };
