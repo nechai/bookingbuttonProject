@@ -202,26 +202,45 @@
                 // $('#edit-field-booking-dates-end-value').datepicker();
                 var currDate = new Date();
                 var dateFormat = "yy-mm-dd";
-                from = $("#edit-field-booking-dates-value")
+                // from = $("#edit-field-booking-dates-value")
+                //     .datepicker({
+                //         minDate: currDate,
+                //         dateFormat: dateFormat,
+                //         // defaultDate: new Date(),
+                //         // changeMonth: true,
+                //         numberOfMonths: 2
+                //     }).datepicker("setDate", currDate)
+                //     .on("change", function () {
+                //         to.datepicker("option", "minDate", getDate(this));
+                //     }),
+                //     to = $("#edit-field-booking-dates-end-value").datepicker({
+                //         minDate: currDate,
+                //         dateFormat: dateFormat,
+                //         // defaultDate: "+1w",
+                //         // changeMonth: true,
+                //         numberOfMonths: 2
+                //     }).datepicker("setDate", "+1d")
+                //         .on("change", function () {
+                //             from.datepicker("option", "maxDate", getDate(this));
+                //         });
+
+                from = $( "#edit-field-booking-dates-value" )
                     .datepicker({
-                        minDate: currDate,
                         dateFormat: dateFormat,
-                        // defaultDate: new Date(),
-                        // changeMonth: true,
+                        changeMonth: false,
                         numberOfMonths: 2
-                    }).datepicker("setDate", currDate)
-                    .on("change", function () {
-                        to.datepicker("option", "minDate", getDate(this));
+                    })
+                    .on( "change", function() {
+                        to.datepicker( "option", "minDate", getDate( this ) );
                     }),
-                    to = $("#edit-field-booking-dates-end-value").datepicker({
-                        minDate: currDate,
+                    to = $( "#edit-field-booking-dates-end-value" ).datepicker({
                         dateFormat: dateFormat,
                         defaultDate: "+1w",
-                        // changeMonth: true,
+                        changeMonth: false,
                         numberOfMonths: 2
-                    }).datepicker("setDate", "+1d")
-                        .on("change", function () {
-                            from.datepicker("option", "maxDate", getDate(this));
+                    })
+                        .on( "change", function() {
+                            from.datepicker( "option", "maxDate", getDate( this ) );
                         });
 
                 function getDate(element) {
