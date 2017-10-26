@@ -63,7 +63,6 @@ body {
 .region-header-first #block-languageswitcher a {
   color: white;
   text-decoration: none;
-  pointer-events: none;
   cursor: pointer;
 }
 
