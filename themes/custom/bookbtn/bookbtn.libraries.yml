@@ -6,6 +6,9 @@ global-styling:
   js:
     js/common.js: {}
   dependencies:
+    - core/ajax
+    - core/drupal
+    - core/jquery.once
     - core/jquery
     - core/jquery.ui.datepicker
 
