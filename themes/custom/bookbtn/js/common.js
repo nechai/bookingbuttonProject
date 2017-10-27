@@ -86,28 +86,17 @@
                     closeOnBgClick: true,
                 });
             });
+        }
+    };
 
-            // $('article.product-item').magnificPopup({
-            //
-            //     items: {
-            //         src: $('article.product-item').find('article.product-hidden'),
-            //         type: 'inline',
-            //     },
-            //
-            //     mainClass: 'popup-block',
-            //     closeOnBgClick: true
-            // });
+    Drupal.behaviors.popupBehavior = {
+        attach: function (context, settings) {
 
+            // hide popup window
+            $('.product-hidden', context).once().each(function () {
+                $(this).addClass('mfp-hide');
 
-            // $('article[data-quickedit-entity-id="commerce_product/13"] .field--name-field-more-information').magnificPopup({
-            //     items: {
-            //         src: 'article[data-quickedit-entity-id="commerce_product/13"].product-hidden',
-            //         type: 'inline',
-            //     },
-            //
-            //     mainClass: 'popup-block',
-            //     closeOnBgClick: true
-            // });
+            });
         }
     };
 
@@ -201,19 +190,6 @@
     // };
 
 
-    Drupal.behaviors.popupBehavior = {
-        attach: function (context, settings) {
-
-            // Using once() with more complexity.
-            $('.product-hidden', context).once().each(function () {
-                // hide popup window
-                $(this).addClass('mfp-hide');
-
-                // remove slick slider
-                // $('.product-hidden .field--name-field-image').slick('unslick');
-            });
-        }
-    };
 
 
     Drupal.behaviors.datapickerBehavior = {
@@ -221,8 +197,12 @@
 
 
             $(function () {
-                // $('#edit-field-booking-dates-value').datepicker();
-                // $('#edit-field-booking-dates-end-value').datepicker();
+
+                // connect made-up datapicker skin ---- ttps://github.com/rtsinani/jquery-datepicker-skins
+                if (!$('#ui-datepicker-div').hasClass('ll-skin-cangas')) {
+                    $('#ui-datepicker-div').addClass('ll-skin-cangas');
+                };
+
                 var currDate = new Date();
                 var dateFormat = "yy-mm-dd";
                 // from = $("#edit-field-booking-dates-value")
@@ -250,6 +230,8 @@
                 from = $( "#edit-field-booking-dates-value" )
                     .datepicker({
                         dateFormat: dateFormat,
+                        setDate: currDate,
+                        defaultDate: currDate,
                         changeMonth: false,
                         numberOfMonths: 2
                     })
@@ -258,7 +240,8 @@
                     }),
                     to = $( "#edit-field-booking-dates-end-value" ).datepicker({
                         dateFormat: dateFormat,
-                        defaultDate: "+1w",
+                        setDate: "+1d",
+                        defaultDate: "+1d",
                         changeMonth: false,
                         numberOfMonths: 2
                     })

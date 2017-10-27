@@ -3,6 +3,7 @@ global-styling:
     theme:
       css/common.css: {}
       css/icons-style.css: {}
+      css/datepicker-custom-style.css: {}
   js:
     js/common.js: {}
   dependencies:
