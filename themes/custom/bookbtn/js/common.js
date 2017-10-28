@@ -73,7 +73,7 @@
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
 
-            $('article.product-item').each(function() {
+            $('article .product-item').each(function() {
                 var item = $(this);
 
                 item.magnificPopup({

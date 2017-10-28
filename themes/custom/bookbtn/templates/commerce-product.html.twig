@@ -19,82 +19,91 @@
  * @ingroup themeable
  */
 #}
+  {# Two fields: variations and price #}
+  {%  set variations_and_price_fields = product|without('title',
+                      'variation_attributes',
+                      'field_description',
+                      'field_image',
+                      'field_more_information',
+                      'field_amenities',
+                      'field_square',
+                      'field_queen_bed',
+                      'field_sofa_bed',
+                      'field_bathroom',
+                      'field_outside_view',
+                      'field_smoking',
+                      'field_amenities'
 
-{#<article{{ attributes }}>#}
-  {#{% for item in product %}#}
-      {#{% if item==product.field_description %}#}
-          {#{{ item }}#}
-      {#{% endif %}#}
-  {#{% endfor %}#}
+  )%}
 
-  {#{{- product|without('variation_attributes') -}}#}
-
-{#</article>#}
-
-
-<article {{ attributes }} class="product-item">
-
-  <div class="image-wrapper left-col">
-      {{ product.field_image }}
-  </div>
-
-  <div class="description-wrapper right-col">
-      {{ product.title }}
-      {{ product.field_description }}
-      {{ product.field_more_information }}
-
-      <div class="amenities">
-            {{ product.field_amenities }}
+<article {{ attributes }}>
+    <div class="product-item">
+      <div class="image-wrapper left-col">
+          {{ product.field_image }}
       </div>
 
-      <div class="room-conf">
-          {{ product.field_square }}
-          {{ product.field_queen_bed }}
-          {{ product.field_sofa_bed }}
-          {{ product.field_bathroom }}
-          {{ product.field_outside_view }}
-          {{ product.field_smoking }}
+      <div class="description-wrapper right-col">
+          {{ product.title }}
+          {{ product.field_description }}
+          {{ product.field_more_information }}
+
+          <div class="amenities">
+              {{ product.field_amenities }}
+          </div>
+
+          <div class="room-conf">
+              {{ product.field_square }}
+              {{ product.field_queen_bed }}
+              {{ product.field_sofa_bed }}
+              {{ product.field_bathroom }}
+              {{ product.field_outside_view }}
+              {{ product.field_smoking }}
+          </div>
       </div>
-      {{ product.variations }}
-      {{ product.field_price }}
-  </div>
 
-    {# This div.product-hidden is copy of higher article.product-item and was created only for better layout #}
-    <div {{ attributes }} class="product-hidden">
 
-        <div class="image-wrapper left-col">
-            <!-- The Modal -->
-            <div class="myModal">
-                <img class="modal-content"/>
+        {#This div.product-hidden is copy of higher article.product-item and was created only for better layout#}
+        <div {{ attributes }} class="product-hidden">
+
+            <div class="image-wrapper left-col">
+                <!-- The Modal -->
+                <div class="myModal">
+                    <img class="modal-content"/>
+                </div>
+                {{ product.field_image }}
             </div>
-            {{ product.field_image }}
+
+            <div class="description-wrapper right-col">
+                <fieldset class="description-fieldset">
+                    <legend>{{ product.field_description['#title'] }}</legend>
+                    <div class="room-conf">
+                        {{ product.field_square }}
+                        {{ product.field_queen_bed }}
+                        {{ product.field_sofa_bed }}
+                        {{ product.field_bathroom }}
+                        {{ product.field_outside_view }}
+                        {{ product.field_smoking }}
+                    </div>
+                    {{ product.title }}
+                    {{ product.field_description }}
+                    {{ product.field_more_information }}
+                </fieldset>
+
+                <fieldset class="amenities-fieldset">
+                    <legend>{{ product.field_amenities['#title'] }}</legend>
+                    <div class="amenities">
+                        {{ product.field_amenities }}
+                        {{ product.field_amenities.field__label }}
+                    </div>
+                </fieldset>
+            </div>
+
         </div>
-
-        <div class="description-wrapper right-col">
-            <fieldset class="description-fieldset">
-                <legend>DESCRIPTION</legend>
-                <div class="room-conf">
-                    {{ product.field_square }}
-                    {{ product.field_queen_bed }}
-                    {{ product.field_sofa_bed }}
-                    {{ product.field_bathroom }}
-                    {{ product.field_outside_view }}
-                    {{ product.field_smoking }}
-                </div>
-                {{ product.title }}
-                {{ product.field_description }}
-                {{ product.field_more_information }}
-            </fieldset>
-
-            <fieldset class="amenities-fieldset">
-                <legend>AMENITIES</legend>
-                <div class="amenities">
-                    {{ product.field_amenities }}
-                </div>
-            </fieldset>
-        </div>
-
     </div>
-
+    <div class="variations-custom">
+        <div class="variations-custom-wrap">
+            {{ variations_and_price_fields }}
+        </div>
+    </div>
 </article>
 

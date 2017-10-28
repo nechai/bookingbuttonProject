@@ -1,0 +1,11 @@
+<?php
+
+//function bookbtn_preprocess_commerce_product(&$variables) {
+//    kint($variables['product']['field_amenities']);
+//}
+//
+//function bookbtn_preprocess_field_amenities(&$variables, $hook)
+//{
+//    $element = $variables['label'] ;
+//    $second = $variables['title'] ;
+//}

@@ -1,6 +1,6 @@
 $slider_width: 350px;
 $image-box: 450px;
-$color_pink: #603551;
+$color_main: #3D0800;
 
 %field_vertical_margin {
   margin: 15px 0;
@@ -163,7 +163,7 @@ main {
 
   .layout-content {
     margin-right: 20px;
-    width: 70%;
+    width: 75%;
     padding-top: 0;
     padding-right: 10px;
     float: left;
@@ -177,111 +177,160 @@ main {
       article {
         margin-bottom: 25px;
         padding-top: 0;
-        padding-bottom: 40px;
         min-height: 250px;
         height: auto;
-        position: relative;
-        background: #fff;
+        background: white;
 
-        &:after {
-          content: '';
-          display: table;
-          clear: both;
-        }
 
-        a {
-          pointer-events: none;
-          &:hover {
-            color: grey;
+        .product-item {
+          display: block;
+          position: relative;
+          background: #fff;
+          cursor: pointer;
+
+          &:after {
+            content: '';
+            display: table;
+            clear: both;
           }
-        }
 
-        .image-wrapper.left-col {
-          display: inline-block;
-          float: left;
+          a {
+            pointer-events: none;
+            &:hover {
+              color: grey;
+            }
+          }
 
-          .field--name-field-image {
-            width: $slider_width;
-            height: auto;
-            img {
-              width: 100%;
+          .image-wrapper.left-col {
+            display: inline-block;
+            float: left;
+
+            .field--name-field-image {
+              width: $slider_width;
               height: auto;
+              img {
+                width: 100%;
+                height: auto;
+                cursor: pointer;
+              }
+            }
+          }
+
+          .right-col {
+            margin-left: 25px;
+            display: inline-block;
+            float: left;
+            width: 55%;
+
+            .field--name-title {
+              margin: 15px 0;
+              font-size: 22px;
+              font-weight: 400;
+              color: #3D0800;
+            }
+
+            .field--name-field-more-information {
+              margin: 15px 0;
+            }
+
+            .room-conf {
+
+              > div {
+                display: inline-block;
+
+              }
+
+              .field--name-field-square {
+                padding: 0 5px;
+                border-right: 1px solid #bcc4c5;
+                font-weight: normal;
+                font-style: normal;
+                font-size: 16px;
+                display: inline-block;
+                line-height: 1;
+                text-transform: none;
+                direction: ltr;
+              }
+
+              /* Поля конфігурації кімнати */
+              .field--label-inline .field__label,
+              .field--label-inline .field__item {
+                display: none;
+                float: none;
+              }
+            }
+
+            .field--name-field-amenities {
+
+              margin: 10px 0;
+
+              .field__label {
+                display: none;
+              }
+
+              .field__item {
+                display: inline-block;
+                float: none;
+              }
             }
           }
         }
+      }
 
-        .right-col {
-          margin-left: 25px;
-          display: inline-block;
-          float: left;
-          width: 55%;
+      .variations-custom {
+        display: block;
+        height: 87px;
+        width: 100%;
+        position: relative;
 
-          .field--name-title {
-            margin: 15px 0;
-            font-size: 22px;
-            font-weight: 400;
-            color: #603551;
-          }
+        .variations-custom-wrap {
+          position: absolute;
+          bottom: 15px;
+          right: 30px;
 
-          .field--name-field-more-information {
-            margin: 15px 0;
-          }
-
-          .room-conf {
-
-            > div {
-              display: inline-block;
-
-            }
-
-            .field--name-field-square {
-              padding: 0 5px;
-              border-right: 1px solid #bcc4c5;
-              font-weight: normal;
-              font-style: normal;
+          .field--name-price {
+            .field__label {
               font-size: 16px;
-              display: inline-block;
-              line-height: 1;
-              text-transform: none;
-              direction: ltr;
+              font-weight: 700;
+              line-height: 1em;
+              color: #3D0800;
             }
 
-            /* Поля конфігурації кімнати */
-            .field--label-inline .field__label,
-            .field--label-inline .field__item {
-              display: none;
-              float: none;
+            .field__item {
+              font-size: 15px;
+              font-weight: 700;
+              line-height: 1em;
+              color: #3D0800;
             }
           }
 
-          .field--name-field-amenities {
-
-            margin: 10px 0;
-
+          .field--name-variations {
+            height: 40px;
+            width: 150px;
+            .form-item, .form-actions {
+              margin-top: 0em;
+              margin-bottom: 0em;
+            }
             .field__label {
               display: none;
             }
 
-            .field__item {
-              display: inline-block;
-              float: none;
+            .form-actions {
+              margin-top: 10px;
+              height: 40px;
+              width: 150px;
+
+              .button {
+                height: 100%;
+                width: 100%;
+                border: none;
+                border-radius: 2px;
+                color: white;
+                background: #3D0800;
+                cursor: pointer;
+              }
             }
           }
-
-          .field--name-variations .field__label {
-            display: none;
-          }
-
-.field--name-price {
-  display: block;
-  position: absolute;
-  top: 25px;
-  right: 20px;
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 30px;
-  color: #603551;
-}
         }
       }
     }
@@ -354,7 +403,7 @@ blockquote footer {
       float: left;
 
       .field--name-field-image {
-        width: $slider_width;
+        width: 100%;
         height: auto;
 
         &:after {
@@ -383,6 +432,7 @@ blockquote footer {
           -webkit-box-sizing: border-box;
           -moz-box-sizing: border-box;
           box-sizing: border-box;
+          cursor: pointer;
 
           &:hover {
             opacity: 0.85;
@@ -418,11 +468,10 @@ blockquote footer {
       //  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
       //}
 
-      /* Modal Content (image) */
       .modal-content {
         margin-bottom: 30px;
         display: block;
-        width: 450px;
+        width: 100%;
         height: 100%;
         border-radius: 5px;
       }
@@ -444,28 +493,7 @@ blockquote footer {
         from {transform:scale(0)}
         to {transform:scale(1)}
       }
-
       /* END W3school Image modal */
-
-        //
-          //.image-box {
-          //  position: absolute;
-          //  top: 0;
-          //  left: 0;
-          //  width: $image-box;
-          //  border-bottom: 1px solid grey;
-          //
-          //  img {
-          //    width: auto;
-          //    height: 100%;
-          //    -webkit-box-sizing: border-box;
-          //    -moz-box-sizing: border-box;
-          //    box-sizing: border-box;
-          //
-          //  }
-          //}
-
-
     }
 
     .right-col {
@@ -483,7 +511,8 @@ blockquote footer {
 
       legend {
         text-align: center;
-        color: $color_pink;
+        text-transform: uppercase;
+        color: $color_main;
       }
 
       fieldset.description-fieldset {
@@ -503,7 +532,7 @@ blockquote footer {
           margin: 15px 0;
           font-size: 22px;
           font-weight: 400;
-          color: #603551;
+          color: #3D0800;
         }
 
         .field--name-field-description {
@@ -545,6 +574,10 @@ blockquote footer {
         margin: 10px 0;
         height: auto;
 
+        .field__label {
+          display: none;
+        }
+
         .field__item {
           display: block;
           float: none;
@@ -559,7 +592,8 @@ blockquote footer {
 
 
 .layout-sidebar-second {
-  width: 25%;
+  max-width: 220px;
+  width: 20%;
   float: left;
   background: #fff;
 
@@ -663,6 +697,7 @@ blockquote footer {
         -webkit-box-sizing: border-box;
         -moz-box-sizing: border-box;
         box-sizing: border-box;
+        cursor: pointer;
 
         &:hover {
           opacity: 0.85;
@@ -673,6 +708,7 @@ blockquote footer {
 
   #block-features {
     width: 25%;
+    min-width: 330px;
 
     h2 {
       margin: 5px 0 15px 0;
@@ -681,7 +717,6 @@ blockquote footer {
 
     .field--type-list-string {
       display: inline-block;
-      margin-right: 20px;
     }
 
     .field__item {
