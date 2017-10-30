@@ -29,7 +29,7 @@
             // Using once() with more complexity.
             $('.field--name-field-currency-language', context).once('mySecondBehavior').each(function () {
                 $(this).click(function () {
-                    $('#block-languageswitcher').fadeToggle(1000);
+                    $('#block-languageswitcher').fadeToggle(500);
                 })
             });
 
@@ -198,11 +198,6 @@
 
             $(function () {
 
-                // connect made-up datapicker skin ---- ttps://github.com/rtsinani/jquery-datepicker-skins
-                if (!$('#ui-datepicker-div').hasClass('ll-skin-cangas')) {
-                    $('#ui-datepicker-div').addClass('ll-skin-cangas');
-                };
-
                 var currDate = new Date();
                 var dateFormat = "yy-mm-dd";
                 // from = $("#edit-field-booking-dates-value")
@@ -227,27 +222,42 @@
                 //             from.datepicker("option", "maxDate", getDate(this));
                 //         });
 
+                // set default value
+                if( document.getElementById('edit-field-booking-dates-value').value === '' ){
+                    $('#edit-field-booking-dates-value').datepicker("setDate", new Date());
+                }
+
+                if( document.getElementById('edit-field-booking-dates-end-value').value === '' ){
+                    $('#edit-field-booking-dates-end-value').datepicker("setDate", '+1d');
+                }
+
                 from = $( "#edit-field-booking-dates-value" )
                     .datepicker({
                         dateFormat: dateFormat,
-                        setDate: currDate,
+                        minDate: currDate,
                         defaultDate: currDate,
                         changeMonth: false,
                         numberOfMonths: 2
                     })
-                    .on( "change", function() {
-                        to.datepicker( "option", "minDate", getDate( this ) );
-                    }),
+                        .on( "change", function() {
+                            to.datepicker( "option", "minDate", getDate( this ) );
+                        })
+                        // .on ("click", function () {
+                        // from.datepicker("setDate", "+1d");
+                        // }),
                     to = $( "#edit-field-booking-dates-end-value" ).datepicker({
+                        minDate: "+1d",
                         dateFormat: dateFormat,
-                        setDate: "+1d",
                         defaultDate: "+1d",
                         changeMonth: false,
                         numberOfMonths: 2
                     })
                         .on( "change", function() {
                             from.datepicker( "option", "maxDate", getDate( this ) );
-                        });
+                        })
+                        // .on ("click", function () {
+                        //     to.datepicker("setDate", "+1d");
+                        // })
 
                 function getDate(element) {
                     var date;
