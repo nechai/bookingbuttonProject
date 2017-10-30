@@ -29,7 +29,7 @@
             // Using once() with more complexity.
             $('.field--name-field-currency-language', context).once('mySecondBehavior').each(function () {
                 $(this).click(function () {
-                    $('#block-languageswitcher').toggle();
+                    $('#block-languageswitcher').fadeToggle(1000);
                 })
             });
 

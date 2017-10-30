@@ -48,10 +48,10 @@ body {
 }
 
 .region-header-first #block-languageswitcher {
-  height: 350px;
-  width: 100%;
+  height: auto;
+  width: 186px;
   position: absolute;
-  top: 100%;
+  top: 40px;
   right: 0;
   display: none;
   background: #000;
@@ -60,7 +60,18 @@ body {
   text-transform: uppercase;
 }
 
-.region-header-first #block-languageswitcher a {
+.region-header-first #block-languageswitcher ul {
+  margin: 20px;
+  margin-left: 15px;
+  list-style: none;
+}
+
+.region-header-first #block-languageswitcher ul li {
+  line-height: 3em;
+}
+
+.region-header-first #block-languageswitcher ul li a {
+  text-decoration: none;
   color: white;
   text-decoration: none;
   cursor: pointer;

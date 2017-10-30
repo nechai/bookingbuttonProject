@@ -55,10 +55,10 @@ body {
   }
 
   #block-languageswitcher {
-    height: 350px;
-    width: 100%;
+    height: auto;
+    width: 186px;
     position: absolute;
-    top: 100%;
+    top: 40px;
     right: 0;
     display: none;
     background: #000;
@@ -66,10 +66,20 @@ body {
     color: white;
     text-transform: uppercase;
 
-     a {
-      color: white;
-      text-decoration: none;
-      cursor: pointer;
+    ul {
+      margin: 20px;
+      margin-left: 15px;
+      list-style: none;
+      li {
+        line-height: 3em;
+        a {
+          text-decoration: none;
+          color: white;
+          text-decoration: none;
+          cursor: pointer;
+        }
+      }
+
     }
   }
 }
