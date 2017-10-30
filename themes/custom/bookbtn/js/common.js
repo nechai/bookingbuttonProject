@@ -223,13 +223,6 @@
                 //         });
 
                 // set default value
-                if( document.getElementById('edit-field-booking-dates-value').value === '' ){
-                    $('#edit-field-booking-dates-value').datepicker("setDate", new Date());
-                }
-
-                if( document.getElementById('edit-field-booking-dates-end-value').value === '' ){
-                    $('#edit-field-booking-dates-end-value').datepicker("setDate", '+1d');
-                }
 
                 from = $( "#edit-field-booking-dates-value" )
                     .datepicker({
@@ -241,7 +234,7 @@
                     })
                         .on( "change", function() {
                             to.datepicker( "option", "minDate", getDate( this ) );
-                        })
+                        }),
                         // .on ("click", function () {
                         // from.datepicker("setDate", "+1d");
                         // }),
@@ -268,6 +261,14 @@
                     }
 
                     return date;
+                }
+
+                if( $('#edit-field-booking-dates-value').val() === '' ){
+                    $('#edit-field-booking-dates-value').datepicker("setDate", new Date());
+                }
+
+                if( $('#edit-field-booking-dates-end-value').val() === '' ){
+                    $('#edit-field-booking-dates-end-value').datepicker("setDate", '+1d');
                 }
 
             });
