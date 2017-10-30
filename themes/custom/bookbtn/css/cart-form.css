@@ -1,0 +1,76 @@
+.cart-form {
+  background: white;
+  padding-bottom: 20px;
+}
+
+.cart-form td {
+  text-align: center;
+}
+
+.cart-form .views-table thead {
+  line-height: 4em;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.cart-form .views-table thead th {
+  padding-right: 20px;
+  color: #3D0800;
+}
+
+.cart-form .views-table thead th:first-child {
+  min-width: 200px;
+}
+
+.cart-form .views-table tbody td {
+  padding-right: 20px;
+  width: 116px;
+}
+
+.cart-form .views-table tbody .views-field-purchased-entity {
+  padding-left: 15px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: left !important;
+}
+
+.cart-form .views-table tbody .views-field-unit-price__number,
+.cart-form .views-table tbody .views-field-total-price__number {
+  text-align: center;
+}
+
+.cart-form .views-table tbody input {
+  height: 20px;
+  background: #ebe7e7;
+  border: 1px solid #dcd9d9;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.cart-form .form-actions {
+  position: relative;
+  margin-top: 10px;
+  height: 40px;
+  width: auto;
+}
+
+.cart-form .form-actions .button {
+  position: absolute;
+  height: 100%;
+  width: 100px;
+  border: none;
+  border-radius: 2px;
+  color: white;
+  background: #3D0800;
+  cursor: pointer;
+}
+
+.cart-form .form-actions #edit-checkout {
+  top: 0;
+  right: 15px;
+}
+
+.cart-form .form-actions #edit-submit {
+  top: 0;
+  right: 165px;
+}

@@ -1,0 +1,83 @@
+$first_element_width: 200px;
+
+
+
+.cart-form {
+  background: white;
+  padding-bottom: 20px;
+  
+  td {
+    text-align: center;
+  }
+
+  .views-table {
+    thead {
+      line-height: 4em;
+      font-weight: bold;
+      font-size: 1.2em;
+
+      th {
+        padding-right: 20px;
+        color: #3D0800;
+
+        &:first-child {
+          min-width: $first_element_width;
+        }
+      }
+    }
+
+    tbody {
+      td {
+        padding-right: 20px;
+        width: 116px;
+      }
+
+      .views-field-purchased-entity {
+        padding-left: 15px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align:  left !important;
+      }
+      .views-field-unit-price__number,
+      .views-field-total-price__number {
+        text-align: center;
+      }
+
+      input {
+        height: 20px;
+        background: #ebe7e7;
+        border: 1px solid #dcd9d9;
+        border-radius: 2px;
+        text-align: center;
+      }
+    }
+  }
+
+  .form-actions {
+    position: relative;
+    margin-top: 10px;
+    height: 40px;
+    width: auto;
+
+    .button {
+      position: absolute;
+      height: 100%;
+      width: 100px;
+      border: none;
+      border-radius: 2px;
+      color: white;
+      background: #3D0800;
+      cursor: pointer;
+    }
+
+    #edit-checkout {
+      top: 0;
+      right: 15px;
+    }
+
+    #edit-submit {
+      top: 0;
+      right: 165px;
+    }
+  }
+}

@@ -4,6 +4,7 @@ global-styling:
       css/common.css: {}
       css/icons-style.css: {}
       css/datepicker-custom-style.css: {}
+      css/cart-form.css: {}
   js:
     js/common.js: {}
   dependencies:
