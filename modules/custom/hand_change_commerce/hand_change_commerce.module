@@ -1,0 +1,13 @@
+<?php
+
+/**
+ * Implements hook_form_alter().
+ */
+//
+//function hand_change_commerce_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+//    if (strpos($form_id, 'commerce_order_item_add_to_cart_form_commerce_product_') === 0) {
+//        $url = \Drupal\Core\Url::fromRoute('commerce_cart.page')->toString();
+//        $response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
+//        $form_state->setRedirectUrl($url)
+//    }
+//}

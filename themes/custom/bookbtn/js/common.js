@@ -54,10 +54,10 @@
             // Using once() with more complexity.
             $(function () {
 
-                $('.product-hidden').ready(function () {
-                    var attrImage = $(this).find('img').attr('src');
-                    $(this).find('.modal-content').attr('src', attrImage);
-                });
+                // $('.product-hidden').ready(function () {
+                //     var attrImage = $('.product-hidden').find('img').first().attr('src');
+                //     $(this).find('.modal-content').attr('src', attrImage);
+                // });
 
                 $('.product-hidden .field--name-field-image.field__items img').click(function () {
                     var attrImage = $(this).attr('src');
@@ -69,6 +69,23 @@
         }
     };
 
+    Drupal.behaviors.slickBehavior = {
+        attach: function (context, settings) {
+
+            // Using once() with more complexity.
+
+            $(context).once().each(function () {
+                $('article .field--name-field-image:first-child').slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear',
+                    arrows : true,
+                });
+            });
+        }
+    };
 
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
@@ -76,6 +93,11 @@
             $('article .product-item').each(function() {
                 var item = $(this);
 
+                //add image to modal window
+                var attrImage = item.find('div.product-hidden .field--name-field-image img').first().attr('src');
+                item.find('.myModal img').attr('src', attrImage);
+
+                // pop-up
                 item.magnificPopup({
                     items: {
                         src: item.find('div.product-hidden'),
@@ -101,23 +123,7 @@
     };
 
 
-    Drupal.behaviors.slickBehavior = {
-        attach: function (context, settings) {
 
-            // Using once() with more complexity.
-
-            $(context).once().each(function () {
-                $('article .field--name-field-image:first-child').slick({
-                    dots: false,
-                    infinite: true,
-                    speed: 500,
-                    fade: true,
-                    cssEase: 'linear',
-                    arrows : false,
-                });
-            });
-        }
-    };
 
     // Drupal.behaviors.lightsliderBehavior = {
     //     attach: function (context, settings) {
@@ -200,29 +206,6 @@
 
                 var currDate = new Date();
                 var dateFormat = "yy-mm-dd";
-                // from = $("#edit-field-booking-dates-value")
-                //     .datepicker({
-                //         minDate: currDate,
-                //         dateFormat: dateFormat,
-                //         // defaultDate: new Date(),
-                //         // changeMonth: true,
-                //         numberOfMonths: 2
-                //     }).datepicker("setDate", currDate)
-                //     .on("change", function () {
-                //         to.datepicker("option", "minDate", getDate(this));
-                //     }),
-                //     to = $("#edit-field-booking-dates-end-value").datepicker({
-                //         minDate: currDate,
-                //         dateFormat: dateFormat,
-                //         // defaultDate: "+1w",
-                //         // changeMonth: true,
-                //         numberOfMonths: 2
-                //     }).datepicker("setDate", "+1d")
-                //         .on("change", function () {
-                //             from.datepicker("option", "maxDate", getDate(this));
-                //         });
-
-                // set default value
 
                 from = $( "#edit-field-booking-dates-value" )
                     .datepicker({
@@ -263,6 +246,7 @@
                     return date;
                 }
 
+                // Set default values for input fields
                 if( $('#edit-field-booking-dates-value').val() === '' ){
                     $('#edit-field-booking-dates-value').datepicker("setDate", new Date());
                 }
