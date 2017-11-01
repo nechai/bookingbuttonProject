@@ -15,6 +15,13 @@ p {
   //font-family: Open Sans,sans-serif;
 }
 
+img[src*="vertical"] {
+  margin: auto !important;
+  width: auto !important;
+  height: 50% !important;
+  margin-bottom: 30px !important;
+}
+
 
 body {
   font-family: Open Sans,sans-serif;
@@ -814,10 +821,3 @@ blockquote footer {
 
 }
 /*------END Slick-----*/
-
-img[src*="vertical"] {
-  margin: auto !important;
-  width: auto !important;
-  height: 221px !important;
-  margin-bottom: 30px !important;
-}
