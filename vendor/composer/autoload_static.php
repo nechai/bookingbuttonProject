@@ -54,6 +54,7 @@ class ComposerStaticInitDrupal8
             'Symfony\\Cmf\\Component\\Routing\\' => 30,
             'Symfony\\Bridge\\PsrHttpMessage\\' => 30,
             'Symfony\\Bridge\\PhpUnit\\' => 23,
+            'SquareConnect\\' => 14,
         ),
         'P' => 
         array (
@@ -212,6 +213,10 @@ class ComposerStaticInitDrupal8
         'Symfony\\Bridge\\PhpUnit\\' => 
         array (
             0 => __DIR__ . '/..' . '/symfony/phpunit-bridge',
+        ),
+        'SquareConnect\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/square/connect/lib',
         ),
         'Psr\\Log\\' => 
         array (

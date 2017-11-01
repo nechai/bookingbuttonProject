@@ -4,50 +4,71 @@ $first_element_width: 200px;
 
 .cart-form {
   background: white;
+  padding: 20px;
   padding-bottom: 20px;
-  
+
   td {
     text-align: center;
   }
 
-  .views-table {
+  table.views-table {
+    margin-bottom: 30px;
+    width: 100%;
     thead {
+      background: #3D0800;
       line-height: 4em;
       font-weight: bold;
       font-size: 1.2em;
+      color: white;
 
       th {
-        padding-right: 20px;
-        color: #3D0800;
+        //border-bottom: 3px solid #d3d3d3;
 
         &:first-child {
           min-width: $first_element_width;
         }
+
+        //&:nth-child(2n) {
+        //  background: lightgray;
+          //border-bottom: 3px solid #d0a7a7;
+        //}
       }
     }
 
     tbody {
       td {
-        padding-right: 20px;
         width: 116px;
+        background: #f4f4f0;
+        //border-bottom: 3px solid #d3d3d3;
+
+        &:nth-child(2n -1) {
+          background: #e8dfdf;
+          //border-bottom: 3px solid #d0a7a7;
+        }
       }
 
       .views-field-purchased-entity {
         padding-left: 15px;
         font-size: 18px;
         font-weight: 700;
-        text-align:  left !important;
+        text-align: left !important;
       }
       .views-field-unit-price__number,
       .views-field-total-price__number {
         text-align: center;
       }
 
+      .js-form-item {
+        margin: 0;
+        height: 45px;
+        width: auto;
+      }
       input {
-        height: 20px;
-        background: #ebe7e7;
-        border: 1px solid #dcd9d9;
-        border-radius: 2px;
+        height: 100%;
+        width: 100%;
+        background: inherit;
+        border: none;
+        border-radius: 0;
         text-align: center;
       }
     }
@@ -63,8 +84,9 @@ $first_element_width: 200px;
       position: absolute;
       height: 100%;
       width: 100px;
+      margin: 0;
       border: none;
-      border-radius: 2px;
+      border-radius: 5px;
       color: white;
       background: #3D0800;
       cursor: pointer;
@@ -72,12 +94,12 @@ $first_element_width: 200px;
 
     #edit-checkout {
       top: 0;
-      right: 15px;
+      right: 0;
     }
 
     #edit-submit {
       top: 0;
-      right: 165px;
+      right: 130px;
     }
   }
 }

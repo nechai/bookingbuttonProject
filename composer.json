@@ -10,7 +10,8 @@
         "drupal/commerce": "^2.0",
         "drupal/blazy": "^1.0@RC",
         "drupal/slick": "^1.0",
-        "drupal/paragraphs": "^1.2"
+        "drupal/paragraphs": "^1.2",
+        "drupal/commerce_square": "^1.0@beta"
     },
     "replace": {
         "drupal/core": "^8.4"

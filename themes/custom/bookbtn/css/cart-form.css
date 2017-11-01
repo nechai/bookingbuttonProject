@@ -1,5 +1,6 @@
 .cart-form {
   background: white;
+  padding: 20px;
   padding-bottom: 20px;
 }
 
@@ -7,43 +8,56 @@
   text-align: center;
 }
 
-.cart-form .views-table thead {
+.cart-form table.views-table {
+  margin-bottom: 30px;
+  width: 100%;
+}
+
+.cart-form table.views-table thead {
+  background: #3D0800;
   line-height: 4em;
   font-weight: bold;
   font-size: 1.2em;
+  color: white;
 }
 
-.cart-form .views-table thead th {
-  padding-right: 20px;
-  color: #3D0800;
-}
-
-.cart-form .views-table thead th:first-child {
+.cart-form table.views-table thead th:first-child {
   min-width: 200px;
 }
 
-.cart-form .views-table tbody td {
-  padding-right: 20px;
+.cart-form table.views-table tbody td {
   width: 116px;
+  background: #f4f4f0;
 }
 
-.cart-form .views-table tbody .views-field-purchased-entity {
+.cart-form table.views-table tbody td:nth-child(2n -1) {
+  background: #e8dfdf;
+}
+
+.cart-form table.views-table tbody .views-field-purchased-entity {
   padding-left: 15px;
   font-size: 18px;
   font-weight: 700;
   text-align: left !important;
 }
 
-.cart-form .views-table tbody .views-field-unit-price__number,
-.cart-form .views-table tbody .views-field-total-price__number {
+.cart-form table.views-table tbody .views-field-unit-price__number,
+.cart-form table.views-table tbody .views-field-total-price__number {
   text-align: center;
 }
 
-.cart-form .views-table tbody input {
-  height: 20px;
-  background: #ebe7e7;
-  border: 1px solid #dcd9d9;
-  border-radius: 2px;
+.cart-form table.views-table tbody .js-form-item {
+  margin: 0;
+  height: 45px;
+  width: auto;
+}
+
+.cart-form table.views-table tbody input {
+  height: 100%;
+  width: 100%;
+  background: inherit;
+  border: none;
+  border-radius: 0;
   text-align: center;
 }
 
@@ -58,8 +72,9 @@
   position: absolute;
   height: 100%;
   width: 100px;
+  margin: 0;
   border: none;
-  border-radius: 2px;
+  border-radius: 5px;
   color: white;
   background: #3D0800;
   cursor: pointer;
@@ -67,10 +82,10 @@
 
 .cart-form .form-actions #edit-checkout {
   top: 0;
-  right: 15px;
+  right: 0;
 }
 
 .cart-form .form-actions #edit-submit {
   top: 0;
-  right: 165px;
+  right: 130px;
 }

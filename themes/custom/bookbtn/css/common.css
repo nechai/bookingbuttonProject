@@ -19,7 +19,7 @@ body {
 
 .region-header-first #block-bookbtn-blockheadertop {
   padding: 0 100px;
-  min-height: 60px;
+  height: 90px;
   background: #464741;
   color: white;
 }
@@ -37,21 +37,31 @@ body {
   font-weight: 700;
 }
 
-.region-header-first #block-bookbtn-blockheadertop a {
+.region-header-first #block-bookbtn-blockheadertop .field--name-field-currency-language {
+  height: 100%;
+}
+
+.region-header-first #block-bookbtn-blockheadertop .field--name-field-currency-language a {
   text-decoration: none;
   color: white;
   pointer-events: none;
+  line-height: 7em;
 }
 
-.region-header-first #block-bookbtn-blockheadertop a:hover {
+.region-header-first #block-bookbtn-blockheadertop .field--name-field-currency-language a:hover {
   color: gray;
+}
+
+.region-header-first #block-bookbtn-blockheadertop .field--name-field-logo img {
+  width: 175px;
+  height: 87px;
 }
 
 .region-header-first #block-languageswitcher {
   height: auto;
   width: 186px;
   position: absolute;
-  top: 40px;
+  top: 100%;
   right: 0;
   display: none;
   background: #000;
@@ -80,13 +90,11 @@ body {
 .region-header-second {
   position: relative;
   width: 100%;
-  height: 350px;
-  background-image: url("img/header-background-image.jpg");
-  -webkit-background-image: url("img/header-background-image.jpg");
+  height: 450px;
+  background-image: url("img/header_background.jpg");
+  -webkit-background-image: url("img/header_background.jpg");
   background-position: 50%;
-  background-size: auto 100%;
-  background-repeat: no-repeat;
-  background-color: #220700;
+  background-size: 100%;
 }
 
 .region-header-second #block-exposedformapartmentpage-1 {
@@ -662,6 +670,16 @@ blockquote footer {
   border-radius: 2px;
 }
 
+.region-footer-first .block-block-content .field--name-field-image-gallery .field__item:nth-child(1) img {
+  width: 100%;
+  height: auto;
+}
+
+.region-footer-first .block-block-content .field--name-field-image-gallery .field__item:nth-child(2) img {
+  width: 100%;
+  height: auto;
+}
+
 .region-footer-first .block-block-content .field--name-field-image-gallery img {
   width: auto;
   height: 100%;
@@ -748,3 +766,9 @@ blockquote footer {
 }
 
 /*------END Slick-----*/
+img[src*="vertical"] {
+  margin: auto !important;
+  width: auto !important;
+  height: 221px !important;
+  margin-bottom: 30px !important;
+}
