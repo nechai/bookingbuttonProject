@@ -1,13 +1,26 @@
 <?php
 
 /**
- * Implements hook_form_alter().
+ * hook_form_alter
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ * @param $form_id
  */
 
-//function hand_change_commerce_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
-//    if (strpos($form_id, 'commerce_order_item_add_to_cart_form_commerce_product_') === 0) {
-//        $url = \Drupal\Core\Url::fromRoute('commerce_cart.page');
-////        $response = new Symfony\Component\HttpFoundation\RedirectResponse($url);
-//        $form_state->setRedirectUrl($url);
-//    }
-//}
+function hand_change_commerce_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+
+    //contact page form
+    if (strpos($form_id, 'commerce_order_item_add_to_cart_form_commerce_product_') === 0) {
+        $form['actions']['submit']['#submit'][] = 'hand_change_commerce_custom_submit';
+    }
+}
+
+/**
+ * add_to_cart_form submit handler
+ * @param $form
+ * @param \Drupal\Core\Form\FormStateInterface $form_state
+ */
+function hand_change_commerce_custom_submit(&$form, \Drupal\Core\Form\FormStateInterface $form_state) {
+    $url = Drupal\Core\Url::fromRoute('commerce_cart.page');
+    $form_state->setRedirectUrl($url);
+}
