@@ -11,7 +11,7 @@
 img[src*="vertical"] {
   margin: auto !important;
   width: auto !important;
-  height: 50% !important;
+  height: 230px !important;
   margin-bottom: 30px !important;
 }
 
@@ -101,7 +101,7 @@ body {
   background-image: url("img/header_background.jpg");
   -webkit-background-image: url("img/header_background.jpg");
   background-position: 50%;
-  background-size: 100%;
+  background-size: cover;
 }
 
 .region-header-second #block-exposedformapartmentpage-1 {
@@ -114,7 +114,7 @@ body {
 }
 
 .region-header-second form {
-  margin-left: 100px;
+  margin-left: 5%;
 }
 
 .region-header-second .form-item {
@@ -288,32 +288,33 @@ main .layout-content .views-row article .product-item .right-col .field--name-fi
 
 main .layout-content .views-row .variations-custom {
   display: block;
-  height: 87px;
+  height: 110px;
   width: 100%;
   position: relative;
 }
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap {
   position: absolute;
-  bottom: 15px;
+  bottom: 20px;
   right: 30px;
 }
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-price .field__label {
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 1em;
-  color: #3D0800;
-}
-
-main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-price .field__item {
   font-size: 15px;
   font-weight: 700;
   line-height: 1em;
   color: #3D0800;
 }
 
+main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-price .field__item {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 1em;
+  color: #3D0800;
+}
+
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-variations {
+  margin-top: 10px;
   height: 40px;
   width: 150px;
 }
@@ -328,7 +329,6 @@ main .layout-content .views-row .variations-custom .variations-custom-wrap .fiel
 }
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-variations .form-actions {
-  margin-top: 10px;
   height: 40px;
   width: 150px;
 }
@@ -337,7 +337,7 @@ main .layout-content .views-row .variations-custom .variations-custom-wrap .fiel
   height: 100%;
   width: 100%;
   border: none;
-  border-radius: 2px;
+  border-radius: 4px;
   color: white;
   background: #3D0800;
   cursor: pointer;
@@ -450,6 +450,13 @@ blockquote footer {
 
 .popup-block div.product-hidden .image-wrapper.left-col .field--name-field-image img:hover {
   opacity: 0.85;
+}
+
+.popup-block div.product-hidden .image-wrapper.left-col .field--name-field-image img[src*="vertical"] {
+  margin: auto !important;
+  width: auto !important;
+  height: 230px !important;
+  margin-bottom: 30px !important;
 }
 
 .popup-block div.product-hidden .image-wrapper.left-col .myModal {
@@ -578,8 +585,7 @@ blockquote footer {
 
 /* END Magnific pop-up */
 .layout-sidebar-second {
-  max-width: 220px;
-  width: 20%;
+  width: 22%;
   float: left;
   background: #fff;
 }
@@ -631,40 +637,35 @@ blockquote footer {
   clear: both;
 }
 
-.region-footer-first .block-block-content {
+.region-footer-first #block-aboutus {
   float: left;
-}
-
-.region-footer-first .block-block-content:first-child {
   margin-right: 15px;
   margin-bottom: 15px;
-  padding-right: 10px;
-  max-width: 70%;
-  min-width: 40%;
+  width: 75%;
   border-right: 1px solid #979797;
 }
 
-.region-footer-first .block-block-content .field--name-field-about-us p {
+.region-footer-first #block-aboutus .field--name-field-about-us p {
   margin: 15px auto;
   margin-top: 0;
 }
 
-.region-footer-first .block-block-content .field--name-field-main-menu-link {
+.region-footer-first #block-aboutus .field--name-field-main-menu-link {
   margin-bottom: 15px;
 }
 
-.region-footer-first .block-block-content .field--name-field-main-menu-link div {
+.region-footer-first #block-aboutus .field--name-field-main-menu-link div {
   display: inline-block;
   margin-right: 5px;
 }
 
-.region-footer-first .block-block-content .field--name-field-image-gallery:after {
+.region-footer-first #block-aboutus .field--name-field-image-gallery:after {
   content: '';
   display: table;
   clear: both;
 }
 
-.region-footer-first .block-block-content .field--name-field-image-gallery .field__item {
+.region-footer-first #block-aboutus .field--name-field-image-gallery .field__item {
   display: block;
   float: left;
   margin-right: 10px;
@@ -677,17 +678,17 @@ blockquote footer {
   border-radius: 2px;
 }
 
-.region-footer-first .block-block-content .field--name-field-image-gallery .field__item:nth-child(1) img {
+.region-footer-first #block-aboutus .field--name-field-image-gallery .field__item:nth-child(1) img {
   width: 100%;
   height: auto;
 }
 
-.region-footer-first .block-block-content .field--name-field-image-gallery .field__item:nth-child(2) img {
+.region-footer-first #block-aboutus .field--name-field-image-gallery .field__item:nth-child(2) img {
   width: 100%;
   height: auto;
 }
 
-.region-footer-first .block-block-content .field--name-field-image-gallery img {
+.region-footer-first #block-aboutus .field--name-field-image-gallery img {
   width: auto;
   height: 100%;
   -webkit-box-sizing: border-box;
@@ -696,13 +697,13 @@ blockquote footer {
   cursor: pointer;
 }
 
-.region-footer-first .block-block-content .field--name-field-image-gallery img:hover {
+.region-footer-first #block-aboutus .field--name-field-image-gallery img:hover {
   opacity: 0.85;
 }
 
 .region-footer-first #block-features {
-  width: 25%;
-  min-width: 330px;
+  float: left;
+  width: 22%;
 }
 
 .region-footer-first #block-features h2 {
@@ -773,3 +774,51 @@ blockquote footer {
 }
 
 /*------END Slick-----*/
+/*------BEGIN Media requests------*/
+@media (max-width: 1268px) {
+  .layout-content,
+  .layout-sidebar-second,
+  #block-aboutus,
+  #block-features {
+    width: 100% !important;
+  }
+  #block-aboutus {
+    border: none !important;
+  }
+}
+
+@media (max-width: 925px) {
+  .image-wrapper.left-col {
+    width: 100% !important;
+  }
+  .image-wrapper.left-col .field--name-field-image {
+    width: 100% !important;
+    height: auto !important;
+  }
+  .description-wrapper.right-col {
+    margin-left: 0 !important;
+    padding-left: 5% !important;
+    width: 89% !important;
+  }
+  .variations-custom-wrap .field--name-price {
+    margin-top: 13px;
+    margin-left: 14px;
+    float: left;
+    margin-right: 20px;
+    padding-top: 4px;
+  }
+  .variations-custom-wrap .field--name-variations {
+    float: left;
+  }
+  div.product-hidden .right-col {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 565px) {
+  .bef-exposed-form .form--inline > .form-item {
+    float: none;
+  }
+}
+
+/*------END Media requests------*/
