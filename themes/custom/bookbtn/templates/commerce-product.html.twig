@@ -44,7 +44,11 @@
 
       <div class="description-wrapper right-col">
           {{ product.title }}
-          {{ product.field_description }}
+
+          {# Trim product.field_description text #}
+          {% set text = product.field_description|render|striptags|trim %}
+          {{ (text|length > 200 ? text|slice(0, 201)|split(' ')|slice(0, -1)|join(' ') ~ '…' : text)|raw }}
+
           {{ product.field_more_information }}
 
           <div class="amenities">
@@ -60,7 +64,11 @@
               {{ product.field_smoking }}
           </div>
       </div>
-
+      <div class="variations-custom">
+          <div class="variations-custom-wrap">
+              {{ variations_and_price_fields }}
+          </div>
+      </div>
 
         {#This div.product-hidden is copy of higher article.product-item and was created only for better layout#}
         <div {{ attributes }} class="product-hidden">
@@ -98,11 +106,6 @@
                 </fieldset>
             </div>
 
-        </div>
-    </div>
-    <div class="variations-custom">
-        <div class="variations-custom-wrap">
-            {{ variations_and_price_fields }}
         </div>
     </div>
 </article>
