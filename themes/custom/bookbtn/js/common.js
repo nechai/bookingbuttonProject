@@ -40,25 +40,13 @@
             $('#edit-field-booking-dates-value', context).once().each(function () {
                 $(this).attr('readonly', 'readonly');
             });
-
-
-            // Inline popups
-
-
         }
     };
 
     Drupal.behaviors.addFirstImageBehavior = {
         attach: function (context, settings) {
-
-            // Using once() with more complexity.
             $(function () {
-
-                // $('.product-hidden').ready(function () {
-                //     var attrImage = $('.product-hidden').find('img').first().attr('src');
-                //     $(this).find('.modal-content').attr('src', attrImage);
-                // });
-
+                // This implement to show most large picture in popup
                 $('.product-hidden .field--name-field-image.field__items img').click(function () {
                     var attrImage = $(this).attr('src');
                     $(this).parent().parent().parent().find('.modal-content').attr('src', attrImage);
@@ -70,24 +58,12 @@
     };
 
 
-    Drupal.behaviors.redirectOnClickLogo = {
-        attach: function (context, settings) {
-
-            $(function () {
-                $('.field--name-field-logo').click(function() {
-                    window.location.href = '/';
-                    return false;
-                });
-            });
-        }
-    };
-
     Drupal.behaviors.disableClickingOnLink = {
         attach: function (context, settings) {
 
             $(function () {
                 $('.field--name-field-currency-language a').removeAttr('href');
-                $('.field--name-field-logo img').removeAttr('title');
+                $('#block-bookbtn-branding a').removeAttr('title');
             });
         }
     };

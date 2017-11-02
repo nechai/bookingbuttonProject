@@ -14,11 +14,11 @@ $color_main: #3D0800;
 p {
   //font-family: Open Sans,sans-serif;
 }
-
+// style for popup vertical images
 img[src*="vertical"] {
   margin: auto !important;
-  width: auto !important;
-  height: 230px !important;
+  width: 44% !important;
+  //height: 230px !important;
   margin-bottom: 30px !important;
 }
 
@@ -31,35 +31,25 @@ body {
 
 .region-header-first {
   position: relative;
-
+  height: 90px;
+  padding: 0 3%;
+  background: rgb(70, 71, 65);
+  color: white;
+  &:after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+  #block-bookbtn-branding {
+    float: left
+  }
   #block-bookbtn-blockheadertop {
-    padding: 0 100px;
-    height: 90px;
-    background: rgb(70, 71, 65);
-    color: white;
-
+    float: right;
+    padding-right: 50px;
     .field {
-      float: left;
-      line-height: 50px;
-      font-size: 22px;
-      font-weight: 200;
-
-      &:last-child {
-        float: right;
-        font-size: 12px;
-        font-weight: 700;
+      font-size: 12px;
+      font-weight: 700;
       }
-    }
-
-    .field--name-field-logo {
-      cursor: pointer;
-
-      img {
-        width: 175px;
-        height: 87px;
-      }
-    }
-
     .field--name-field-currency-language {
       height: 100%;
       a {
@@ -71,18 +61,15 @@ body {
         -moz-transition: all 0.3s linear;
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear;
-
         &:hover {
           color: gray;
-
         }
       }
     }
   }
-
   #block-languageswitcher {
     height: auto;
-    width: 186px;
+    width: 200px;
     position: absolute;
     top: 100%;
     right: 0;
@@ -92,7 +79,6 @@ body {
     color: white;
     text-transform: uppercase;
     opacity: 0.8;
-
     ul {
       margin: 20px;
       margin-left: 15px;
@@ -259,10 +245,10 @@ main {
           }
 
           .right-col {
-            margin-left: 25px;
+            padding-left: 25px;
             display: inline-block;
             float: left;
-            width: 55%;
+            width: 40%;
 
             .field--name-title {
               margin: 15px 0;
@@ -321,17 +307,18 @@ main {
       }
 
       .variations-custom {
-        display: block;
-        height: 110px;
-        width: 100%;
+        float: right;
+        height: 250px;
+        width: 15%;
         position: relative;
 
         .variations-custom-wrap {
           position: absolute;
-          bottom: 20px;
-          right: 30px;
+          top: 30%;
+          right: -22px;
+          transform: translate(-50%, -50%);
 
-          .field--name-price {
+        .field--name-price {
             .field__label {
               font-size: 15px;
               font-weight: 700;
@@ -340,7 +327,7 @@ main {
             }
 
             .field__item {
-              font-size: 18px;
+              font-size: 15px;
               font-weight: 700;
               line-height: 1em;
               color: #3D0800;
@@ -350,7 +337,7 @@ main {
           .field--name-variations {
             margin-top: 10px;
             height: 40px;
-            width: 150px;
+            width: 100px;
             .form-item, .form-actions {
               margin-top: 0em;
               margin-bottom: 0em;
@@ -361,8 +348,7 @@ main {
 
             .form-actions {
               height: 40px;
-              width: 150px;
-
+              width: 100px;
               .button {
                 height: 100%;
                 width: 100%;
@@ -499,26 +485,7 @@ blockquote footer {
       .modal-content {
         border-radius: 5px;
         cursor: pointer;
-
         transition: 0.3s;
-      }
-
-      ///* The Modal (background) */
-      //.modal {
-      //  display: none; /* Hidden by default */
-      //  position: absolute; /* Stay in place */
-      //  z-index: 1; /* Sit on top */
-      //  padding-top: 100px; /* Location of the box */
-      //  left: 0;
-      //  top: 0;
-      //  width: 100%; /* Full width */
-      //  height: 100%; /* Full height */
-      //  overflow: auto; /* Enable scroll if needed */
-      //  background-color: rgb(0,0,0); /* Fallback color */
-      //  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
-      //}
-
-      .modal-content {
         margin-bottom: 30px;
         display: block;
         width: 100%;
@@ -529,9 +496,9 @@ blockquote footer {
       /* Add Animation */
       .modal-content {
         -webkit-animation-name: zoom;
-        -webkit-animation-duration: 0.6s;
+        -webkit-animation-duration: 0.4s;
         animation-name: zoom;
-        animation-duration: 0.6s;
+        animation-duration: 0.4s;
       }
 
       @-webkit-keyframes zoom {
@@ -695,36 +662,27 @@ blockquote footer {
 
   #block-aboutus {
     float: left;
-
-
-      margin-right: 15px;
-      margin-bottom: 15px;
-      width: 75%;
-      border-right: 1px solid #979797;
-
-
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 75%;
+    border-right: 1px solid #979797;
     .field--name-field-about-us p {
       margin: 15px auto;
       margin-top: 0;
     }
-
     .field--name-field-main-menu-link {
       margin-bottom: 15px;
     }
-
     .field--name-field-main-menu-link div {
       display: inline-block;
       margin-right: 5px;
     }
-
     .field--name-field-image-gallery {
-
       &:after {
         content: '';
         display: table;
         clear: both;
       }
-
       .field__item {
         display: block;
         float: left;
@@ -733,9 +691,9 @@ blockquote footer {
         width: 70px;
         height: 70px;
         overflow: hidden;
-        -webkit-border-radius: 2px;
-        -moz-border-radius: 2px;
-        border-radius: 2px;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
         &:nth-child(1) {
           img {
             width: 100%;
@@ -749,7 +707,6 @@ blockquote footer {
           }
         }
       }
-
       img {
         width: auto;
         height: 100%;
@@ -757,7 +714,6 @@ blockquote footer {
         -moz-box-sizing: border-box;
         box-sizing: border-box;
         cursor: pointer;
-
         &:hover {
           opacity: 0.85;
         }
@@ -869,21 +825,23 @@ blockquote footer {
     padding-left: 5% !important;
     width: 89% !important;
   }
+  .variations-custom {
+    height: 70px !important;
+    width: 100% !important;
+    .variations-custom-wrap {
+      .field--name-price {
+        margin-top: 13px;
+        margin-left: 14px;
+        float: left;
+        margin-right: 20px;
+        padding-top: 4px;
+      }
 
-  .variations-custom-wrap {
-    .field--name-price {
-      margin-top: 13px;
-      margin-left: 14px;
-      float: left;
-      margin-right: 20px;
-      padding-top: 4px;
-    }
-
-    .field--name-variations {
-      float: left
+      .field--name-variations {
+        float: left
+      }
     }
   }
-
   div.product-hidden {
     .right-col {
       margin-left: 0;

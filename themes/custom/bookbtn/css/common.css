@@ -10,8 +10,7 @@
 
 img[src*="vertical"] {
   margin: auto !important;
-  width: auto !important;
-  height: 230px !important;
+  width: 44% !important;
   margin-bottom: 30px !important;
 }
 
@@ -22,35 +21,30 @@ body {
 
 .region-header-first {
   position: relative;
-}
-
-.region-header-first #block-bookbtn-blockheadertop {
-  padding: 0 100px;
   height: 90px;
+  padding: 0 3%;
   background: #464741;
   color: white;
 }
 
-.region-header-first #block-bookbtn-blockheadertop .field {
-  float: left;
-  line-height: 50px;
-  font-size: 22px;
-  font-weight: 200;
+.region-header-first:after {
+  content: '';
+  display: table;
+  clear: both;
 }
 
-.region-header-first #block-bookbtn-blockheadertop .field:last-child {
+.region-header-first #block-bookbtn-branding {
+  float: left;
+}
+
+.region-header-first #block-bookbtn-blockheadertop {
   float: right;
+  padding-right: 50px;
+}
+
+.region-header-first #block-bookbtn-blockheadertop .field {
   font-size: 12px;
   font-weight: 700;
-}
-
-.region-header-first #block-bookbtn-blockheadertop .field--name-field-logo {
-  cursor: pointer;
-}
-
-.region-header-first #block-bookbtn-blockheadertop .field--name-field-logo img {
-  width: 175px;
-  height: 87px;
 }
 
 .region-header-first #block-bookbtn-blockheadertop .field--name-field-currency-language {
@@ -74,7 +68,7 @@ body {
 
 .region-header-first #block-languageswitcher {
   height: auto;
-  width: 186px;
+  width: 200px;
   position: absolute;
   top: 100%;
   right: 0;
@@ -247,10 +241,10 @@ main .layout-content .views-row article .product-item .image-wrapper.left-col .f
 }
 
 main .layout-content .views-row article .product-item .right-col {
-  margin-left: 25px;
+  padding-left: 25px;
   display: inline-block;
   float: left;
-  width: 55%;
+  width: 40%;
 }
 
 main .layout-content .views-row article .product-item .right-col .field--name-title {
@@ -305,16 +299,17 @@ main .layout-content .views-row article .product-item .right-col .field--name-fi
 }
 
 main .layout-content .views-row .variations-custom {
-  display: block;
-  height: 110px;
-  width: 100%;
+  float: right;
+  height: 250px;
+  width: 15%;
   position: relative;
 }
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap {
   position: absolute;
-  bottom: 20px;
-  right: 30px;
+  top: 30%;
+  right: -22px;
+  transform: translate(-50%, -50%);
 }
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-price .field__label {
@@ -325,7 +320,7 @@ main .layout-content .views-row .variations-custom .variations-custom-wrap .fiel
 }
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-price .field__item {
-  font-size: 18px;
+  font-size: 15px;
   font-weight: 700;
   line-height: 1em;
   color: #3D0800;
@@ -334,7 +329,7 @@ main .layout-content .views-row .variations-custom .variations-custom-wrap .fiel
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-variations {
   margin-top: 10px;
   height: 40px;
-  width: 150px;
+  width: 100px;
 }
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-variations .form-item, main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-variations .form-actions {
@@ -348,7 +343,7 @@ main .layout-content .views-row .variations-custom .variations-custom-wrap .fiel
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-variations .form-actions {
   height: 40px;
-  width: 150px;
+  width: 100px;
 }
 
 main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-variations .form-actions .button {
@@ -486,9 +481,6 @@ blockquote footer {
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-}
-
-.popup-block div.product-hidden .image-wrapper.left-col .modal-content {
   margin-bottom: 30px;
   display: block;
   width: 100%;
@@ -498,9 +490,9 @@ blockquote footer {
 
 .popup-block div.product-hidden .image-wrapper.left-col .modal-content {
   -webkit-animation-name: zoom;
-  -webkit-animation-duration: 0.6s;
+  -webkit-animation-duration: 0.4s;
   animation-name: zoom;
-  animation-duration: 0.6s;
+  animation-duration: 0.4s;
 }
 
 @-webkit-keyframes zoom {
@@ -691,9 +683,9 @@ blockquote footer {
   width: 70px;
   height: 70px;
   overflow: hidden;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
 }
 
 .region-footer-first #block-aboutus .field--name-field-image-gallery .field__item:nth-child(1) img {
@@ -818,14 +810,18 @@ blockquote footer {
     padding-left: 5% !important;
     width: 89% !important;
   }
-  .variations-custom-wrap .field--name-price {
+  .variations-custom {
+    height: 70px !important;
+    width: 100% !important;
+  }
+  .variations-custom .variations-custom-wrap .field--name-price {
     margin-top: 13px;
     margin-left: 14px;
     float: left;
     margin-right: 20px;
     padding-top: 4px;
   }
-  .variations-custom-wrap .field--name-variations {
+  .variations-custom .variations-custom-wrap .field--name-variations {
     float: left;
   }
   div.product-hidden .right-col {
