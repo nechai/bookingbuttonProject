@@ -75,6 +75,7 @@ body {
   z-index: 100;
   color: white;
   text-transform: uppercase;
+  opacity: 0.8;
 }
 
 .region-header-first #block-languageswitcher ul {
