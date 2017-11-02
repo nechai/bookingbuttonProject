@@ -44,6 +44,15 @@ body {
   font-weight: 700;
 }
 
+.region-header-first #block-bookbtn-blockheadertop .field--name-field-logo {
+  cursor: pointer;
+}
+
+.region-header-first #block-bookbtn-blockheadertop .field--name-field-logo img {
+  width: 175px;
+  height: 87px;
+}
+
 .region-header-first #block-bookbtn-blockheadertop .field--name-field-currency-language {
   height: 100%;
 }
@@ -51,17 +60,16 @@ body {
 .region-header-first #block-bookbtn-blockheadertop .field--name-field-currency-language a {
   text-decoration: none;
   color: white;
-  pointer-events: none;
   line-height: 7em;
+  cursor: pointer;
+  -webkit-transition: all 0.3s linear;
+  -moz-transition: all 0.3s linear;
+  -o-transition: all 0.3s linear;
+  transition: all 0.3s linear;
 }
 
 .region-header-first #block-bookbtn-blockheadertop .field--name-field-currency-language a:hover {
   color: gray;
-}
-
-.region-header-first #block-bookbtn-blockheadertop .field--name-field-logo img {
-  width: 175px;
-  height: 87px;
 }
 
 .region-header-first #block-languageswitcher {
@@ -86,13 +94,21 @@ body {
 
 .region-header-first #block-languageswitcher ul li {
   line-height: 3em;
+  cursor: pointer;
 }
 
 .region-header-first #block-languageswitcher ul li a {
   text-decoration: none;
   color: white;
   text-decoration: none;
-  cursor: pointer;
+}
+
+.region-header-first #block-languageswitcher ul li a:hover {
+  color: grey;
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
 }
 
 .region-header-second {
@@ -197,7 +213,6 @@ main .layout-content .views-row article .product-item {
   display: block;
   position: relative;
   background: #fff;
-  cursor: pointer;
 }
 
 main .layout-content .views-row article .product-item:after {
@@ -217,6 +232,7 @@ main .layout-content .views-row article .product-item a:hover {
 main .layout-content .views-row article .product-item .image-wrapper.left-col {
   display: inline-block;
   float: left;
+  cursor: pointer;
 }
 
 main .layout-content .views-row article .product-item .image-wrapper.left-col .field--name-field-image {
@@ -246,6 +262,7 @@ main .layout-content .views-row article .product-item .right-col .field--name-ti
 
 main .layout-content .views-row article .product-item .right-col .field--name-field-more-information {
   margin: 15px 0;
+  cursor: pointer;
 }
 
 main .layout-content .views-row article .product-item .right-col .room-conf {

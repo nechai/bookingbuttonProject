@@ -51,25 +51,31 @@ body {
       }
     }
 
+    .field--name-field-logo {
+      cursor: pointer;
+
+      img {
+        width: 175px;
+        height: 87px;
+      }
+    }
+
     .field--name-field-currency-language {
       height: 100%;
       a {
         text-decoration: none;
         color: white;
-        pointer-events: none;
         line-height: 7em;
+        cursor: pointer;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear;
 
         &:hover {
           color: gray;
+
         }
-      }
-    }
-
-    .field--name-field-logo {
-
-      img {
-        width: 175px;
-        height: 87px;
       }
     }
   }
@@ -93,11 +99,18 @@ body {
       list-style: none;
       li {
         line-height: 3em;
+        cursor: pointer;
         a {
           text-decoration: none;
           color: white;
           text-decoration: none;
-          cursor: pointer;
+          &:hover {
+            color: grey;
+            -webkit-transition: all 0.2s linear;
+            -moz-transition: all 0.2s linear;
+            -o-transition: all 0.2s linear;
+            transition: all 0.2s linear;
+          }
         }
       }
 
@@ -215,7 +228,6 @@ main {
           display: block;
           position: relative;
           background: #fff;
-          cursor: pointer;
 
           &:after {
             content: '';
@@ -233,6 +245,7 @@ main {
           .image-wrapper.left-col {
             display: inline-block;
             float: left;
+            cursor: pointer;
 
             .field--name-field-image {
               width: $slider_width;
@@ -260,6 +273,7 @@ main {
 
             .field--name-field-more-information {
               margin: 15px 0;
+              cursor: pointer;
             }
 
             .room-conf {

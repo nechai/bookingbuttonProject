@@ -69,6 +69,29 @@
         }
     };
 
+
+    Drupal.behaviors.redirectOnClickLogo = {
+        attach: function (context, settings) {
+
+            $(function () {
+                $('.field--name-field-logo').click(function() {
+                    window.location.href = '/';
+                    return false;
+                });
+            });
+        }
+    };
+
+    Drupal.behaviors.disableClickingOnLink = {
+        attach: function (context, settings) {
+
+            $(function () {
+                $('.field--name-field-currency-language a').removeAttr('href');
+                $('.field--name-field-logo img').removeAttr('title');
+            });
+        }
+    };
+
     Drupal.behaviors.slickBehavior = {
         attach: function (context, settings) {
 
@@ -90,17 +113,38 @@
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
 
-            $('article .product-item').each(function() {
+            //pop-up after clicking on img
+            $('article .product-item .image-wrapper').each(function() {
                 var item = $(this);
 
                 //add image to modal window
-                var attrImage = item.find('div.product-hidden .field--name-field-image img').first().attr('src');
+                var attrImage = item.parents('article .product-item').find('div.product-hidden .field--name-field-image img').first().attr('src');
                 item.find('.myModal img').attr('src', attrImage);
 
                 // pop-up
                 item.magnificPopup({
                     items: {
-                        src: item.find('div.product-hidden'),
+                        src: item.parents('article .product-item').find('div.product-hidden'),
+                        type: 'inline',
+                    },
+                    type: 'inline',
+                    mainClass: 'popup-block',
+                    closeOnBgClick: true,
+                });
+            });
+
+            //pop-up after clicking on "more information"
+            $('article .product-item .right-col .field--name-field-more-information').each(function() {
+                var item = $(this);
+
+                //add image to modal window
+                var attrImage = item.parents('article .product-item').find('div.product-hidden .field--name-field-image img').first().attr('src');
+                item.find('.myModal img').attr('src', attrImage);
+
+                // pop-up
+                item.magnificPopup({
+                    items: {
+                        src: item.parents('article .product-item').find('div.product-hidden'),
                         type: 'inline',
                     },
                     type: 'inline',
