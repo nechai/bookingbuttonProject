@@ -7,6 +7,7 @@ dependencies:
     - field.field.commerce_product.room.field_amenities
     - field.field.commerce_product.room.field_bathroom
     - field.field.commerce_product.room.field_booking_dates
+    - field.field.commerce_product.room.field_date_test
     - field.field.commerce_product.room.field_description
     - field.field.commerce_product.room.field_image
     - field.field.commerce_product.room.field_max_adults
@@ -22,6 +23,7 @@ dependencies:
     - field.field.commerce_product.room.variations
   module:
     - commerce_product
+    - datetime
     - image
     - link
     - options
@@ -46,6 +48,15 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
+    region: content
+  field_date_test:
+    weight: 12
+    label: above
+    settings:
+      format_type: medium
+      timezone_override: ''
+    third_party_settings: {  }
+    type: datetime_default
     region: content
   field_description:
     weight: 1

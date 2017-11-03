@@ -5,16 +5,12 @@ display:
         field_booking_dates_value:
           expose:
             label: 'Дата въезда'
-          group_info:
-            description: ''
         field_booking_dates_end_value:
           expose:
             label: 'Дата выезда'
         field_max_adults_value:
           expose:
             label: Взрослые
-          group_info:
-            description: ''
         field_max_children_value:
           expose:
             label: Дети

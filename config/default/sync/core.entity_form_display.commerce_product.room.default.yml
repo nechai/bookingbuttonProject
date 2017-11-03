@@ -7,6 +7,7 @@ dependencies:
     - field.field.commerce_product.room.field_amenities
     - field.field.commerce_product.room.field_bathroom
     - field.field.commerce_product.room.field_booking_dates
+    - field.field.commerce_product.room.field_date_test
     - field.field.commerce_product.room.field_description
     - field.field.commerce_product.room.field_image
     - field.field.commerce_product.room.field_max_adults
@@ -23,6 +24,7 @@ dependencies:
     - image.style.thumbnail
   module:
     - commerce
+    - datetime
     - datetime_range
     - image
     - inline_entity_form
@@ -59,6 +61,12 @@ content:
     third_party_settings: {  }
     type: daterange_default
     region: content
+  field_date_test:
+    weight: 106
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
   field_description:
     weight: 92
     settings:
@@ -79,13 +87,13 @@ content:
     weight: 102
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_max_children:
     weight: 101
     settings: {  }
     third_party_settings: {  }
-    type: options_select
+    type: options_buttons
     region: content
   field_max_infants:
     weight: 103
@@ -175,6 +183,8 @@ content:
   translation:
     weight: 10
     region: content
+    settings: {  }
+    third_party_settings: {  }
   uid:
     type: entity_reference_autocomplete
     weight: 5

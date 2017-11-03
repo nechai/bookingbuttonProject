@@ -13,7 +13,7 @@ entity_type: commerce_product
 bundle: room
 label: 'Max adults'
 description: ''
-required: true
+required: false
 translatable: true
 default_value:
   -
