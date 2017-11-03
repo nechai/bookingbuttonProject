@@ -1,0 +1,21 @@
+uuid: ccde351e-dec3-426a-ac15-9365a64b7eec
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_location
+    - field.storage.block_content.field_site_name
+id: block_content.contact_location.field_site_name
+field_name: field_site_name
+entity_type: block_content
+bundle: contact_location
+label: 'Site name'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: '7Seasons Apartments Budapest'
+default_value_callback: ''
+settings: {  }
+field_type: string

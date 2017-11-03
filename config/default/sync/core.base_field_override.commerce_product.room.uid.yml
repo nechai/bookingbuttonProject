@@ -1,0 +1,20 @@
+uuid: fd929115-e506-4b1c-a8bb-0c803be05743
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+id: commerce_product.room.uid
+field_name: uid
+entity_type: commerce_product
+bundle: room
+label: Author
+description: 'The product author.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: 'Drupal\commerce_product\Entity\Product::getCurrentUserId'
+settings:
+  handler: default
+  handler_settings: {  }
+field_type: entity_reference

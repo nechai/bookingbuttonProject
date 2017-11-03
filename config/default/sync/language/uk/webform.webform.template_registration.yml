@@ -1,0 +1,6 @@
+title: Реєстрація
+handlers:
+  email_notification:
+    settings:
+      subject: замовчування
+      body: замовчування

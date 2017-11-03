@@ -1,0 +1,62 @@
+uuid: 42ea4371-fae4-44ad-a574-44b11a6c995d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_us
+    - field.field.block_content.about_us.field_about_us
+    - field.field.block_content.about_us.field_image_gallery
+    - field.field.block_content.about_us.field_main_menu_link
+    - image.style.thumbnail
+  module:
+    - image
+    - link
+    - text
+id: block_content.about_us.default
+targetEntityType: block_content
+bundle: about_us
+mode: default
+content:
+  field_about_us:
+    weight: 26
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_image_gallery:
+    weight: 28
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_main_menu_link:
+    weight: 27
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden: {  }

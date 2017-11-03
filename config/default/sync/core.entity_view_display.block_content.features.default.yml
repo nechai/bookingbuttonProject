@@ -1,0 +1,23 @@
+uuid: 588e96d8-fe35-487d-900b-4858d5234110
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.features
+    - field.field.block_content.features.field_features_list
+  module:
+    - options
+id: block_content.features.default
+targetEntityType: block_content
+bundle: features
+mode: default
+content:
+  field_features_list:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+hidden:
+  langcode: true

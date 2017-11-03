@@ -1,0 +1,23 @@
+uuid: ea8a64ff-e95a-4b3d-a437-d318c1d59487
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_outside_view
+  module:
+    - options
+id: commerce_product.room.field_outside_view
+field_name: field_outside_view
+entity_type: commerce_product
+bundle: room
+label: 'Outside view'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Various view'
+default_value_callback: ''
+settings: {  }
+field_type: list_string

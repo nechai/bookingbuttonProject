@@ -1,0 +1,24 @@
+uuid: e8d7883c-bc56-4e85-8c06-0d71b10482d2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_location
+    - field.storage.block_content.field_parking
+  module:
+    - text
+id: block_content.contact_location.field_parking
+field_name: field_parking
+entity_type: block_content
+bundle: contact_location
+label: Parking
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Security Parking (charges apply),</br> Street-Side Parking (Charges Apply)'
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

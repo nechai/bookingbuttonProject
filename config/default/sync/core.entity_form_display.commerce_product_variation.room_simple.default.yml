@@ -1,0 +1,46 @@
+uuid: b20de0f2-3b0d-4c45-af96-64ecfcfde4c6
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.room_simple
+  module:
+    - commerce_price
+id: commerce_product_variation.room_simple.default
+targetEntityType: commerce_product_variation
+bundle: room_simple
+mode: default
+content:
+  price:
+    type: commerce_price_default
+    weight: 2
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sku:
+    type: string_textfield
+    weight: 1
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    weight: 3
+    region: content
+    settings:
+      display_label: true
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+hidden:
+  created: true
+  langcode: true
+  uid: true

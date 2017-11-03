@@ -1,0 +1,21 @@
+uuid: 1968dbbc-4afc-4301-b4fe-a2666c537329
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_max_children
+  module:
+    - options
+id: commerce_product.room.field_max_children
+field_name: field_max_children
+entity_type: commerce_product
+bundle: room
+label: 'Max children'
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

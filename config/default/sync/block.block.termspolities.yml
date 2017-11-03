@@ -1,0 +1,25 @@
+uuid: 2b6361aa-3bfe-4f31-b5cf-8538026ea05e
+langcode: en
+status: false
+dependencies:
+  content:
+    - 'block_content:terms_and_policies:eaeb182c-b220-4961-9563-75d0d34ecab4'
+  module:
+    - block_content
+  theme:
+    - bookbtn
+id: termspolities
+theme: bookbtn
+region: footer_second
+weight: 0
+provider: null
+plugin: 'block_content:eaeb182c-b220-4961-9563-75d0d34ecab4'
+settings:
+  id: 'block_content:eaeb182c-b220-4961-9563-75d0d34ecab4'
+  label: 'Terms & Polities'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

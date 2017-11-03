@@ -1,0 +1,11 @@
+uuid: cbb397e0-cd26-41e8-998d-16943fd609dd
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_variation_type.room_simple
+id: commerce_product_variation.room_simple
+target_entity_type_id: commerce_product_variation
+target_bundle: room_simple
+default_langcode: site_default
+language_alterable: false

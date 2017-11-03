@@ -1,0 +1,66 @@
+uuid: 6a6b130c-b6e8-4601-960a-7dcfb2c5bceb
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - options
+id: block_content.field_features_list
+field_name: field_features_list
+entity_type: block_content
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '24-hour reception'
+      label: '24-hour reception'
+    -
+      value: Conditioner
+      label: Conditioner
+    -
+      value: Parking
+      label: Parking
+    -
+      value: 'Broadband Internet access'
+      label: 'Broadband Internet access'
+    -
+      value: 'Non-Smoking Property'
+      label: 'Non-Smoking Property'
+    -
+      value: 'Non-Smoking Rooms'
+      label: 'Non-Smoking Rooms'
+    -
+      value: Wifi
+      label: Wifi
+    -
+      value: Bar/Lounge
+      label: Bar/Lounge
+    -
+      value: Café
+      label: Café
+    -
+      value: 'DVD Library'
+      label: 'DVD Library'
+    -
+      value: Lift/Elevator
+      label: Lift/Elevator
+    -
+      value: 'Meeting Room'
+      label: 'Meeting Room'
+    -
+      value: 'Mini Market On-site'
+      label: 'Mini Market On-site'
+    -
+      value: 'On Site Restaurant'
+      label: 'On Site Restaurant'
+    -
+      value: 'Tour Desk'
+      label: 'Tour Desk'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,8 @@
+uuid: c8ac9d40-0ba1-4f47-a9b5-4b21f9e3afdf
+langcode: en
+status: true
+dependencies: {  }
+id: about_us
+label: 'About Us'
+revision: 0
+description: 'Footer block with fields: text, link and image gallery.'

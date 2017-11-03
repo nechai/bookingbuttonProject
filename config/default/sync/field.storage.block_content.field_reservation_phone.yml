@@ -1,0 +1,20 @@
+uuid: 5c4ddefe-9688-49e6-8387-6488aaeb9b32
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_reservation_phone
+field_name: field_reservation_phone
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

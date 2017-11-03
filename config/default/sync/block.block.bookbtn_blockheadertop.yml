@@ -1,0 +1,25 @@
+uuid: e6d626d2-c755-4137-b771-07d3df4836a0
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:site_name_languages:7a254e97-b530-4fb8-9d1b-e75446fba80d'
+  module:
+    - block_content
+  theme:
+    - bookbtn
+id: bookbtn_blockheadertop
+theme: bookbtn
+region: header_first
+weight: -12
+provider: null
+plugin: 'block_content:7a254e97-b530-4fb8-9d1b-e75446fba80d'
+settings:
+  id: 'block_content:7a254e97-b530-4fb8-9d1b-e75446fba80d'
+  label: Block-header-top
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

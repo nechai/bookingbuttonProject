@@ -1,0 +1,20 @@
+uuid: 2835ab96-00e3-4612-9f8d-9ae0eb0eb3cd
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_sofa_bed
+field_name: field_sofa_bed
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

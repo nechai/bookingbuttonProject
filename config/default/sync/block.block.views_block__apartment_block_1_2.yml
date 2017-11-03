@@ -1,0 +1,24 @@
+uuid: 45330045-14b4-4fb8-9d6d-03fb3ac0e9d5
+langcode: en
+status: false
+dependencies:
+  config:
+    - views.view.apartment
+  module:
+    - views
+  theme:
+    - bookbtn
+id: views_block__apartment_block_1_2
+theme: bookbtn
+region: header_second
+weight: 0
+provider: null
+plugin: 'views_block:apartment-block_1'
+settings:
+  id: 'views_block:apartment-block_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+  items_per_page: none
+visibility: {  }

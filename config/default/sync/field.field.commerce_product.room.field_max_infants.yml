@@ -1,0 +1,23 @@
+uuid: 7e7f684d-b66d-435e-8ab5-f3d977b23468
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_max_infants
+  module:
+    - options
+id: commerce_product.room.field_max_infants
+field_name: field_max_infants
+entity_type: commerce_product
+bundle: room
+label: 'Max infants'
+description: ''
+required: true
+translatable: true
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings: {  }
+field_type: list_integer

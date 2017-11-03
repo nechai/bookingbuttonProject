@@ -1,0 +1,27 @@
+uuid: 0f895689-a2e2-4fb3-9612-50b0c629550a
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_smoking
+field_name: field_smoking
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Non-smoking
+      label: Non-smoking
+    -
+      value: Smoking
+      label: Smoking
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

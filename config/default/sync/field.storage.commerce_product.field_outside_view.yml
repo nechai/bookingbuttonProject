@@ -1,0 +1,30 @@
+uuid: 6ba2f24c-8acd-4c27-a2f3-5ef6fa530f6e
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_outside_view
+field_name: field_outside_view
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: 'Various view'
+      label: 'Various view'
+    -
+      value: 'Garden view'
+      label: 'Garden view'
+    -
+      value: 'City view'
+      label: 'City view'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

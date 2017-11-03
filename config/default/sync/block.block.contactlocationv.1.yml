@@ -1,0 +1,25 @@
+uuid: e3d07c08-ea1a-44f3-a01b-483ecfd1f56c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:contact_location:e6e631b2-b323-4eef-8279-2b1ff2f5c404'
+  module:
+    - block_content
+  theme:
+    - bookbtn
+id: contactlocationv.1
+theme: bookbtn
+region: sidebar_second
+weight: -9
+provider: null
+plugin: 'block_content:e6e631b2-b323-4eef-8279-2b1ff2f5c404'
+settings:
+  id: 'block_content:e6e631b2-b323-4eef-8279-2b1ff2f5c404'
+  label: 'Contact & Location'
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

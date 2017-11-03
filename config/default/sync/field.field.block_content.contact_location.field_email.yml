@@ -1,0 +1,21 @@
+uuid: 3418cfb8-5da9-42db-9e0b-dbbaa727d6c2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_location
+    - field.storage.block_content.field_email
+id: block_content.contact_location.field_email
+field_name: field_email
+entity_type: block_content
+bundle: contact_location
+label: Email
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: info@7seasonsapartments.com
+default_value_callback: ''
+settings: {  }
+field_type: email

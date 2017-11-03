@@ -1,0 +1,24 @@
+uuid: 9bd4f28c-0d6c-4579-a73f-93dc8f25d3f1
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.languages
+  module:
+    - system
+  theme:
+    - bookbtn
+id: languages
+theme: bookbtn
+region: header_first
+weight: -10
+provider: null
+plugin: 'system_menu_block:languages'
+settings:
+  id: 'system_menu_block:languages'
+  label: Languages
+  provider: system
+  label_display: visible
+  level: 1
+  depth: 0
+visibility: {  }

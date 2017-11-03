@@ -1,0 +1,8 @@
+uuid: 703b700c-41e1-4af4-bbbb-371e881c936d
+langcode: en
+status: true
+dependencies: {  }
+id: terms_and_policies
+label: 'Terms and Policies'
+revision: 0
+description: 'The very last block in footer.'

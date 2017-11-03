@@ -1,0 +1,10 @@
+uuid: 7c3bfddc-36d1-414f-8e47-9e7c88d6b73a
+langcode: en
+status: true
+dependencies: {  }
+id: room
+label: Room
+description: ''
+variationType: default
+injectVariationFields: true
+traits: {  }

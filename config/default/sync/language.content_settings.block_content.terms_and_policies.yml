@@ -1,0 +1,16 @@
+uuid: 6de5fa49-76a2-43cd-818e-3519e5a3847f
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.terms_and_policies
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.terms_and_policies
+target_entity_type_id: block_content
+target_bundle: terms_and_policies
+default_langcode: site_default
+language_alterable: true

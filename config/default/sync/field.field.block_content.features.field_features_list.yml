@@ -1,0 +1,21 @@
+uuid: a1b1893e-702e-4e16-a0dc-af76739e6fd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.features
+    - field.storage.block_content.field_features_list
+  module:
+    - options
+id: block_content.features.field_features_list
+field_name: field_features_list
+entity_type: block_content
+bundle: features
+label: Features
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,53 @@
+uuid: 0174349e-b09c-486a-81e1-a396d3811da7
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_us
+    - field.field.block_content.about_us.field_about_us
+    - field.field.block_content.about_us.field_image_gallery
+    - field.field.block_content.about_us.field_main_menu_link
+  module:
+    - colorbox
+    - link
+    - text
+id: block_content.about_us.default
+targetEntityType: block_content
+bundle: about_us
+mode: default
+content:
+  field_about_us:
+    weight: 0
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image_gallery:
+    weight: 2
+    label: hidden
+    settings:
+      colorbox_node_style: ''
+      colorbox_node_style_first: ''
+      colorbox_image_style: ''
+      colorbox_gallery: post
+      colorbox_gallery_custom: ''
+      colorbox_caption: none
+      colorbox_caption_custom: ''
+    third_party_settings: {  }
+    type: colorbox
+    region: content
+  field_main_menu_link:
+    weight: 1
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: '0'
+      target: '0'
+    third_party_settings: {  }
+    type: link_separate
+    region: content
+hidden:
+  langcode: true

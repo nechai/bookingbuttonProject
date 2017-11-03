@@ -1,0 +1,23 @@
+uuid: 0da00670-f4c9-4f93-b1c8-1676a25c77ce
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_square
+id: commerce_product.room.field_square
+field_name: field_square
+entity_type: commerce_product
+bundle: room
+label: Square
+description: ''
+required: false
+translatable: true
+default_value: {  }
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: m<sup>2</sup>
+field_type: integer

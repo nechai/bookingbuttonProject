@@ -1,0 +1,16 @@
+uuid: 9277bd48-1694-42dc-8f6e-e621acb1a0b8
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.appartement_unit
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: node.appartement_unit
+target_entity_type_id: node
+target_bundle: appartement_unit
+default_langcode: site_default
+language_alterable: false

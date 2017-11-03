@@ -1,0 +1,22 @@
+uuid: aef4791a-bd60-4ee3-ad5d-ae7d81060aa1
+langcode: en
+status: false
+dependencies:
+  module:
+    - help
+  theme:
+    - bookbtn
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: bookbtn_help
+theme: bookbtn
+region: footer_first
+weight: -7
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

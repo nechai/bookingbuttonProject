@@ -1,0 +1,8 @@
+uuid: dec48d35-fb0c-4ade-b6a6-7cf73e69723f
+langcode: en
+status: true
+dependencies: {  }
+id: contact_location
+label: 'Contact & Location'
+revision: 0
+description: ''

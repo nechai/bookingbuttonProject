@@ -1,0 +1,9 @@
+uuid: 7e1051b4-e6e9-4672-8ea4-a07dbaf9f6c4
+langcode: en
+status: true
+dependencies: {  }
+currencyCode: UAH
+name: 'Ukrainian Hryvnia'
+numericCode: '980'
+symbol: UAH
+fractionDigits: 2

@@ -1,0 +1,25 @@
+uuid: 77b6b899-729c-41a8-be24-50a05ce45b66
+langcode: ru
+status: true
+dependencies:
+  content:
+    - 'block_content:features:458edba9-a2c4-4bf1-a278-2b664d2b00f4'
+  module:
+    - block_content
+  theme:
+    - bookbtn
+id: features
+theme: bookbtn
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:458edba9-a2c4-4bf1-a278-2b664d2b00f4'
+settings:
+  id: 'block_content:458edba9-a2c4-4bf1-a278-2b664d2b00f4'
+  label: Особенности
+  provider: block_content
+  label_display: visible
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

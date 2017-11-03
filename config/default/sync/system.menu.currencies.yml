@@ -1,0 +1,8 @@
+uuid: 4c165244-4035-438f-9f99-40b58775be38
+langcode: en
+status: true
+dependencies: {  }
+id: currencies
+label: Currencies
+description: 'Second menu for Header (CUSTOM)'
+locked: false

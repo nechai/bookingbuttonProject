@@ -1,0 +1,24 @@
+uuid: 1dc03921-2b60-4596-91ca-8cafb8c682a4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.terms_and_policies
+    - field.storage.block_content.field_cancellation_polities_text
+  module:
+    - text
+id: block_content.terms_and_policies.field_cancellation_polities_text
+field_name: field_cancellation_polities_text
+entity_type: block_content
+bundle: terms_and_policies
+label: 'Cancellation Polities (text)'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<h4>Property Cancellation Policy</h4>\r\n\r\n<p>Cancellation and prepayment policies vary according to rate type. Please check the rate information when selecting your apartment above.</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

@@ -1,0 +1,23 @@
+uuid: 9472b3db-a887-4d0a-ab57-b88e3940cf3f
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_non
+    - node.type.appartement_unit
+id: node.appartement_unit.field_non
+field_name: field_non
+entity_type: node
+bundle: appartement_unit
+label: Non-smoking
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

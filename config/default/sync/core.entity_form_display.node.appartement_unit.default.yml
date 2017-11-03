@@ -1,0 +1,156 @@
+uuid: a23e299d-ef5d-46d4-8bf5-02abb230bba0
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.node.appartement_unit.field_amenities
+    - field.field.node.appartement_unit.field_bathroom
+    - field.field.node.appartement_unit.field_description
+    - field.field.node.appartement_unit.field_garden_view
+    - field.field.node.appartement_unit.field_image
+    - field.field.node.appartement_unit.field_non
+    - field.field.node.appartement_unit.field_price
+    - field.field.node.appartement_unit.field_queen_bed
+    - field.field.node.appartement_unit.field_sofa_bed
+    - field.field.node.appartement_unit.field_square
+    - image.style.thumbnail
+    - node.type.appartement_unit
+  module:
+    - commerce_price
+    - image
+    - path
+    - text
+id: node.appartement_unit.default
+targetEntityType: node
+bundle: appartement_unit
+mode: default
+content:
+  created:
+    type: datetime_timestamp
+    weight: 3
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_amenities:
+    weight: 16
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
+    region: content
+  field_bathroom:
+    weight: 13
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_description:
+    weight: 9
+    settings:
+      rows: 9
+      summary_rows: 3
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea_with_summary
+    region: content
+  field_garden_view:
+    weight: 14
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_image:
+    weight: 8
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_non:
+    weight: 15
+    settings:
+      display_label: true
+    third_party_settings: {  }
+    type: boolean_checkbox
+    region: content
+  field_price:
+    weight: 17
+    settings: {  }
+    third_party_settings: {  }
+    type: commerce_price_default
+    region: content
+  field_queen_bed:
+    weight: 11
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_sofa_bed:
+    weight: 12
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  field_square:
+    weight: 10
+    settings:
+      placeholder: ''
+    third_party_settings: {  }
+    type: number
+    region: content
+  langcode:
+    type: language_select
+    weight: 1
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  path:
+    type: path
+    weight: 6
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  promote:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 4
+    region: content
+    third_party_settings: {  }
+  status:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 7
+    region: content
+    third_party_settings: {  }
+  sticky:
+    type: boolean_checkbox
+    settings:
+      display_label: true
+    weight: 5
+    region: content
+    third_party_settings: {  }
+  title:
+    type: string_textfield
+    weight: 0
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  uid:
+    type: entity_reference_autocomplete
+    weight: 2
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    region: content
+    third_party_settings: {  }
+hidden: {  }

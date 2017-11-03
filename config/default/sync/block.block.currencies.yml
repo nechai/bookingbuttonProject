@@ -1,0 +1,24 @@
+uuid: 3e52f303-e86e-4811-8f9a-adf981a679f3
+langcode: en
+status: false
+dependencies:
+  config:
+    - system.menu.currencies
+  module:
+    - system
+  theme:
+    - bookbtn
+id: currencies
+theme: bookbtn
+region: header_first
+weight: -9
+provider: null
+plugin: 'system_menu_block:currencies'
+settings:
+  id: 'system_menu_block:currencies'
+  label: Currencies
+  provider: system
+  label_display: '0'
+  level: 1
+  depth: 0
+visibility: {  }

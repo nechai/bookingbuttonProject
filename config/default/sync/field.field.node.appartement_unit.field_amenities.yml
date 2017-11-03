@@ -1,0 +1,21 @@
+uuid: de2f2c07-b5ba-4a4a-884e-cee6859b5e1c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_amenities
+    - node.type.appartement_unit
+  module:
+    - options
+id: node.appartement_unit.field_amenities
+field_name: field_amenities
+entity_type: node
+bundle: appartement_unit
+label: Amenities
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

@@ -1,0 +1,20 @@
+uuid: cd24d12e-e674-443f-b865-f8d519d741f1
+langcode: en
+status: true
+dependencies:
+  module:
+    - language
+  theme:
+    - bookbtn
+id: languageswitcher
+theme: bookbtn
+region: header_first
+weight: -11
+provider: null
+plugin: 'language_block:language_interface'
+settings:
+  id: 'language_block:language_interface'
+  label: 'Language switcher'
+  provider: language
+  label_display: '0'
+visibility: {  }

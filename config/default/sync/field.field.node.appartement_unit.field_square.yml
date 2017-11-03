@@ -1,0 +1,25 @@
+uuid: 5a4b99f0-b4e7-44e1-a4c8-0b3335108f79
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_square
+    - node.type.appartement_unit
+id: node.appartement_unit.field_square
+field_name: field_square
+entity_type: node
+bundle: appartement_unit
+label: Square
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: m<sup>2</sup>
+field_type: integer

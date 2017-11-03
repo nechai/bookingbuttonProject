@@ -1,0 +1,96 @@
+uuid: 4ec608a0-35db-42ee-9751-5988d561885c
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+    - options
+id: node.field_amenities
+field_name: field_amenities
+entity_type: node
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: Air-conditioned
+      label: Air-conditioned
+    -
+      value: Housekeeping
+      label: Housekeeping
+    -
+      value: Shower
+      label: Shower
+    -
+      value: 'Fridge - Bar Fridge'
+      label: 'Fridge - Bar Fridge'
+    -
+      value: 'Room Safe'
+      label: 'Room Safe'
+    -
+      value: 'En-suite Bathroom'
+      label: 'En-suite Bathroom'
+    -
+      value: 'Flat Screen TV'
+      label: 'Flat Screen TV'
+    -
+      value: Kitchenette
+      label: Kitchenette
+    -
+      value: Dishwater
+      label: Dishwater
+    -
+      value: 'Cable/Satellite TV'
+      label: 'Cable/Satellite TV'
+    -
+      value: 'Interconnecting rooms'
+      label: 'Interconnecting rooms'
+    -
+      value: 'Wireless Interner'
+      label: 'Wireless Interner'
+    -
+      value: 'Free Toiletries'
+      label: 'Free Toiletries'
+    -
+      value: 'Linen and Towels Provided'
+      label: 'Linen and Towels Provided'
+    -
+      value: Toaster
+      label: Toaster
+    -
+      value: 'Cots Available'
+      label: 'Cots Available'
+    -
+      value: Hairdryer
+      label: Hairdryer
+    -
+      value: Heating
+      label: Heating
+    -
+      value: 'High Chair Available'
+      label: 'High Chair Available'
+    -
+      value: Hob
+      label: Hob
+    -
+      value: 'Handicap Accessible'
+      label: 'Handicap Accessible'
+    -
+      value: Bath
+      label: Bath
+    -
+      value: Balcony
+      label: Balcony
+    -
+      value: 'DVD Player'
+      label: 'DVD Player'
+    -
+      value: 'Alarm Clock'
+      label: 'Alarm Clock'
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,39 @@
+uuid: 15dee183-9247-4879-a94f-6a2c26d0c351
+langcode: en
+status: true
+dependencies:
+  config:
+    - core.entity_view_mode.node.teaser
+    - field.field.node.appartement_unit.field_amenities
+    - field.field.node.appartement_unit.field_bathroom
+    - field.field.node.appartement_unit.field_description
+    - field.field.node.appartement_unit.field_garden_view
+    - field.field.node.appartement_unit.field_image
+    - field.field.node.appartement_unit.field_non
+    - field.field.node.appartement_unit.field_price
+    - field.field.node.appartement_unit.field_queen_bed
+    - field.field.node.appartement_unit.field_sofa_bed
+    - field.field.node.appartement_unit.field_square
+    - node.type.appartement_unit
+  module:
+    - user
+id: node.appartement_unit.teaser
+targetEntityType: node
+bundle: appartement_unit
+mode: teaser
+content:
+  links:
+    weight: 100
+    region: content
+hidden:
+  field_amenities: true
+  field_bathroom: true
+  field_description: true
+  field_garden_view: true
+  field_image: true
+  field_non: true
+  field_price: true
+  field_queen_bed: true
+  field_sofa_bed: true
+  field_square: true
+  langcode: true

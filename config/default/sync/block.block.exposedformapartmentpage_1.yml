@@ -1,0 +1,23 @@
+uuid: 9d5b1d5c-3063-40f7-9527-b1053d33eed4
+langcode: en
+status: true
+dependencies:
+  config:
+    - views.view.apartment
+  module:
+    - views
+  theme:
+    - bookbtn
+id: exposedformapartmentpage_1
+theme: bookbtn
+region: header_second
+weight: 0
+provider: null
+plugin: 'views_exposed_filter_block:apartment-page_1'
+settings:
+  id: 'views_exposed_filter_block:apartment-page_1'
+  label: ''
+  provider: views
+  label_display: visible
+  views_label: ''
+visibility: {  }

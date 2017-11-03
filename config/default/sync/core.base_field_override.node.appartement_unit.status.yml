@@ -1,0 +1,22 @@
+uuid: d47ab9c9-5f52-48af-a25e-85e1624f6488
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.appartement_unit
+id: node.appartement_unit.status
+field_name: status
+entity_type: node
+bundle: appartement_unit
+label: Published
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 1
+default_value_callback: ''
+settings:
+  on_label: 'On'
+  off_label: 'Off'
+field_type: boolean

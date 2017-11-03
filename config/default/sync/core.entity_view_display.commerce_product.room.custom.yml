@@ -1,0 +1,196 @@
+uuid: 545c47ba-c611-409c-880e-3856cbe7cb5a
+langcode: en
+status: false
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - core.entity_view_mode.commerce_product.custom
+    - field.field.commerce_product.room.field_amenities
+    - field.field.commerce_product.room.field_bathroom
+    - field.field.commerce_product.room.field_booking_dates
+    - field.field.commerce_product.room.field_description
+    - field.field.commerce_product.room.field_image
+    - field.field.commerce_product.room.field_max_adults
+    - field.field.commerce_product.room.field_max_children
+    - field.field.commerce_product.room.field_max_infants
+    - field.field.commerce_product.room.field_more_information
+    - field.field.commerce_product.room.field_outside_view
+    - field.field.commerce_product.room.field_queen_bed
+    - field.field.commerce_product.room.field_smoking
+    - field.field.commerce_product.room.field_sofa_bed
+    - field.field.commerce_product.room.field_square
+    - field.field.commerce_product.room.stores
+    - field.field.commerce_product.room.variations
+  module:
+    - commerce_product
+    - datetime_range
+    - image
+    - link
+    - options
+    - text
+    - user
+id: commerce_product.room.custom
+targetEntityType: commerce_product
+bundle: room
+mode: custom
+content:
+  created:
+    type: timestamp_ago
+    weight: 1
+    region: content
+    label: above
+    settings:
+      future_format: '@interval hence'
+      past_format: '@interval ago'
+      granularity: 2
+    third_party_settings: {  }
+  field_amenities:
+    weight: 13
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_bathroom:
+    weight: 10
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_booking_dates:
+    weight: 19
+    label: above
+    settings:
+      timezone_override: ''
+      date_format: m-d-Y
+      separator: '-'
+    third_party_settings: {  }
+    type: daterange_custom
+    region: content
+  field_description:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_image:
+    weight: 3
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: content
+  field_max_adults:
+    weight: 17
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_max_children:
+    weight: 15
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_max_infants:
+    weight: 18
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_more_information:
+    weight: 6
+    label: hidden
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_outside_view:
+    weight: 11
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_queen_bed:
+    weight: 8
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_smoking:
+    weight: 12
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: content
+  field_sofa_bed:
+    weight: 9
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_square:
+    weight: 7
+    label: hidden
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  langcode:
+    type: language
+    weight: 0
+    region: content
+    label: above
+    settings:
+      link_to_entity: false
+      native_language: false
+    third_party_settings: {  }
+  stores:
+    type: entity_reference_entity_view
+    weight: 2
+    region: content
+    label: above
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+  uid:
+    type: author
+    weight: 4
+    region: content
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  variations:
+    type: commerce_add_to_cart
+    weight: 14
+    label: hidden
+    settings:
+      combine: true
+    third_party_settings: {  }
+    region: content
+hidden: {  }

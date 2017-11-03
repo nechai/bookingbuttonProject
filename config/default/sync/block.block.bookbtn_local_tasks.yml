@@ -1,0 +1,22 @@
+uuid: 78f1f467-565c-4194-8481-40a3b8c383c6
+langcode: en
+status: false
+dependencies:
+  theme:
+    - bookbtn
+_core:
+  default_config_hash: X9I1OB0W3WlWtrK-CNcg6hNWwa8wficanpH8pYnDZDE
+id: bookbtn_local_tasks
+theme: bookbtn
+region: content
+weight: -8
+provider: null
+plugin: local_tasks_block
+settings:
+  id: local_tasks_block
+  label: Tabs
+  provider: core
+  label_display: '0'
+  primary: true
+  secondary: true
+visibility: {  }

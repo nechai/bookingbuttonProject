@@ -1,0 +1,25 @@
+uuid: 9c534a2b-ec18-47b2-99ce-bfa844e25bcd
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_bathroom
+    - node.type.appartement_unit
+id: node.appartement_unit.field_bathroom
+field_name: field_bathroom
+entity_type: node
+bundle: appartement_unit
+label: Bathroom
+description: ''
+required: true
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

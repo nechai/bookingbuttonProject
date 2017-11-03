@@ -1,0 +1,20 @@
+uuid: e03b4c9c-37de-4cca-b047-3ab1bc4512a6
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.field_bathroom
+field_name: field_bathroom
+entity_type: commerce_product
+type: integer
+settings:
+  unsigned: false
+  size: normal
+module: core
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

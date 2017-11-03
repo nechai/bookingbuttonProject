@@ -1,0 +1,16 @@
+uuid: 86f448fe-c30e-4d49-bcef-5a379f4391dc
+langcode: en
+status: true
+dependencies:
+  enforced:
+    module:
+      - commerce_cart
+      - commerce_product
+  module:
+    - commerce_product
+_core:
+  default_config_hash: SjZo-csuMc7wQHh55OpVRuTrQTp8zy3k6cR9RykDWIg
+id: commerce_product_variation.cart
+label: Cart
+targetEntityType: commerce_product_variation
+cache: true

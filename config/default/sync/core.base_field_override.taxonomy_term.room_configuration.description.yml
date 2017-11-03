@@ -1,0 +1,20 @@
+uuid: 5c79f8db-496e-4d2a-b5a9-efd98c16acd0
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.room_configuration
+  module:
+    - text
+id: taxonomy_term.room_configuration.description
+field_name: description
+entity_type: taxonomy_term
+bundle: room_configuration
+label: Description
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

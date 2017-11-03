@@ -1,0 +1,25 @@
+uuid: 87830f4c-fa76-41ca-b0bc-792263d10123
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_queen_bed
+    - node.type.appartement_unit
+id: node.appartement_unit.field_queen_bed
+field_name: field_queen_bed
+entity_type: node
+bundle: appartement_unit
+label: 'Queen bed'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

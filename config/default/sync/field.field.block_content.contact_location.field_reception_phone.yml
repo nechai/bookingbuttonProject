@@ -1,0 +1,24 @@
+uuid: 3703eaed-8beb-47b2-9ca4-a1586ea01113
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_location
+    - field.storage.block_content.field_reception_phone
+  module:
+    - text
+id: block_content.contact_location.field_reception_phone
+field_name: field_reception_phone
+entity_type: block_content
+bundle: contact_location
+label: 'Reception phone'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Reception +36202747777'
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

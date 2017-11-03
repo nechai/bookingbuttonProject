@@ -1,0 +1,20 @@
+uuid: 1bce1468-c85b-4539-a59f-34c767ae15b4
+langcode: en
+status: true
+dependencies:
+  config:
+    - taxonomy.vocabulary.room_configuration
+  module:
+    - path
+id: taxonomy_term.room_configuration.path
+field_name: path
+entity_type: taxonomy_term
+bundle: room_configuration
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path

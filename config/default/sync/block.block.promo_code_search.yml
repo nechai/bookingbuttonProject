@@ -1,0 +1,22 @@
+uuid: 0a2523f4-c32d-4d6b-999e-af792ed50367
+langcode: en
+status: false
+dependencies:
+  module:
+    - webform
+  theme:
+    - bookbtn
+id: promo_code_search
+theme: bookbtn
+region: header_second
+weight: 0
+provider: null
+plugin: webform_block
+settings:
+  id: webform_block
+  label: 'Promo code search'
+  provider: webform
+  label_display: '0'
+  webform_id: promo_code_search
+  default_data: ''
+visibility: {  }

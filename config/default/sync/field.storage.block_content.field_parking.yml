@@ -1,0 +1,20 @@
+uuid: 6b06d01e-c2f5-4cf9-bc48-07328f2d4e2a
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_parking
+field_name: field_parking
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

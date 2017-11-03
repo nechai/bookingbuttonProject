@@ -1,0 +1,9 @@
+uuid: dcb56071-d1e7-4f3d-8a28-6fdfce43be87
+langcode: en
+status: true
+dependencies: {  }
+name: 'Room configuration'
+vid: room_configuration
+description: 'Room config such as type of rooms and their quantity, views etc.'
+hierarchy: 0
+weight: 0

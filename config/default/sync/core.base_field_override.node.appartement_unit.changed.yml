@@ -1,0 +1,18 @@
+uuid: 2b01efcf-f0d4-40a8-8a61-6e68a465a648
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.appartement_unit
+id: node.appartement_unit.changed
+field_name: changed
+entity_type: node
+bundle: appartement_unit
+label: Changed
+description: 'The time that the node was last edited.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: changed

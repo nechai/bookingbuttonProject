@@ -1,0 +1,28 @@
+uuid: 275f6e20-a987-4f29-b06a-4ef75bbb4137
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.terms_and_policies
+    - field.storage.block_content.field_terms_and_conditions
+  module:
+    - link
+id: block_content.terms_and_policies.field_terms_and_conditions
+field_name: field_terms_and_conditions
+entity_type: block_content
+bundle: terms_and_policies
+label: 'Terms and Conditions'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    attributes: {  }
+    uri: 'internal:#'
+    title: 'Terms and Conditions'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 1
+  title: 1
+field_type: link

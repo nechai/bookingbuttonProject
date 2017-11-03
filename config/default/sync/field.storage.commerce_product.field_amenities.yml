@@ -1,0 +1,69 @@
+uuid: 98095b0a-64ff-48bd-a1b0-c5105543f305
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+    - options
+id: commerce_product.field_amenities
+field_name: field_amenities
+entity_type: commerce_product
+type: list_string
+settings:
+  allowed_values:
+    -
+      value: '24-hour reception'
+      label: '24-hour reception'
+    -
+      value: Conditioner
+      label: Conditioner
+    -
+      value: Parking
+      label: Parking
+    -
+      value: 'Broadband Internet access'
+      label: 'Broadband Internet access'
+    -
+      value: Non-smoking
+      label: Non-smoking
+    -
+      value: Wifi
+      label: Wifi
+    -
+      value: Housekeeping
+      label: Housekeeping
+    -
+      value: Balcony
+      label: Balcony
+    -
+      value: TV
+      label: TV
+    -
+      value: Kitchen
+      label: Kitchen
+    -
+      value: Fridge
+      label: Fridge
+    -
+      value: Shower
+      label: Shower
+    -
+      value: Hairdryer
+      label: Hairdryer
+    -
+      value: Washer
+      label: Washer
+    -
+      value: 'Free Toiletries'
+      label: 'Free Toiletries'
+    -
+      value: Toilet
+      label: Toilet
+  allowed_values_function: ''
+module: options
+locked: false
+cardinality: -1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

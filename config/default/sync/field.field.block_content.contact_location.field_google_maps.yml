@@ -1,0 +1,28 @@
+uuid: c1112dda-01df-47dd-b053-24a8f5837363
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_location
+    - field.storage.block_content.field_google_maps
+  module:
+    - link
+id: block_content.contact_location.field_google_maps
+field_name: field_google_maps
+entity_type: block_content
+bundle: contact_location
+label: 'Google maps'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    attributes: {  }
+    uri: 'https://www.google.com/maps/d/u/0/viewer?ll=47.500271000000026%2C19.056988000000047&spn=0.04059%2C0.073814&%20%20ie=UTF8&hl=en&msa=0&z=13&source=embed&mid=1xoDTn-AcKf_-_ZJ6xJRrTSZSpjc'
+    title: 'View in Google maps'
+    options: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 1
+field_type: link

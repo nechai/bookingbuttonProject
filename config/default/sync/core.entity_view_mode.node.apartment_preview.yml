@@ -1,0 +1,10 @@
+uuid: 281c5390-3767-4c86-862e-36255cc9a2bd
+langcode: en
+status: true
+dependencies:
+  module:
+    - node
+id: node.apartment_preview
+label: 'Apartment preview'
+targetEntityType: node
+cache: true

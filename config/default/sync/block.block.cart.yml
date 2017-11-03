@@ -1,0 +1,21 @@
+uuid: b9865de1-23cb-42f7-9e65-49df7d55aaee
+langcode: en
+status: false
+dependencies:
+  module:
+    - commerce_cart
+  theme:
+    - bookbtn
+id: cart
+theme: bookbtn
+region: header_first
+weight: -4
+provider: null
+plugin: commerce_cart
+settings:
+  id: commerce_cart
+  label: Cart
+  provider: commerce_cart
+  label_display: visible
+  dropdown: true
+visibility: {  }

@@ -1,0 +1,25 @@
+display:
+  default:
+    display_options:
+      filters:
+        field_booking_dates_value:
+          expose:
+            label: 'Дата въезда'
+          group_info:
+            description: ''
+        field_booking_dates_end_value:
+          expose:
+            label: 'Дата выезда'
+        field_max_adults_value:
+          expose:
+            label: Взрослые
+          group_info:
+            description: ''
+        field_max_children_value:
+          expose:
+            label: Дети
+      empty:
+        area:
+          content:
+            value: "<blockquote>\r\n<p>К сожалению, эти номера недоступны для бронирования.</p>\r\n\r\n<p>Выберите более позднюю дату или другое количество жильцов, чтобы забронировать свободный номер.</p>\r\n</blockquote>\r\n"
+            format: full_html

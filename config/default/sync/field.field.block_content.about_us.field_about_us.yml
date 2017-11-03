@@ -1,0 +1,24 @@
+uuid: 6d9be298-17a0-4a50-b78c-306699401caa
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.about_us
+    - field.storage.block_content.field_about_us
+  module:
+    - text
+id: block_content.about_us.field_about_us
+field_name: field_about_us
+entity_type: block_content
+bundle: about_us
+label: 'About us'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: "<p>Opened in 2008, 7Seasons Apartments offer you exclusive and stylish apartments at great rates right in the heart of Budapest, only a few minutes' walk from the main sights.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>The spacious studio, one, two and three-bedroom apartments featuring sleek contemporary design and furnishings, equipped with a range of modern conveniences and facilities to ensure a comfortable stay. Wireless internet access is available in all apartments free of charge.</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>&nbsp;</p>\r\n\r\n<p>7Seasons Apartments are easily accessible as all means of public transport (Metro 2, Metro 3, Millennium Underground, and several trams and buses) are only a 2-minute walk away. Andrassy Boulevard, Deak Square and Liszt Ferenc Square, St. Stephen's Basilica, the Synagogue, the State Opera House and the Hungarian Parliament are easily reachable on foot.</p>\r\n\r\n<p>&nbsp;</p>\r\n"
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text_long

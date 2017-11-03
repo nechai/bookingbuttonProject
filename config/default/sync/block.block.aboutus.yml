@@ -1,0 +1,25 @@
+uuid: 28a0949d-90dd-4d36-826c-1eb371b6851b
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:about_us:b22e352f-01bb-4f1a-ad26-8f97635667d4'
+  module:
+    - block_content
+  theme:
+    - bookbtn
+id: aboutus
+theme: bookbtn
+region: footer_first
+weight: 0
+provider: null
+plugin: 'block_content:b22e352f-01bb-4f1a-ad26-8f97635667d4'
+settings:
+  id: 'block_content:b22e352f-01bb-4f1a-ad26-8f97635667d4'
+  label: 'About us'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

@@ -1,0 +1,26 @@
+uuid: 6b0a4c6b-af4a-41b1-8b47-9aea4244333b
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_price
+    - node.type.appartement_unit
+  module:
+    - commerce_price
+id: node.appartement_unit.field_price
+field_name: field_price
+entity_type: node
+bundle: appartement_unit
+label: Price
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    number: '0.00'
+    currency_code: UAH
+default_value_callback: ''
+settings:
+  available_currencies:
+    UAH: UAH
+field_type: commerce_price

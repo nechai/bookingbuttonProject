@@ -1,0 +1,24 @@
+uuid: b0777718-bd1d-4271-976d-2ad223760ae9
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_location
+    - field.storage.block_content.field_address
+  module:
+    - text
+id: block_content.contact_location.field_address
+field_name: field_address
+entity_type: block_content
+bundle: contact_location
+label: Address
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    value: 'Kiraly utca 8., Budapest, 1061, Hungary'
+    format: basic_html
+default_value_callback: ''
+settings: {  }
+field_type: text

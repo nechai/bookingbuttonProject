@@ -1,0 +1,21 @@
+uuid: 9692d782-bf0c-4aee-b292-971f69c18c66
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.stores
+id: commerce_product.room.stores
+field_name: stores
+entity_type: commerce_product
+bundle: room
+label: Stores
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: null
+settings:
+  handler: 'default:commerce_store'
+  handler_settings: {  }
+field_type: entity_reference

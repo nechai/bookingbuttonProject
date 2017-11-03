@@ -1,0 +1,23 @@
+display:
+  default:
+    display_options:
+      filters:
+        field_booking_dates_value:
+          expose:
+            label: 'Дата в''їзду'
+        field_booking_dates_end_value:
+          expose:
+            label: 'Дата виїзду'
+        field_max_adults_value:
+          expose:
+            label: Дорослі
+        field_max_children_value:
+          expose:
+            label: Діти
+          group_info:
+            label: 'Кількість малюків'
+      empty:
+        area:
+          content:
+            value: "<blockquote>\r\n<p>Нажаль, за такими параметрами кімнати для бронювання недоступні.</p>\r\n\r\n<p>Виберіть пізнішу дату або іншу кількість жильців для отримання можливості забронювати вільну кімнату.</p>\r\n</blockquote>\r\n"
+            format: full_html

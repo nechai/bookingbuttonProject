@@ -1,0 +1,26 @@
+uuid: 791739bd-8803-420f-9dc4-e6c6f4c81b46
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_booking_dates
+  module:
+    - datetime_range
+id: commerce_product.room.field_booking_dates
+field_name: field_booking_dates
+entity_type: commerce_product
+bundle: room
+label: 'Booking dates'
+description: ''
+required: false
+translatable: true
+default_value:
+  -
+    default_date_type: now
+    default_date: now
+    default_end_date_type: ''
+    default_end_date: ''
+default_value_callback: ''
+settings: {  }
+field_type: daterange

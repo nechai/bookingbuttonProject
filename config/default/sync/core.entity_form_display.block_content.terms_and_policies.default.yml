@@ -1,0 +1,69 @@
+uuid: e311b7a1-da08-4ec1-9d99-0221980fb4a2
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.terms_and_policies
+    - field.field.block_content.terms_and_policies.field_cancellation_policies
+    - field.field.block_content.terms_and_policies.field_cancellation_polities_text
+    - field.field.block_content.terms_and_policies.field_terms_and_conditions
+    - field.field.block_content.terms_and_policies.field_terms_and_conditions_text_
+  module:
+    - link
+    - text
+id: block_content.terms_and_policies.default
+targetEntityType: block_content
+bundle: terms_and_policies
+mode: default
+content:
+  field_cancellation_policies:
+    weight: 27
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_cancellation_polities_text:
+    weight: 29
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  field_terms_and_conditions:
+    weight: 26
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+  field_terms_and_conditions_text_:
+    weight: 28
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+  translation:
+    weight: 10
+    region: content
+hidden: {  }

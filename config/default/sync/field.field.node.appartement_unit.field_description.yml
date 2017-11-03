@@ -1,0 +1,22 @@
+uuid: 9ed8d429-22be-4526-9786-77d082dae7ea
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_description
+    - node.type.appartement_unit
+  module:
+    - text
+id: node.appartement_unit.field_description
+field_name: field_description
+entity_type: node
+bundle: appartement_unit
+label: Description
+description: 'Description of an apartment.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  display_summary: false
+field_type: text_with_summary

@@ -1,0 +1,19 @@
+uuid: a7b69916-534d-4ad8-b7f7-797248c1496e
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - link
+id: block_content.field_google_maps
+field_name: field_google_maps
+entity_type: block_content
+type: link
+settings: {  }
+module: link
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

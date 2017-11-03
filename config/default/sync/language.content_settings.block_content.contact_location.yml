@@ -1,0 +1,16 @@
+uuid: aca4ef28-ba0c-4088-a687-a9e81d900e4a
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.contact_location
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
+id: block_content.contact_location
+target_entity_type_id: block_content
+target_bundle: contact_location
+default_langcode: site_default
+language_alterable: true

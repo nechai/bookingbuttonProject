@@ -1,0 +1,92 @@
+uuid: c63c25cb-b208-45a6-a699-7cf091f3629c
+langcode: en
+status: false
+dependencies:
+  config:
+    - block_content.type.contact_location
+    - core.entity_view_mode.block_content.full
+    - field.field.block_content.contact_location.field_address
+    - field.field.block_content.contact_location.field_email
+    - field.field.block_content.contact_location.field_google_maps
+    - field.field.block_content.contact_location.field_parking
+    - field.field.block_content.contact_location.field_reception_phone
+    - field.field.block_content.contact_location.field_reservation_phone
+    - field.field.block_content.contact_location.field_site_name
+    - field.field.block_content.contact_location.field_visit_website
+  module:
+    - link
+    - text
+id: block_content.contact_location.full
+targetEntityType: block_content
+bundle: contact_location
+mode: full
+content:
+  field_address:
+    weight: 1
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_email:
+    weight: 5
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: basic_string
+    region: content
+  field_google_maps:
+    weight: 7
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  field_parking:
+    weight: 2
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_reception_phone:
+    weight: 3
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_reservation_phone:
+    weight: 4
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: content
+  field_site_name:
+    weight: 0
+    label: above
+    settings:
+      link_to_entity: false
+    third_party_settings: {  }
+    type: string
+    region: content
+  field_visit_website:
+    weight: 6
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+hidden:
+  langcode: true

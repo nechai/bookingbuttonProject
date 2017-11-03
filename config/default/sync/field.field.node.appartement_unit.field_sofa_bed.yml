@@ -1,0 +1,25 @@
+uuid: 77431599-6530-49a1-a402-6aa161276a65
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.node.field_sofa_bed
+    - node.type.appartement_unit
+id: node.appartement_unit.field_sofa_bed
+field_name: field_sofa_bed
+entity_type: node
+bundle: appartement_unit
+label: 'Sofa bed'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

@@ -1,0 +1,20 @@
+uuid: b149e295-def3-46b2-8dff-22a1d5aa02ac
+langcode: en
+status: true
+dependencies:
+  module:
+    - block_content
+    - text
+id: block_content.field_reception_phone
+field_name: field_reception_phone
+entity_type: block_content
+type: text
+settings:
+  max_length: 255
+module: text
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

@@ -1,0 +1,9 @@
+uuid: b737cbb1-0aef-4969-9402-5066fad39e2c
+langcode: en
+status: true
+dependencies: {  }
+id: room_simple
+label: 'Room simple'
+orderItemType: default
+generateTitle: false
+traits: {  }

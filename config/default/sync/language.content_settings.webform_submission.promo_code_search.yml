@@ -1,0 +1,11 @@
+uuid: baafdb91-d4cc-4d48-8ba9-b763c2d82000
+langcode: en
+status: true
+dependencies:
+  config:
+    - webform.webform.promo_code_search
+id: webform_submission.promo_code_search
+target_entity_type_id: webform_submission
+target_bundle: promo_code_search
+default_langcode: site_default
+language_alterable: false

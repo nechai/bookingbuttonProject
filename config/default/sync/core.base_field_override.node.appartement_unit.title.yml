@@ -1,0 +1,18 @@
+uuid: 9712852a-bf13-4ab4-8925-b7234cc3eaed
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.appartement_unit
+id: node.appartement_unit.title
+field_name: title
+entity_type: node
+bundle: appartement_unit
+label: Title
+description: ''
+required: true
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: string

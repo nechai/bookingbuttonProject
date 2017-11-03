@@ -1,0 +1,8 @@
+uuid: 57b7a3a7-5868-478a-bf2d-3bca8f34f2de
+langcode: en
+status: true
+dependencies: {  }
+id: features
+label: Features
+revision: 0
+description: 'Footer block with two field-list.'

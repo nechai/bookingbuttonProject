@@ -1,0 +1,20 @@
+uuid: ae5e0373-2b10-42c6-a581-63e1a09aa10d
+langcode: en
+status: true
+dependencies:
+  config:
+    - node.type.appartement_unit
+  module:
+    - path
+id: node.appartement_unit.path
+field_name: path
+entity_type: node
+bundle: appartement_unit
+label: 'URL alias'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: path
