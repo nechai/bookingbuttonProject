@@ -14,7 +14,7 @@ function hand_change_commerce_form_alter(&$form, \Drupal\Core\Form\FormStateInte
         $form['actions']['submit']['#submit'][] = 'hand_change_commerce_custom_submit';
         $form['actions']['submit']['#value'] = t('Booking');
     }
-   
+
 
 }
 
