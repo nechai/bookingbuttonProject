@@ -12,7 +12,10 @@ function hand_change_commerce_form_alter(&$form, \Drupal\Core\Form\FormStateInte
     //contact page form
     if (strpos($form_id, 'commerce_order_item_add_to_cart_form_commerce_product_') === 0) {
         $form['actions']['submit']['#submit'][] = 'hand_change_commerce_custom_submit';
+        $form['actions']['submit']['#value'] = t('Booking');
     }
+   
+
 }
 
 /**
