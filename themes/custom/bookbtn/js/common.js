@@ -33,11 +33,11 @@
                 })
             });
 
-            $('#edit-field-booking-dates-end-value', context).once().each(function () {
+            $('#edit-field-check-out-date-value', context).once().each(function () {
                 $(this).attr('readonly', 'readonly');
             });
 
-            $('#edit-field-booking-dates-value', context).once().each(function () {
+            $('#edit-field-check-in-date-value', context).once().each(function () {
                 $(this).attr('readonly', 'readonly');
             });
         }
@@ -227,7 +227,7 @@
                 var currDate = new Date();
                 var dateFormat = "yy-mm-dd";
 
-                from = $( "#edit-field-booking-dates-value" )
+                from = $( "#edit-field-check-in-date-value" )
                     .datepicker({
                         dateFormat: dateFormat,
                         minDate: currDate,
@@ -241,7 +241,7 @@
                         // .on ("click", function () {
                         // from.datepicker("setDate", "+1d");
                         // }),
-                    to = $( "#edit-field-booking-dates-end-value" ).datepicker({
+                    to = $( "#edit-field-check-out-date-value" ).datepicker({
                         minDate: "+1d",
                         dateFormat: dateFormat,
                         defaultDate: "+1d",
@@ -267,12 +267,12 @@
                 }
 
                 // Set default values for input fields
-                if( $('#edit-field-booking-dates-value').val() === '' ){
-                    $('#edit-field-booking-dates-value').datepicker("setDate", new Date());
+                if( $('#edit-field-check-in-date-value').val() === '' ){
+                    $('#edit-field-check-in-date-value').datepicker("setDate", new Date());
                 }
 
-                if( $('#edit-field-booking-dates-end-value').val() === '' ){
-                    $('#edit-field-booking-dates-end-value').datepicker("setDate", '+1d');
+                if( $('#edit-field-check-out-date-value').val() === '' ){
+                    $('#edit-field-check-out-date-value').datepicker("setDate", '+1d');
                 }
 
             });
@@ -285,7 +285,7 @@
     //
     //         // Using once() with more complexity.
     //         $(function () {
-    //             $('#edit-field-booking-dates-value').datepicker({
+    //             $('#edit-field-check-in-date-value').datepicker({
     //                 dateFormat: "yyyy-mm-dd",
     //                 minDate: new Date(),
     //                 numberOfMonths: 2,
@@ -295,7 +295,7 @@
     //                 //     $("#views-exposed-form-apartment-page-1").submit();
     //                 // }
     //             });
-    //             $('#edit-field-booking-dates-end-value').datepicker({
+    //             $('#edit-field-check-out-date-value').datepicker({
     //                 dateFormat: "yyyy-mm-dd",
     //             });
     //         });
