@@ -213,3 +213,49 @@ function views_post_update_revision_metadata_fields() {
     $view->save();
   });
 }
+
+/**
+ * Fix views containing entity fields with an empty group column value set.
+ */
+function views_post_update_empty_entity_field_group_column() {
+  $views = View::loadMultiple();
+  /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager */
+  $entity_field_manager = \Drupal::service('entity_field.manager');
+
+  array_walk($views, function (View $view) use ($entity_field_manager) {
+    $save = FALSE;
+    $displays = $view->get('display');
+    foreach ($displays as $display_name => &$display) {
+      if (isset($display['display_options']['fields'])) {
+        foreach ($display['display_options']['fields'] as $field_name => &$field) {
+          // Only update fields that have group_column set to an empty value.
+          if (!empty($field['plugin_id']) && $field['plugin_id'] == 'field' && isset($field['group_column']) && empty($field['group_column'])) {
+            // Attempt to load the field storage definition of the field.
+            $executable = $view->getExecutable();
+            $executable->setDisplay($display_name);
+            /** @var \Drupal\views\Plugin\views\field\FieldHandlerInterface $field_handler */
+            $field_handler = $executable->getDisplay()->getHandler('field', $field['id']);
+            if ($entity_type_id = $field_handler->getEntityType()) {
+              $field_storage_definitions = $entity_field_manager->getFieldStorageDefinitions($entity_type_id);
+
+              $field_storage = NULL;
+              if (isset($field['field']) && isset($field_storage_definitions[$field['field']])) {
+                $field_storage = $field_storage_definitions[$field['field']];
+              }
+              // If a main property is defined use that as a default.
+              if (!empty($field_storage) && $field_storage->getMainPropertyName()) {
+                $save = TRUE;
+              }
+              elseif (!empty($field_storage)) {
+                $save = TRUE;
+              }
+            }
+          }
+        }
+      }
+    }
+    if ($save) {
+      $view->save();
+    }
+  });
+}

@@ -293,6 +293,7 @@ class View extends ConfigEntityBase implements ViewEntityInterface {
     $displays = $this->get('display');
 
     $this->fixTableNames($displays);
+    $this->fixEmptyGroupColumn();
 
     // Sort the displays.
     ksort($displays);
@@ -335,6 +336,51 @@ class View extends ConfigEntityBase implements ViewEntityInterface {
               // wrong table.
               if (in_array($property_data['field'], $revision_metadata_fields) && $property_data['table'] != $revision_table) {
                 $displays[$display]['display_options']['fields'][$property_name]['table'] = $revision_table;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  /**
+   * Fixes empty group columns.
+   *
+   * Some fields could be saved without a group column, this assures that every
+   * field has a default group column.
+   *
+   * @deprecated in Drupal 8.4.0, will be removed before Drupal 9.0.0.
+   */
+  private function fixEmptyGroupColumn() {
+    @trigger_error(__METHOD__ . ' is deprecated in version 8.4 and will be removed before 9.0.0.', E_USER_DEPRECATED);
+    /** @var \Drupal\Core\Entity\EntityFieldManagerInterface $entity_field_manager */
+    $entity_field_manager = \Drupal::service('entity_field.manager');
+    $displays = $this->get('display');
+    foreach ($displays as $display_name => &$display) {
+      if (isset($display['display_options']['fields'])) {
+        foreach ($display['display_options']['fields'] as $field_name => &$field) {
+          // Only update fields that have group_column set to an empty value.
+          if (!empty($field['plugin_id']) && $field['plugin_id'] == 'field' && isset($field['group_column']) && empty($field['group_column'])) {
+            // Attempt to load the field storage definition of the field.
+            $executable = $this->getExecutable();
+            $executable->setDisplay($display_name);
+            /** @var \Drupal\views\Plugin\views\field\FieldHandlerInterface $field_handler */
+            $field_handler = $executable->getDisplay()->getHandler('field', $field['id']);
+            if ($entity_type_id = $field_handler->getEntityType()) {
+              $field_storage_definitions = $entity_field_manager->getFieldStorageDefinitions($entity_type_id);
+
+              $field_storage = NULL;
+              if (isset($field['field']) && isset($field_storage_definitions[$field['field']])) {
+                $field_storage = $field_storage_definitions[$field['field']];
+              }
+              // If a main property is defined use that as a default.
+              if (!empty($field_storage) && $field_storage->getMainPropertyName()) {
+                $field['group_column'] = $field_storage->getMainPropertyName();
+              }
+              elseif (!empty($field_storage)) {
+                $column_names = array_keys($field_storage->getColumns());
+                $field['group_column'] = $column_names[0];
               }
             }
           }

@@ -231,7 +231,7 @@ class EntityField extends FieldPluginBase implements CacheableDependencyInterfac
       unset($fields[$entity_type_key]);
     }
 
-    if ($use_groupby) {
+    if ($use_groupby && !empty($this->options['group_column'])) {
       // Add the fields that we're actually grouping on.
       $options = [];
       if ($this->options['group_column'] != 'entity_id') {
@@ -266,7 +266,7 @@ class EntityField extends FieldPluginBase implements CacheableDependencyInterfac
    */
   public function add_field_table($use_groupby) {
     // Grouping is enabled.
-    if ($use_groupby) {
+    if ($use_groupby && !empty($this->options['group_column'])) {
       return TRUE;
     }
     // This a multiple value field, but "group multiple values" is not checked.
@@ -354,13 +354,16 @@ class EntityField extends FieldPluginBase implements CacheableDependencyInterfac
     $field_storage_definition = $this->getFieldStorageDefinition();
     $field_type = $this->fieldTypePluginManager->getDefinition($field_storage_definition->getType());
     $column_names = array_keys($field_storage_definition->getColumns());
-    $default_column = '';
-    // Try to determine a sensible default.
-    if (count($column_names) == 1) {
-      $default_column = $column_names[0];
-    }
-    elseif (in_array('value', $column_names)) {
-      $default_column = 'value';
+    $default_column = $field_storage_definition->getMainPropertyName() ?: '';
+    // Try to determine a sensible default if none if provided by the field
+    // definition.
+    if (!$default_column) {
+      if (in_array('value', $column_names)) {
+        $default_column = 'value';
+      }
+      else {
+        $default_column = $column_names[0];
+      }
     }
 
     // If the field has a "value" column, we probably need that one.
