@@ -9,10 +9,10 @@ dependencies:
   module:
     - better_exposed_filters
     - commerce_product
-    - commerce_store
     - datetime
     - image
     - options
+    - paragraphs
 id: apartment
 label: Apartment
 module: views
@@ -49,7 +49,7 @@ display:
           reset_button: false
           reset_button_label: Reset
           exposed_sorts_label: 'Sort by'
-          expose_sort_order: true
+          expose_sort_order: false
           sort_asc_label: Asc
           sort_desc_label: Desc
           input_required: false
@@ -60,16 +60,6 @@ display:
               secondary_label: 'Advanced options'
               autosubmit: true
               autosubmit_hide: true
-            field_booking_dates_value:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
-            field_booking_dates_end_value:
-              bef_format: default
-              more_options:
-                is_secondary: false
-                placeholder_text: ''
             field_max_adults_value:
               bef_format: default
               more_options:
@@ -86,7 +76,11 @@ display:
                 is_secondary: false
                 rewrite:
                   filter_rewrite_values: ''
-            field_date_test_value:
+            field_check_in_date_value:
+              bef_format: default
+              more_options:
+                is_secondary: false
+            field_check_out_date_value:
               bef_format: default
               more_options:
                 is_secondary: false
@@ -251,65 +245,28 @@ display:
           field: field_image
           plugin_id: field
       filters:
-        field_booking_dates_value:
-          id: field_booking_dates_value
-          table: commerce_product__field_booking_dates
-          field: field_booking_dates_value
-          relationship: none
+        field_check_out_date_value:
+          id: field_check_out_date_value
+          table: paragraph__field_check_out_date
+          field: field_check_out_date_value
+          relationship: field_book_dates
           group_type: group
           admin_label: ''
-          operator: '='
-          value: ''
+          operator: '<='
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
           group: 1
           exposed: true
           expose:
-            operator_id: field_booking_dates_value_op
+            operator_id: field_check_out_date_value_op
             label: 'Check In'
             description: ''
             use_operator: false
-            operator: field_booking_dates_value_op
-            identifier: field_booking_dates_value
-            required: false
-            remember: false
-            multiple: false
-            remember_roles:
-              authenticated: authenticated
-              anonymous: '0'
-              administrator: '0'
-          is_grouped: false
-          group_info:
-            label: 'Booking dates (field_booking_dates)'
-            description: null
-            identifier: field_booking_dates_value
-            optional: true
-            widget: select
-            multiple: false
-            remember: false
-            default_group: All
-            default_group_multiple: {  }
-            group_items:
-              1: {  }
-              2: {  }
-              3: {  }
-          plugin_id: string
-        field_booking_dates_end_value:
-          id: field_booking_dates_end_value
-          table: commerce_product__field_booking_dates
-          field: field_booking_dates_end_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          operator: starts
-          value: ''
-          group: 1
-          exposed: true
-          expose:
-            operator_id: field_booking_dates_end_value_op
-            label: 'Check out'
-            description: ''
-            use_operator: false
-            operator: field_booking_dates_end_value_op
-            identifier: field_booking_dates_end_value
+            operator: field_check_out_date_value_op
+            identifier: field_check_out_date_value
             required: false
             remember: false
             multiple: false
@@ -329,7 +286,49 @@ display:
             default_group: All
             default_group_multiple: {  }
             group_items: {  }
-          plugin_id: string
+          plugin_id: datetime
+        field_check_in_date_value:
+          id: field_check_in_date_value
+          table: paragraph__field_check_in_date
+          field: field_check_in_date_value
+          relationship: field_book_dates
+          group_type: group
+          admin_label: ''
+          operator: '<'
+          value:
+            min: ''
+            max: ''
+            value: ''
+            type: date
+          group: 1
+          exposed: true
+          expose:
+            operator_id: field_check_in_date_value_op
+            label: 'Check out'
+            description: ''
+            use_operator: false
+            operator: field_check_in_date_value_op
+            identifier: field_check_in_date_value
+            required: false
+            remember: false
+            multiple: false
+            remember_roles:
+              authenticated: authenticated
+              anonymous: '0'
+              administrator: '0'
+          is_grouped: false
+          group_info:
+            label: ''
+            description: ''
+            identifier: ''
+            optional: true
+            widget: select
+            multiple: false
+            remember: false
+            default_group: All
+            default_group_multiple: {  }
+            group_items: {  }
+          plugin_id: datetime
         field_max_adults_value:
           id: field_max_adults_value
           table: commerce_product__field_max_adults
@@ -337,26 +336,25 @@ display:
           relationship: none
           group_type: group
           admin_label: ''
-          operator: and
+          operator: or
           value:
-            - '0'
-            - '1'
-            - '2'
-            - '3'
-            - '4'
-            - '5'
-            - '6'
-            - '7'
-            - '8'
-            - '9'
-            - '10'
+            1: '1'
+            2: '2'
+            3: '3'
+            4: '4'
+            5: '5'
+            6: '6'
+            7: '7'
+            8: '8'
+            9: '9'
+            10: '10'
           group: 1
           exposed: true
           expose:
             operator_id: field_max_adults_value_op
             label: Adults
             description: ''
-            use_operator: true
+            use_operator: false
             operator: field_max_adults_value_op
             identifier: field_max_adults_value
             required: false
@@ -445,7 +443,7 @@ display:
           operator: in
           value:
             '***LANGUAGE_language_interface***': '***LANGUAGE_language_interface***'
-          group: 2
+          group: 1
           exposed: false
           expose:
             operator_id: ''
@@ -505,169 +503,23 @@ display:
           inherit_arguments: false
           plugin_id: view
       relationships:
-        variations:
-          id: variations
-          table: commerce_product__variations
-          field: variations
+        field_book_dates:
+          id: field_book_dates
+          table: commerce_product__field_book_dates
+          field: field_book_dates
           relationship: none
           group_type: group
-          admin_label: 'variations: Product variation'
+          admin_label: 'field_book_dates: Paragraph'
           required: false
           plugin_id: standard
-      arguments:
-        field_date_test_value:
-          id: field_date_test_value
-          table: commerce_product__field_date_test
-          field: field_date_test_value
-          relationship: none
-          group_type: group
-          admin_label: ''
-          default_action: ignore
-          exception:
-            value: all
-            title_enable: false
-            title: All
-          title_enable: false
-          title: ''
-          default_argument_type: fixed
-          default_argument_options:
-            argument: ''
-          default_argument_skip_url: false
-          summary_options:
-            base_path: ''
-            count: true
-            items_per_page: 25
-            override: false
-          summary:
-            sort_order: asc
-            number_of_records: 0
-            format: default_summary
-          specify_validation: false
-          validate:
-            type: none
-            fail: 'not found'
-          validate_options: {  }
-          plugin_id: datetime
+      arguments: {  }
       display_extenders: {  }
       use_ajax: true
       filter_groups:
         operator: AND
         groups:
           1: AND
-          2: AND
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_content'
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-      tags:
-        - 'config:field.storage.commerce_product.field_amenities'
-        - 'config:field.storage.commerce_product.field_image'
-  block_1:
-    display_plugin: block
-    id: block_1
-    display_title: Block
-    position: 2
-    display_options:
-      display_extenders: {  }
-      style:
-        type: default
-        options: {  }
-      defaults:
-        style: false
-        row: false
-        fields: false
-      row:
-        type: fields
-        options:
-          default_field_elements: true
-          inline: {  }
-          separator: ''
-          hide_empty: false
-      block_description: 'Product block'
-      fields:
-        rendered_entity:
-          id: rendered_entity
-          table: commerce_product
-          field: rendered_entity
-          relationship: none
-          group_type: group
-          admin_label: ''
-          label: ''
-          exclude: false
-          alter:
-            alter_text: false
-            text: ''
-            make_link: false
-            path: ''
-            absolute: false
-            external: false
-            replace_spaces: false
-            path_case: none
-            trim_whitespace: false
-            alt: ''
-            rel: ''
-            link_class: ''
-            prefix: ''
-            suffix: ''
-            target: ''
-            nl2br: false
-            max_length: 0
-            word_boundary: true
-            ellipsis: true
-            more_link: false
-            more_link_text: ''
-            more_link_path: ''
-            strip_tags: false
-            trim: false
-            preserve_tags: ''
-            html: false
-          element_type: ''
-          element_class: ''
-          element_label_type: ''
-          element_label_class: ''
-          element_label_colon: false
-          element_wrapper_type: ''
-          element_wrapper_class: ''
-          element_default_classes: true
-          empty: ''
-          hide_empty: false
-          empty_zero: false
-          hide_alter_empty: true
-          view_mode: default
-          entity_type: commerce_product
-          plugin_id: rendered_entity
-    cache_metadata:
-      max-age: -1
-      contexts:
-        - 'languages:language_interface'
-        - url
-        - url.query_args
-      tags:
-        - 'config:core.entity_view_display.commerce_product.room.default'
-        - 'config:core.entity_view_display.commerce_product.default.default'
-        - 'config:core.entity_view_display.commerce_product.room.custom'
-  embed_1:
-    display_plugin: embed
-    id: embed_1
-    display_title: Embed
-    position: 3
-    display_options:
-      display_extenders: {  }
-      relationships:
-        stores:
-          id: stores
-          table: commerce_product__stores
-          field: stores
-          relationship: none
-          group_type: group
-          admin_label: 'stores: Store'
-          required: false
-          plugin_id: standard
-      defaults:
-        relationships: false
+      group_by: true
     cache_metadata:
       max-age: -1
       contexts:
@@ -692,14 +544,13 @@ display:
       defaults:
         style: false
         row: false
-        relationships: false
+        relationships: true
       row:
         type: 'entity:commerce_product'
         options:
           relationship: none
           view_mode: default
       exposed_block: true
-      relationships: {  }
     cache_metadata:
       max-age: -1
       contexts:

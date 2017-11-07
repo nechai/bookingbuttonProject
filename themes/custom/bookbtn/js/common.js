@@ -52,7 +52,6 @@
                     $(this).parent().parent().parent().find('.modal-content').attr('src', attrImage);
 
                 })
-
             });
         }
     };
@@ -82,52 +81,70 @@
                     cssEase: 'linear',
                     arrows : false,
                 });
+
+            });
+        }
+    };
+
+    Drupal.behaviors.slickForPopup = {
+        attach: function (context, settings) {
+
+            $(function () {
+                if ($(window).width() <= 425) {
+                    $('.product-hidden').removeClass('product-hidden');
+                    $('article .product-item a').css('pointer-events', 'auto');
+                }
+
             });
         }
     };
 
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
+            if ($(window).width() <= 425) {
+                // $('.product-hidden').removeClass('product-hidden');
+                $('article .product-item a').css('pointer-events', 'auto');
+            } else {
+                //pop-up after clicking on img
+                $('article .product-item .image-wrapper').each(function () {
+                    var item = $(this);
 
-            //pop-up after clicking on img
-            $('article .product-item .image-wrapper').each(function() {
-                var item = $(this);
+                    //add image to modal window
+                    var attrImage = item.parents('article .product-item').find('div.product-hidden .field--name-field-image img').first().attr('src');
+                    item.find('.myModal img').attr('src', attrImage);
 
-                //add image to modal window
-                var attrImage = item.parents('article .product-item').find('div.product-hidden .field--name-field-image img').first().attr('src');
-                item.find('.myModal img').attr('src', attrImage);
-
-                // pop-up
-                item.magnificPopup({
-                    items: {
-                        src: item.parents('article .product-item').find('div.product-hidden'),
+                    // pop-up
+                    item.magnificPopup({
+                        items: {
+                            src: item.parents('article .product-item').find('div.product-hidden'),
+                            type: 'inline',
+                        },
                         type: 'inline',
-                    },
-                    type: 'inline',
-                    mainClass: 'popup-block',
-                    closeOnBgClick: true,
+                        mainClass: 'popup-block',
+                        closeOnBgClick: true,
+                    });
                 });
-            });
 
-            //pop-up after clicking on "more information"
-            $('article .product-item .right-col .field--name-field-more-information').each(function() {
-                var item = $(this);
+                //pop-up after clicking on "more information"
+                $('article .product-item .right-col .field--name-field-more-information').each(function() {
+                    var item = $(this);
 
-                //add image to modal window
-                var attrImage = item.parents('article .product-item').find('div.product-hidden .field--name-field-image img').first().attr('src');
-                item.find('.myModal img').attr('src', attrImage);
+                    //add image to modal window
+                    var attrImage = item.parents('article .product-item').find('div.product-hidden .field--name-field-image img').first().attr('src');
+                    item.find('.myModal img').attr('src', attrImage);
 
-                // pop-up
-                item.magnificPopup({
-                    items: {
-                        src: item.parents('article .product-item').find('div.product-hidden'),
+                    // pop-up
+                    item.magnificPopup({
+                        items: {
+                            src: item.parents('article .product-item').find('div.product-hidden'),
+                            type: 'inline',
+                        },
                         type: 'inline',
-                    },
-                    type: 'inline',
-                    mainClass: 'popup-block',
-                    closeOnBgClick: true,
+                        mainClass: 'popup-block',
+                        closeOnBgClick: true,
+                    });
                 });
-            });
+            }
         }
     };
 
@@ -142,82 +159,6 @@
         }
     };
 
-
-
-
-    // Drupal.behaviors.lightsliderBehavior = {
-    //     attach: function (context, settings) {
-    //
-    //         // Using once() with more complexity.
-    //         $.once().each(function () {
-    //             $('.popup-block .field--name-field-image').lightSlider({
-    //
-    //                 item: 1,
-    //                 slideMargin: 0,
-    //
-    //                 autoWidth: true,
-    //                 // slideMove: 1, // slidemove will be 1 if loop is true
-    //                 // slideMargin: 10,
-    //                 //
-    //                 // // addClass: '',
-    //                 mode: "fade",
-    //                 useCSS: true,
-    //                 // cssEasing: 'ease', //'cubic-bezier(0.25, 0, 0.25, 1)',//
-    //                 // easing: 'linear', //'for jquery animation',////
-    //                 //
-    //                 // speed: 400, //ms'
-    //                 // auto: false,
-    //                 // pauseOnHover: false,
-    //                 // loop: false,
-    //                 // slideEndAnimation: false,
-    //                 // pause: 2000,
-    //                 //
-    //                 // keyPress: false,
-    //                 // controls: true,
-    //                 // prevHtml: '',
-    //                 // nextHtml: '',
-    //                 //
-    //                 // rtl: false,
-    //                 // adaptiveHeight: false,
-    //                 //
-    //                 // vertical: false,
-    //                 verticalHeight: 500,
-    //                 vThumbWidth: 100,
-    //                 //
-    //                 thumbItem: 5,
-    //                 // // pager: true,
-    //                 gallery: true,
-    //                 galleryMargin: 5,
-    //                 thumbMargin: 5,
-    //                 // currentPagerPosition: 'middle',
-    //                 //
-    //                 // // enableTouch:true,
-    //                 // // enableDrag:true,
-    //                 // freeMove: true,
-    //                 // swipeThreshold: 40,
-    //                 //
-    //                 // responsive: [],
-    //                 //
-    //                 // onBeforeStart: function (el) {
-    //                 // },
-    //                 // onSliderLoad: function (el) {
-    //                 // },
-    //                 // onBeforeSlide: function (el) {
-    //                 // },
-    //                 // onAfterSlide: function (el) {
-    //                 // },
-    //                 // onBeforeNextSlide: function (el) {
-    //                 // },
-    //                 // onBeforePrevSlide: function (el) {
-    //                 // }
-    //             });
-    //         })
-    //     }
-    // };
-
-
-
-
     Drupal.behaviors.datapickerBehavior = {
         attach: function (context, settings) {
 
@@ -227,7 +168,7 @@
                 var currDate = new Date();
                 var dateFormat = "yy-mm-dd";
 
-                from = $( "#edit-field-check-in-date-value" )
+                from = $( "#edit-field-check-out-date-value" )
                     .datepicker({
                         dateFormat: dateFormat,
                         minDate: currDate,
@@ -241,7 +182,7 @@
                         // .on ("click", function () {
                         // from.datepicker("setDate", "+1d");
                         // }),
-                    to = $( "#edit-field-check-out-date-value" ).datepicker({
+                    to = $( "#edit-field-check-in-date-value" ).datepicker({
                         minDate: "+1d",
                         dateFormat: dateFormat,
                         defaultDate: "+1d",
@@ -267,74 +208,17 @@
                 }
 
                 // Set default values for input fields
-                if( $('#edit-field-check-in-date-value').val() === '' ){
-                    $('#edit-field-check-in-date-value').datepicker("setDate", new Date());
+                if( $('#edit-field-check-out-date-value').val() === '' ){
+                    $('#edit-field-check-out-date-value').datepicker("setDate", new Date());
                 }
 
-                if( $('#edit-field-check-out-date-value').val() === '' ){
-                    $('#edit-field-check-out-date-value').datepicker("setDate", '+1d');
+                if( $('#edit-field-check-in-date-value').val() === '' ){
+                    $('#edit-field-check-in-date-value').datepicker("setDate", '+1d');
                 }
 
             });
 
         }
     };
-
-    // Drupal.behaviors.airdatepickerBehavior = {
-    //     attach: function (context, settings) {
-    //
-    //         // Using once() with more complexity.
-    //         $(function () {
-    //             $('#edit-field-check-in-date-value').datepicker({
-    //                 dateFormat: "yyyy-mm-dd",
-    //                 minDate: new Date(),
-    //                 numberOfMonths: 2,
-    //
-    //                 // // auto submit
-    //                 // onSelect: function() {
-    //                 //     $("#views-exposed-form-apartment-page-1").submit();
-    //                 // }
-    //             });
-    //             $('#edit-field-check-out-date-value').datepicker({
-    //                 dateFormat: "yyyy-mm-dd",
-    //             });
-    //         });
-    //     }
-    // };
-
-    // Drupal.behaviors.imageBoxBehavior = {
-    //     attach: function (context, settings) {
-    //
-    //         // Using once() with more complexity.
-    //         $(function () {
-    //             $('.field--name-field-image .field__item').click(function () {
-    //                 if (!$(this).hasClass('image-box') && !$('.field--name-field-image .field__item').hasClass('image-box')) {
-    //                     $(this).addClass('image-box');
-    //                 } else if (!$(this).hasClass('image-box') && $('.field--name-field-image .field__item').hasClass('image-box')) {
-    //                     $('.field--name-field-image .field__item').removeClass('image-box');
-    //                     $(this).addClass('image-box');
-    //                 } else {
-    //                     //do nothing
-    //                 }
-    //             })
-    //         });
-    //     }
-    // };
-
-
-
-    // Drupal.behaviors.authoSubmitBehavior = {
-    //     attach: function (context, settings) {
-    //
-    //         // Using once() with more complexity.
-    //         $(function () {
-    //             // Autosubmit 'view-class-here' views exposed form.
-    //             $("div.views-exposed-form").find("#views-exposed-form-apartment-page-1").find("select").bind("change", function () {
-    //                 $(this).closest("form").trigger("submit");
-    //             }).end().find("input[type='submit']").addClass("visually-hidden");
-    //         });
-    //     }
-    // };
-
 
 })(jQuery);

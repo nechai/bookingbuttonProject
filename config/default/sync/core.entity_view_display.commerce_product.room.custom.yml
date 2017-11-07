@@ -7,7 +7,6 @@ dependencies:
     - core.entity_view_mode.commerce_product.custom
     - field.field.commerce_product.room.field_amenities
     - field.field.commerce_product.room.field_bathroom
-    - field.field.commerce_product.room.field_booking_dates
     - field.field.commerce_product.room.field_description
     - field.field.commerce_product.room.field_image
     - field.field.commerce_product.room.field_max_adults
@@ -23,7 +22,6 @@ dependencies:
     - field.field.commerce_product.room.variations
   module:
     - commerce_product
-    - datetime_range
     - image
     - link
     - options
@@ -59,16 +57,6 @@ content:
       prefix_suffix: true
     third_party_settings: {  }
     type: number_integer
-    region: content
-  field_booking_dates:
-    weight: 19
-    label: above
-    settings:
-      timezone_override: ''
-      date_format: m-d-Y
-      separator: '-'
-    third_party_settings: {  }
-    type: daterange_custom
     region: content
   field_description:
     weight: 5

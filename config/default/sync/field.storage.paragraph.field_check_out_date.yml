@@ -1,0 +1,20 @@
+uuid: c05c19ce-b9b8-4a6a-89b7-f07fa725623d
+langcode: en
+status: true
+dependencies:
+  module:
+    - datetime
+    - paragraphs
+id: paragraph.field_check_out_date
+field_name: field_check_out_date
+entity_type: paragraph
+type: datetime
+settings:
+  datetime_type: date
+module: datetime
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

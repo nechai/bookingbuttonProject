@@ -1,0 +1,21 @@
+uuid: 6efdab50-f169-4544-a1be-5395bf7a4c6a
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_check_in_date
+    - paragraphs.paragraphs_type.booking_dates
+  module:
+    - datetime
+id: paragraph.booking_dates.field_check_in_date
+field_name: field_check_in_date
+entity_type: paragraph
+bundle: booking_dates
+label: 'Check in date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime

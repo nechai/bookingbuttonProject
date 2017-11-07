@@ -2,12 +2,6 @@ display:
   default:
     display_options:
       filters:
-        field_booking_dates_value:
-          expose:
-            label: 'Дата в''їзду'
-        field_booking_dates_end_value:
-          expose:
-            label: 'Дата виїзду'
         field_max_adults_value:
           expose:
             label: Дорослі

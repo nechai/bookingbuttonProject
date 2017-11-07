@@ -6,8 +6,7 @@ dependencies:
     - commerce_product.commerce_product_type.room
     - field.field.commerce_product.room.field_amenities
     - field.field.commerce_product.room.field_bathroom
-    - field.field.commerce_product.room.field_booking_dates
-    - field.field.commerce_product.room.field_date_test
+    - field.field.commerce_product.room.field_book_dates
     - field.field.commerce_product.room.field_description
     - field.field.commerce_product.room.field_image
     - field.field.commerce_product.room.field_max_adults
@@ -23,7 +22,7 @@ dependencies:
     - field.field.commerce_product.room.variations
   module:
     - commerce_product
-    - datetime
+    - entity_reference_revisions
     - image
     - link
     - options
@@ -49,14 +48,14 @@ content:
     third_party_settings: {  }
     type: number_integer
     region: content
-  field_date_test:
-    weight: 12
+  field_book_dates:
+    type: entity_reference_revisions_entity_view
+    weight: 11
     label: above
     settings:
-      format_type: medium
-      timezone_override: ''
+      view_mode: default
+      link: ''
     third_party_settings: {  }
-    type: datetime_default
     region: content
   field_description:
     weight: 1
@@ -137,7 +136,6 @@ content:
     region: content
 hidden:
   created: true
-  field_booking_dates: true
   field_max_adults: true
   field_max_children: true
   field_max_infants: true

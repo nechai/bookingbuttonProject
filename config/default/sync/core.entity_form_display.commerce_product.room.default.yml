@@ -6,8 +6,7 @@ dependencies:
     - commerce_product.commerce_product_type.room
     - field.field.commerce_product.room.field_amenities
     - field.field.commerce_product.room.field_bathroom
-    - field.field.commerce_product.room.field_booking_dates
-    - field.field.commerce_product.room.field_date_test
+    - field.field.commerce_product.room.field_book_dates
     - field.field.commerce_product.room.field_description
     - field.field.commerce_product.room.field_image
     - field.field.commerce_product.room.field_max_adults
@@ -24,11 +23,10 @@ dependencies:
     - image.style.thumbnail
   module:
     - commerce
-    - datetime
-    - datetime_range
     - image
     - inline_entity_form
     - link
+    - paragraphs
     - path
     - text
 id: commerce_product.room.default
@@ -55,17 +53,17 @@ content:
     third_party_settings: {  }
     type: number
     region: content
-  field_booking_dates:
+  field_book_dates:
+    type: entity_reference_paragraphs
     weight: 104
-    settings: {  }
+    settings:
+      title: Paragraph
+      title_plural: Paragraphs
+      edit_mode: open
+      add_mode: dropdown
+      form_display_mode: default
+      default_paragraph_type: ''
     third_party_settings: {  }
-    type: daterange_default
-    region: content
-  field_date_test:
-    weight: 106
-    settings: {  }
-    third_party_settings: {  }
-    type: datetime_default
     region: content
   field_description:
     weight: 92

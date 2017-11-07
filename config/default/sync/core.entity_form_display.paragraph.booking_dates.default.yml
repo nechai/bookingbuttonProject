@@ -1,0 +1,31 @@
+uuid: ef38310b-2e82-4f33-86bc-316b8257a50c
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.field.paragraph.booking_dates.field_check_in_date
+    - field.field.paragraph.booking_dates.field_check_out_date
+    - paragraphs.paragraphs_type.booking_dates
+  module:
+    - datetime
+id: paragraph.booking_dates.default
+targetEntityType: paragraph
+bundle: booking_dates
+mode: default
+content:
+  field_check_in_date:
+    weight: 1
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+  field_check_out_date:
+    weight: 2
+    settings: {  }
+    third_party_settings: {  }
+    type: datetime_default
+    region: content
+hidden:
+  created: true
+  status: true
+  uid: true

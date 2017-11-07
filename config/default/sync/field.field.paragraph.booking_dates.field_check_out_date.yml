@@ -1,0 +1,21 @@
+uuid: 74d5771f-960f-4b9a-97d6-7e577554a720
+langcode: en
+status: true
+dependencies:
+  config:
+    - field.storage.paragraph.field_check_out_date
+    - paragraphs.paragraphs_type.booking_dates
+  module:
+    - datetime
+id: paragraph.booking_dates.field_check_out_date
+field_name: field_check_out_date
+entity_type: paragraph
+bundle: booking_dates
+label: 'Check out date'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: datetime
