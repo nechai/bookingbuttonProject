@@ -1,0 +1,10 @@
+uuid: c5572c61-e259-413a-a9cb-e05fed768329
+langcode: en
+status: true
+dependencies:
+  module:
+    - commerce_product
+id: commerce_product.mobile_version
+label: 'Mobile version'
+targetEntityType: commerce_product
+cache: true
