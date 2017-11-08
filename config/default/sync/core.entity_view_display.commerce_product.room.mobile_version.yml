@@ -1,0 +1,161 @@
+uuid: ab6b2533-2df0-446d-ab01-feb217cc6a81
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - core.entity_view_mode.commerce_product.mobile_version
+    - field.field.commerce_product.room.field_amenities
+    - field.field.commerce_product.room.field_bathroom
+    - field.field.commerce_product.room.field_book_dates
+    - field.field.commerce_product.room.field_description
+    - field.field.commerce_product.room.field_image
+    - field.field.commerce_product.room.field_max_adults
+    - field.field.commerce_product.room.field_max_children
+    - field.field.commerce_product.room.field_max_infants
+    - field.field.commerce_product.room.field_more_information
+    - field.field.commerce_product.room.field_outside_view
+    - field.field.commerce_product.room.field_queen_bed
+    - field.field.commerce_product.room.field_smoking
+    - field.field.commerce_product.room.field_sofa_bed
+    - field.field.commerce_product.room.field_square
+    - field.field.commerce_product.room.stores
+    - field.field.commerce_product.room.variations
+  module:
+    - ds
+    - image
+    - options
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_3col_stacked_fluid
+      library: ds/ds_3col_stacked_fluid
+      disable_css: true
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          header: div
+          left: div
+          middle: div
+          right: div
+          footer: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      header:
+        - field_image
+      left:
+        - field_square
+        - field_queen_bed
+        - field_sofa_bed
+        - field_bathroom
+        - field_outside_view
+        - field_smoking
+      middle:
+        - field_description
+      right:
+        - field_amenities
+      footer:
+        - variations
+id: commerce_product.room.mobile_version
+targetEntityType: commerce_product
+bundle: room
+mode: mobile_version
+content:
+  field_amenities:
+    type: list_default
+    weight: 8
+    region: right
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_bathroom:
+    type: number_integer
+    weight: 4
+    region: left
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_description:
+    type: text_default
+    weight: 7
+    region: middle
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+  field_image:
+    type: image
+    weight: 0
+    region: header
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+  field_outside_view:
+    type: list_default
+    weight: 5
+    region: left
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_queen_bed:
+    type: number_integer
+    weight: 2
+    region: left
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_smoking:
+    type: list_default
+    weight: 6
+    region: left
+    label: inline
+    settings: {  }
+    third_party_settings: {  }
+  field_sofa_bed:
+    type: number_integer
+    weight: 3
+    region: left
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  field_square:
+    type: number_integer
+    weight: 1
+    region: left
+    label: inline
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+  variations:
+    type: entity_reference_entity_view
+    weight: 9
+    label: hidden
+    settings:
+      view_mode: default
+      link: false
+    third_party_settings: {  }
+    region: footer
+hidden:
+  created: true
+  field_book_dates: true
+  field_max_adults: true
+  field_max_children: true
+  field_max_infants: true
+  field_more_information: true
+  langcode: true
+  stores: true
+  uid: true

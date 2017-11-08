@@ -5,6 +5,6 @@ features:
   favicon: 1
 logo:
   use_default: 0
-  path: 'public://logo_grey_small.png'
+  path: 'public://logo_white_transparent_noborder.png'
 favicon:
   use_default: 1

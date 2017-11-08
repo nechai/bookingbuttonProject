@@ -1,0 +1,8 @@
+uuid: ecc859cd-de2e-4fda-be25-ab74136a6a5e
+langcode: en
+status: true
+dependencies: {  }
+id: logo_icons
+label: 'Logo & Icons'
+revision: 0
+description: 'Block for header '

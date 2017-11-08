@@ -1,0 +1,25 @@
+uuid: b11ee821-e0d7-4ca0-8f48-d1ede382e32c
+langcode: en
+status: true
+dependencies:
+  content:
+    - 'block_content:logo_icons:412260f6-0426-44ab-8841-402559c89cb1'
+  module:
+    - block_content
+  theme:
+    - bookbtn
+id: logoandicons
+theme: bookbtn
+region: header_second
+weight: -13
+provider: null
+plugin: 'block_content:412260f6-0426-44ab-8841-402559c89cb1'
+settings:
+  id: 'block_content:412260f6-0426-44ab-8841-402559c89cb1'
+  label: 'Logo and Icons'
+  provider: block_content
+  label_display: '0'
+  status: true
+  info: ''
+  view_mode: full
+visibility: {  }

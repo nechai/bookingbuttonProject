@@ -1,0 +1,56 @@
+uuid: 725b31d0-ee2b-426a-b845-b625d8fa31f3
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_icons
+    - field.field.block_content.logo_icons.field_icons_text
+    - field.field.block_content.logo_icons.field_logo
+    - field.field.block_content.logo_icons.field_slogan
+    - image.style.thumbnail
+  module:
+    - image
+    - text
+id: block_content.logo_icons.default
+targetEntityType: block_content
+bundle: logo_icons
+mode: default
+content:
+  field_icons_text:
+    weight: 28
+    settings: {  }
+    third_party_settings: {  }
+    type: options_select
+    region: content
+  field_logo:
+    weight: 26
+    settings:
+      progress_indicator: throbber
+      preview_image_style: thumbnail
+    third_party_settings: {  }
+    type: image_image
+    region: content
+  field_slogan:
+    weight: 27
+    settings:
+      rows: 5
+      placeholder: ''
+    third_party_settings: {  }
+    type: text_textarea
+    region: content
+  info:
+    type: string_textfield
+    weight: -5
+    region: content
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+  langcode:
+    type: language_select
+    weight: 2
+    region: content
+    settings:
+      include_locked: true
+    third_party_settings: {  }
+hidden: {  }

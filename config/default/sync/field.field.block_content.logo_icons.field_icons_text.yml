@@ -1,0 +1,21 @@
+uuid: 8fcc20b3-6d40-4817-b6f6-d77af8b078f4
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_icons
+    - field.storage.block_content.field_icons_text
+  module:
+    - options
+id: block_content.logo_icons.field_icons_text
+field_name: field_icons_text
+entity_type: block_content
+bundle: logo_icons
+label: 'Icons text'
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: list_string

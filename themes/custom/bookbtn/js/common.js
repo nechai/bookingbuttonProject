@@ -82,17 +82,30 @@
                     arrows : false,
                 });
 
+                $('.group-header .field--name-field-image').slick({
+                    dots: false,
+                    infinite: true,
+                    speed: 500,
+                    fade: true,
+                    cssEase: 'linear',
+                    arrows : true,
+                    respondTo: 'slider',
+                });
+
             });
         }
     };
 
-    Drupal.behaviors.slickForPopup = {
+    Drupal.behaviors.deletePopupForMobile = {
         attach: function (context, settings) {
 
             $(function () {
                 if ($(window).width() <= 425) {
                     $('.product-hidden').removeClass('product-hidden');
                     $('article .product-item a').css('pointer-events', 'auto');
+
+                    $('.field--name-field-currency-language a:first-child').css('display', 'none');
+                    $('.field--name-field-currency-language').append('<a><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>');
                 }
 
             });

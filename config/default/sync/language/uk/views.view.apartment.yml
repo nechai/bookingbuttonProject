@@ -5,11 +5,19 @@ display:
         field_max_adults_value:
           expose:
             label: Дорослі
+          group_info:
+            description: ''
         field_max_children_value:
           expose:
             label: Діти
           group_info:
             label: 'Кількість малюків'
+        field_check_out_date_value:
+          expose:
+            label: 'Дата в''їзду'
+        field_check_in_date_value:
+          expose:
+            label: 'Дата виїзду'
       empty:
         area:
           content:

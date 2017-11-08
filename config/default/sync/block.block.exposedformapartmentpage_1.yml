@@ -11,7 +11,7 @@ dependencies:
 id: exposedformapartmentpage_1
 theme: bookbtn
 region: header_second
-weight: 0
+weight: -12
 provider: null
 plugin: 'views_exposed_filter_block:apartment-page_1'
 settings:

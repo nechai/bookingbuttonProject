@@ -153,11 +153,6 @@ header {
   text-transform: uppercase;
 }
 
-.region-header-second #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-slogan p:last-child {
-  background: #000;
-  width: 445px;
-}
-
 .region-header-second #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text {
   display: flex;
 }
@@ -844,6 +839,12 @@ blockquote footer {
 /*------END Slick-----*/
 /*------BEGIN Media requests------*/
 @media (max-width: 1268px) {
+  #block-logoandicons .group-right .field--name-field-slogan {
+    margin-bottom: 12px;
+    color: #fff;
+    font-size: 1.7em;
+    text-transform: uppercase;
+  }
   .layout-content,
   .layout-sidebar-second,
   #block-aboutus,
@@ -864,6 +865,12 @@ blockquote footer {
 }
 
 @media (max-width: 925px) {
+  #block-logoandicons .group-left {
+    display: none;
+  }
+  #block-logoandicons .group-left .field--name-field-slogan {
+    font-size: 1.1em;
+  }
   .image-wrapper.left-col {
     width: 100% !important;
   }
@@ -902,11 +909,37 @@ blockquote footer {
 }
 
 @media (max-width: 565px) {
+  #block-logoandicons .block-content--type-logo-icons .group-right {
+    border: none !important;
+  }
+  #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-slogan {
+    display: none;
+  }
+  #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item {
+    visibility: hidden;
+  }
+  #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:before {
+    visibility: visible;
+  }
   .bef-exposed-form .form--inline > .form-item {
     float: none;
   }
   main .layout-content .views-row .variations-custom .variations-custom-wrap {
     right: -90px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .field--name-field-currency-language a:first-child {
+    display: none;
+  }
+  .region-header-second {
+    padding-top: 90px;
+    height: 460px;
   }
 }
 

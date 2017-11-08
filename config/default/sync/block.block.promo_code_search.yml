@@ -9,7 +9,7 @@ dependencies:
 id: promo_code_search
 theme: bookbtn
 region: header_second
-weight: 0
+weight: -10
 provider: null
 plugin: webform_block
 settings:

@@ -1,0 +1,21 @@
+uuid: a95ba745-8c4b-478f-a289-fdcb5425e40b
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_icons
+    - field.storage.block_content.field_slogan
+  module:
+    - text
+id: block_content.logo_icons.field_slogan
+field_name: field_slogan
+entity_type: block_content
+bundle: logo_icons
+label: Slogan
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: text_long

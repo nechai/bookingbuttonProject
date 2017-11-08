@@ -1,0 +1,67 @@
+uuid: 79f50029-93a6-4275-9eae-10dc823e4d30
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_icons
+    - field.field.block_content.logo_icons.field_icons_text
+    - field.field.block_content.logo_icons.field_logo
+    - field.field.block_content.logo_icons.field_slogan
+  module:
+    - ds
+    - image
+    - options
+    - text
+third_party_settings:
+  ds:
+    layout:
+      id: ds_2col
+      library: ds/ds_2col
+      disable_css: true
+      entity_classes: all_classes
+      settings:
+        wrappers:
+          left: div
+          right: div
+        outer_wrapper: div
+        attributes: ''
+        link_attribute: ''
+        link_custom: ''
+        classes:
+          layout_class: {  }
+    regions:
+      left:
+        - field_logo
+      right:
+        - field_slogan
+        - field_icons_text
+id: block_content.logo_icons.default
+targetEntityType: block_content
+bundle: logo_icons
+mode: default
+content:
+  field_icons_text:
+    weight: 2
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: list_default
+    region: right
+  field_logo:
+    weight: 0
+    label: hidden
+    settings:
+      image_style: ''
+      image_link: ''
+    third_party_settings: {  }
+    type: image
+    region: left
+  field_slogan:
+    weight: 1
+    label: hidden
+    settings: {  }
+    third_party_settings: {  }
+    type: text_default
+    region: right
+hidden:
+  langcode: true

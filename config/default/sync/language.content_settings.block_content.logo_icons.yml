@@ -1,0 +1,11 @@
+uuid: 9ff46166-ef32-4f7a-b43b-f26532a9111d
+langcode: en
+status: true
+dependencies:
+  config:
+    - block_content.type.logo_icons
+id: block_content.logo_icons
+target_entity_type_id: block_content
+target_bundle: logo_icons
+default_langcode: site_default
+language_alterable: false
