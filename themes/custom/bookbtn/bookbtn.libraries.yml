@@ -5,6 +5,7 @@ global-styling:
       css/icons-style.css: {}
       css/datepicker-custom-style.css: {}
       css/cart-form.css: {}
+      css/mobile-product-page.css: {}
   js:
     js/common.js: {}
   dependencies:

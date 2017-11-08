@@ -1,0 +1,111 @@
+.commerce-product--view-mode-mobile-version {
+  background: white;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  /* Slick style */
+}
+
+.commerce-product--view-mode-mobile-version > div {
+  margin-top: 15px;
+  padding: 0 3%;
+}
+
+.commerce-product--view-mode-mobile-version > div:first-child {
+  padding: 0;
+}
+
+.commerce-product--view-mode-mobile-version .group-header .field--name-field-image {
+  height: auto;
+}
+
+.commerce-product--view-mode-mobile-version .group-header .field--name-field-image img {
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.commerce-product--view-mode-mobile-version .group-header h2 {
+  margin-top: 15px;
+  padding: 0 3%;
+  text-transform: uppercase;
+  color: #837a7a;
+}
+
+.commerce-product--view-mode-mobile-version .group-left > div {
+  display: inline-block;
+}
+
+.commerce-product--view-mode-mobile-version .group-left .field__label,
+.commerce-product--view-mode-mobile-version .group-left .field__item {
+  display: none;
+  float: none;
+}
+
+.commerce-product--view-mode-mobile-version .group-left .field--name-field-square {
+  padding: 0 5px;
+  border-right: 1px solid #bcc4c5;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  direction: ltr;
+}
+
+.commerce-product--view-mode-mobile-version .group-left .field--name-field-square .field__item {
+  display: block;
+  float: none;
+}
+
+.commerce-product--view-mode-mobile-version .group-middle .field--name-field-description .field__label {
+  display: none;
+}
+
+.commerce-product--view-mode-mobile-version .group-right {
+  float: left;
+}
+
+.commerce-product--view-mode-mobile-version .group-right .field--name-field-amenities .field__label {
+  text-transform: uppercase;
+  color: #837a7a;
+}
+
+.commerce-product--view-mode-mobile-version .group-footer {
+  margin-top: 195px;
+}
+
+.commerce-product--view-mode-mobile-version .group-footer .field--name-product-id {
+  display: none;
+}
+
+.commerce-product--view-mode-mobile-version .group-footer .field--name-price .field__label {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1em;
+  color: #3D0800;
+}
+
+.commerce-product--view-mode-mobile-version .group-footer .field--name-price .field__item {
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1em;
+  color: #3D0800;
+}
+
+.commerce-product--view-mode-mobile-version .slick-next:before,
+.commerce-product--view-mode-mobile-version .slick-prev:before {
+  font-size: 30px;
+  color: #9E9E9E;
+}
+
+.commerce-product--view-mode-mobile-version .slick-prev {
+  left: 3%;
+}
+
+.commerce-product--view-mode-mobile-version .slick-next {
+  right: 6%;
+}

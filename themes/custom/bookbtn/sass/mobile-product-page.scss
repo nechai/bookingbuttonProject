@@ -1,0 +1,111 @@
+
+
+.commerce-product--view-mode-mobile-version {
+  background: white;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  > div {
+    margin-top: 15px;
+    padding: 0 3%;
+    &:first-child {
+      padding: 0;
+    }
+  }
+  .group-header {
+    .field--name-field-image {
+      height: auto;
+      img {
+        width: 100%;
+        height: auto;
+        cursor: pointer;
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+      }
+    }
+    h2 {
+      margin-top: 15px;
+      padding: 0 3%;
+      text-transform: uppercase;
+      color: #837a7a;
+    }
+  }
+  .group-left {
+    > div {
+      display: inline-block;
+      }
+    .field__label,
+    .field__item {
+      display: none;
+      float: none;
+    }
+    .field--name-field-square {
+      padding: 0 5px;
+      border-right: 1px solid #bcc4c5;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 16px;
+      display: inline-block;
+      line-height: 1;
+      text-transform: none;
+      direction: ltr;
+      .field__item {
+        display: block;
+        float: none;
+      }
+    }
+  }
+  .group-middle {
+    .field--name-field-description {
+      .field__label {
+      display: none;
+      }
+    }
+  }
+  .group-right {
+    float: left;
+    .field--name-field-amenities {
+      .field__label {
+        text-transform: uppercase;
+        color: #837a7a;
+      }
+    }
+  }
+  .group-footer {
+    margin-top: 195px;
+    .field--name-product-id {
+      display: none;
+    }
+    .field--name-price {
+      .field__label {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1em;
+        color: #3D0800;
+      }
+
+      .field__item {
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 1em;
+        color: #3D0800;
+      }
+    }
+  }
+
+  /* Slick style */
+
+  .slick-next:before,
+  .slick-prev:before {
+    font-size: 30px;
+    color: #9E9E9E;
+  }
+
+  .slick-prev {
+    left: 3%;
+  }
+  .slick-next {
+    right: 6%;
+  }
+}
+
