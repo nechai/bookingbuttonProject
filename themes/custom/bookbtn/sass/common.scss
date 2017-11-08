@@ -29,11 +29,18 @@ body {
   font-size: 12px;
 }
 
+header {
+  background-image: url('img/background_header.jpg');
+  -webkit-background-image: url('img/background_header.jpg');
+  background-position: 50%;
+  background-size: cover;
+}
+
 .region-header-first {
   position: relative;
   height: 90px;
   padding: 0 3%;
-  background: rgb(70, 71, 65);
+  background: rgba(0, 0, 0, 0.3);
   color: white;
   &:after {
     content: '';
@@ -62,7 +69,7 @@ body {
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear;
         &:hover {
-          color: gray;
+          color: #2f2f2f;
         }
       }
     }
@@ -74,7 +81,7 @@ body {
     top: 100%;
     right: 0;
     display: none;
-    background: #000;
+    background: rgba(0, 0, 0, 0.3);
     z-index: 100;
     color: white;
     text-transform: uppercase;
@@ -91,7 +98,7 @@ body {
           color: white;
           text-decoration: none;
           &:hover {
-            color: grey;
+            color: #2f2f2f;
             -webkit-transition: all 0.2s linear;
             -moz-transition: all 0.2s linear;
             -o-transition: all 0.2s linear;
@@ -107,13 +114,56 @@ body {
 
 .region-header-second {
   position: relative;
+  padding-top: 150px;
   width: 100%;
-  height: 450px;
-  background-image: url('img/background_header.jpg');
-  -webkit-background-image: url('img/background_header.jpg');
-  background-position: 50%;
-  background-size: cover;
+  height: 360px;
 
+  #block-logoandicons {
+    margin: auto;
+    .block-content--type-logo-icons {
+      margin: auto;
+      width: 90%;
+      display: flex;
+      .group-left {
+        flex: 3;
+        .field--name-field-logo {
+          img {
+            margin-right: 35px;
+            float: right;
+            height: 170px;
+            width: auto;
+          }
+        }
+      }
+      .group-right {
+        flex: 4;
+        padding-left: 15px;
+        border-left: 7px solid white;
+        .field--name-field-slogan {
+          margin-bottom: 12px;
+          color: #fff;
+          font-size: 2em;
+          text-transform: uppercase;
+          p:last-child {
+            background: #000;
+            width: 445px;
+          }
+        }
+        .field--name-field-icons-text {
+          display: flex;
+          .field__item {
+            flex: 1;
+            max-width: 105px;
+            min-width: 85px;
+            text-align: center;
+            color: #fff;
+            font-size: 1.4em;
+            word-spacing: 1px;
+          }
+        }
+      }
+    }
+  }
 
   #block-exposedformapartmentpage-1 {
     width: 100%;

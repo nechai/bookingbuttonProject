@@ -19,11 +19,18 @@ body {
   font-size: 12px;
 }
 
+header {
+  background-image: url("img/background_header.jpg");
+  -webkit-background-image: url("img/background_header.jpg");
+  background-position: 50%;
+  background-size: cover;
+}
+
 .region-header-first {
   position: relative;
   height: 90px;
   padding: 0 3%;
-  background: #464741;
+  background: rgba(0, 0, 0, 0.3);
   color: white;
 }
 
@@ -63,7 +70,7 @@ body {
 }
 
 .region-header-first #block-bookbtn-blockheadertop .field--name-field-currency-language a:hover {
-  color: gray;
+  color: #2f2f2f;
 }
 
 .region-header-first #block-languageswitcher {
@@ -73,7 +80,7 @@ body {
   top: 100%;
   right: 0;
   display: none;
-  background: #000;
+  background: rgba(0, 0, 0, 0.3);
   z-index: 100;
   color: white;
   text-transform: uppercase;
@@ -98,7 +105,7 @@ body {
 }
 
 .region-header-first #block-languageswitcher ul li a:hover {
-  color: grey;
+  color: #2f2f2f;
   -webkit-transition: all 0.2s linear;
   -moz-transition: all 0.2s linear;
   -o-transition: all 0.2s linear;
@@ -107,12 +114,62 @@ body {
 
 .region-header-second {
   position: relative;
+  padding-top: 150px;
   width: 100%;
-  height: 450px;
-  background-image: url("img/background_header.jpg");
-  -webkit-background-image: url("img/background_header.jpg");
-  background-position: 50%;
-  background-size: cover;
+  height: 360px;
+}
+
+.region-header-second #block-logoandicons {
+  margin: auto;
+}
+
+.region-header-second #block-logoandicons .block-content--type-logo-icons {
+  margin: auto;
+  width: 90%;
+  display: flex;
+}
+
+.region-header-second #block-logoandicons .block-content--type-logo-icons .group-left {
+  flex: 3;
+}
+
+.region-header-second #block-logoandicons .block-content--type-logo-icons .group-left .field--name-field-logo img {
+  margin-right: 35px;
+  float: right;
+  height: 170px;
+  width: auto;
+}
+
+.region-header-second #block-logoandicons .block-content--type-logo-icons .group-right {
+  flex: 4;
+  padding-left: 15px;
+  border-left: 7px solid white;
+}
+
+.region-header-second #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-slogan {
+  margin-bottom: 12px;
+  color: #fff;
+  font-size: 2em;
+  text-transform: uppercase;
+}
+
+.region-header-second #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-slogan p:last-child {
+  background: #000;
+  width: 445px;
+}
+
+.region-header-second #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text {
+  display: flex;
+}
+
+.region-header-second #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item {
+  flex: 1;
+  max-width: 105px;
+  min-width: 85px;
+  text-align: center;
+  color: #fff;
+  font-size: 1.4em;
+  word-spacing: 1px;
 }
 
 .region-header-second #block-exposedformapartmentpage-1 {

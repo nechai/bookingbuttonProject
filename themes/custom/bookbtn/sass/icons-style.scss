@@ -1,4 +1,50 @@
+@import "../css/flaticon/font/_flaticon.scss";
 
+/* Header icons */
+#block-logoandicons {
+  .block-content--type-logo-icons {
+    .group-right {
+      .field--name-field-icons-text {
+
+        .field__item:before {
+          margin: auto;
+          margin-bottom: 7px;
+          display: table;
+          text-align: center;
+          font-family: "Flaticon";
+          color: #fff;
+          font-size: 40px;
+          /* Support for all WebKit browsers. */
+          -webkit-font-smoothing: antialiased;
+          /* Support for Safari and Chrome. */
+          text-rendering: optimizeLegibility;
+          /* Support for Firefox. */
+          -moz-osx-font-smoothing: grayscale;
+          /* Support for IE. */
+          font-feature-settings: 'liga';
+        }
+
+        .field__item:nth-child(1):before { /* 24 hours */
+          content: $font-Flaticon-delivery;
+        }
+        .field__item:nth-child(2):before { /* Daily cleaning */
+          content: $font-Flaticon-short-broom;
+        }
+        .field__item:nth-child(3):before { /* Free WIFI internet */
+          content: $font-Flaticon-internet;
+        }
+        .field__item:nth-child(4):before { /* Parking */
+          content: $font-Flaticon-parking-sign;
+        }
+        .field__item:nth-child(5):before { /* Breakfast available */
+          content: $font-Flaticon-restaurant;
+        }
+      }
+    }
+  }
+}
+
+/* Product icons */
 .field--name-field-queen-bed,
 .field--name-field-sofa-bed,
 .field--name-field-bathroom,
@@ -6,7 +52,8 @@
 .field--name-field-smoking {
   &:before {
     padding: 0 10px;
-
+    font-family: "Flaticon";
+    color: #000;
     font-weight: normal;
     font-style: normal;
     font-size: 18px;  /* Preferred icon size */
@@ -33,58 +80,35 @@
 
 .field--name-field-queen-bed {
   &:before {
-    font-family: "Flaticon";
-    content: "\f106";
-    color: #000;
-
-
+    content:  $font-Flaticon-king-size-bed-with-two-pillows;
     border-right: 1px solid #bcc4c5;
   }
 }
 
 .field--name-field-sofa-bed {
   &:before {
-    font-family: "Flaticon";
-    content: "\f105";
-    color: #000;
-
-
+    content: $font-Flaticon-sofa-set;
     border-right: 1px solid #bcc4c5;
   }
 }
 
-
-
 .field--name-field-bathroom {
   &:before {
-    font-family: "Flaticon";
-    content: "\f109";
-    color: #000;
-
-
+    content: $font-Flaticon-bathtub-with-opened-shower;
     border-right: 1px solid #bcc4c5;
   }
 }
 
 .field--name-field-outside-view {
   &:before {
-    font-family: "Flaticon";
-    content: "\f107";
-    color: #000;
-
-
+    content: $font-Flaticon-photo-of-a-landscape;
     border-right: 1px solid #bcc4c5;
   }
 }
 
-
 .field--name-field-smoking {
   &:before {
-    font-family: "Flaticon";
-    content: "\f108";
-    color: #000;
-
-
+    content: $font-Flaticon-signs;
   }
 }
 
