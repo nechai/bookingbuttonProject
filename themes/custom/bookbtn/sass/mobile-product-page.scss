@@ -63,7 +63,6 @@
     }
   }
   .group-right {
-    float: left;
     .field--name-field-amenities {
       .field__label {
         text-transform: uppercase;
@@ -72,7 +71,6 @@
     }
   }
   .group-footer {
-    margin-top: 195px;
     .field--name-product-id {
       display: none;
     }
@@ -81,7 +79,7 @@
         font-size: 15px;
         font-weight: 700;
         line-height: 1em;
-        color: #3D0800;
+        color: #837a7a;
       }
 
       .field__item {

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /*
     Flaticon icon font: Flaticon
-    Creation date: 07/11/2017 13:38
+    Creation date: 08/11/2017 21:31
     */
 @font-face {
   font-family: "Flaticon";
@@ -33,76 +33,88 @@
   font-smoothing: antialiased;
 }
 
-.flaticon-time:before {
+.flaticon-signs-1:before {
   content: "\f100";
 }
 
-.flaticon-cutlery:before {
+.flaticon-big-bed-with-one-pillow:before {
   content: "\f101";
 }
 
-.flaticon-restaurant:before {
+.flaticon-kings-size-bed-for-three:before {
   content: "\f102";
 }
 
-.flaticon-parking-sign:before {
+.flaticon-time:before {
   content: "\f103";
 }
 
-.flaticon-connection:before {
+.flaticon-cutlery:before {
   content: "\f104";
 }
 
-.flaticon-internet:before {
+.flaticon-restaurant:before {
   content: "\f105";
 }
 
-.flaticon-short-broom:before {
+.flaticon-parking-sign:before {
   content: "\f106";
 }
 
-.flaticon-delivery:before {
+.flaticon-connection:before {
   content: "\f107";
 }
 
-.flaticon-signs:before {
+.flaticon-internet:before {
   content: "\f108";
 }
 
-.flaticon-sofa-set:before {
+.flaticon-short-broom:before {
   content: "\f109";
 }
 
-.flaticon-photo-of-a-landscape:before {
+.flaticon-delivery:before {
   content: "\f10a";
 }
 
-.flaticon-bathtub-with-opened-shower:before {
+.flaticon-signs:before {
   content: "\f10b";
 }
 
-.flaticon-king-size-bed-with-two-pillows:before {
+.flaticon-sofa-set:before {
   content: "\f10c";
 }
 
-.flaticon-medical:before {
+.flaticon-photo-of-a-landscape:before {
   content: "\f10d";
 }
 
-.flaticon-cleaning:before {
+.flaticon-bathtub-with-opened-shower:before {
   content: "\f10e";
 }
 
-.flaticon-wifi:before {
+.flaticon-king-size-bed-with-two-pillows:before {
   content: "\f10f";
 }
 
-.flaticon-shower:before {
+.flaticon-medical:before {
   content: "\f110";
 }
 
-.flaticon-snowflake:before {
+.flaticon-cleaning:before {
   content: "\f111";
+}
+
+.flaticon-wifi:before {
+  content: "\f112";
+}
+
+.flaticon-shower:before {
+  content: "\f113";
+}
+
+.flaticon-snowflake:before {
+  content: "\f114";
 }
 
 /* Header icons */
@@ -126,27 +138,32 @@
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(1):before {
   /* 24 hours */
-  content: "";
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(2):before {
   /* Daily cleaning */
-  content: "";
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(3):before {
   /* Free WIFI internet */
-  content: "";
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(4):before {
   /* Parking */
-  content: "";
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(5):before {
   /* Breakfast available */
-  content: "";
+  content: "";
+}
+
+#block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(6):before {
+  /* Breakfast available */
+  content: "";
 }
 
 /* Product icons */
@@ -180,25 +197,25 @@
 }
 
 .field--name-field-queen-bed:before {
-  content: "";
+  content: "";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-sofa-bed:before {
-  content: "";
+  content: "";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-bathroom:before {
-  content: "";
+  content: "";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-outside-view:before {
-  content: "";
+  content: "";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-smoking:before {
-  content: "";
+  content: "";
 }

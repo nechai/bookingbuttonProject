@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 07/11/2017 13:38
+  	Creation date: 08/11/2017 21:31
   	*/
 
 @font-face {
@@ -29,21 +29,24 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-time:before { content: "\f100"; }
-.flaticon-cutlery:before { content: "\f101"; }
-.flaticon-restaurant:before { content: "\f102"; }
-.flaticon-parking-sign:before { content: "\f103"; }
-.flaticon-connection:before { content: "\f104"; }
-.flaticon-internet:before { content: "\f105"; }
-.flaticon-short-broom:before { content: "\f106"; }
-.flaticon-delivery:before { content: "\f107"; }
-.flaticon-signs:before { content: "\f108"; }
-.flaticon-sofa-set:before { content: "\f109"; }
-.flaticon-photo-of-a-landscape:before { content: "\f10a"; }
-.flaticon-bathtub-with-opened-shower:before { content: "\f10b"; }
-.flaticon-king-size-bed-with-two-pillows:before { content: "\f10c"; }
-.flaticon-medical:before { content: "\f10d"; }
-.flaticon-cleaning:before { content: "\f10e"; }
-.flaticon-wifi:before { content: "\f10f"; }
-.flaticon-shower:before { content: "\f110"; }
-.flaticon-snowflake:before { content: "\f111"; }
+.flaticon-signs-1:before { content: "\f100"; }
+.flaticon-big-bed-with-one-pillow:before { content: "\f101"; }
+.flaticon-kings-size-bed-for-three:before { content: "\f102"; }
+.flaticon-time:before { content: "\f103"; }
+.flaticon-cutlery:before { content: "\f104"; }
+.flaticon-restaurant:before { content: "\f105"; }
+.flaticon-parking-sign:before { content: "\f106"; }
+.flaticon-connection:before { content: "\f107"; }
+.flaticon-internet:before { content: "\f108"; }
+.flaticon-short-broom:before { content: "\f109"; }
+.flaticon-delivery:before { content: "\f10a"; }
+.flaticon-signs:before { content: "\f10b"; }
+.flaticon-sofa-set:before { content: "\f10c"; }
+.flaticon-photo-of-a-landscape:before { content: "\f10d"; }
+.flaticon-bathtub-with-opened-shower:before { content: "\f10e"; }
+.flaticon-king-size-bed-with-two-pillows:before { content: "\f10f"; }
+.flaticon-medical:before { content: "\f110"; }
+.flaticon-cleaning:before { content: "\f111"; }
+.flaticon-wifi:before { content: "\f112"; }
+.flaticon-shower:before { content: "\f113"; }
+.flaticon-snowflake:before { content: "\f114"; }

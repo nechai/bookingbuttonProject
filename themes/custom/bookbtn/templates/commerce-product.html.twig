@@ -72,7 +72,7 @@
 
         {#This div.product-hidden is copy of higher article.product-item and was created only for better layout#}
         <div {{ attributes }} class="product-hidden">
-
+            <h1>{{ product.title }}</h1>
             <div class="image-wrapper left-col">
                 <!-- The Modal -->
                 <div class="myModal">
@@ -92,7 +92,6 @@
                         {{ product.field_outside_view }}
                         {{ product.field_smoking }}
                     </div>
-                    {{ product.title }}
                     {{ product.field_description }}
                     {{ product.field_more_information }}
                 </fieldset>

@@ -91,31 +91,23 @@
                     arrows : true,
                     respondTo: 'slider',
                 });
-
             });
         }
     };
 
     Drupal.behaviors.deletePopupForMobile = {
         attach: function (context, settings) {
-
-            $(function () {
-                if ($(window).width() <= 425) {
-                    $('.product-hidden').removeClass('product-hidden');
-                    $('article .product-item a').css('pointer-events', 'auto');
-
-                    $('.field--name-field-currency-language a:first-child').css('display', 'none');
-                    $('.field--name-field-currency-language').append('<a><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>');
-                }
-
-            });
+            if ($(window).width() <= 425) {
+                $('.field--name-field-currency-language a:first-child').css('display', 'none');
+                $('.field--name-field-currency-language').append('<a><i class="fa fa-bars fa-3x" aria-hidden="true"></i></a>');
+            }
         }
     };
 
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
             if ($(window).width() <= 425) {
-                // $('.product-hidden').removeClass('product-hidden');
+                $('.product-hidden').removeClass('product-hidden');
                 $('article .product-item a').css('pointer-events', 'auto');
             } else {
                 //pop-up after clicking on img

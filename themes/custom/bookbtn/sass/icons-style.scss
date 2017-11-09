@@ -39,6 +39,9 @@
         .field__item:nth-child(5):before { /* Breakfast available */
           content: $font-Flaticon-restaurant;
         }
+        .field__item:nth-child(6):before { /* Breakfast available */
+          content: $font-Flaticon-signs-1;
+        }
       }
     }
   }

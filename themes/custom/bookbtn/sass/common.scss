@@ -3,7 +3,7 @@ $image-box: 450px;
 $color_main: #3D0800;
 
 %field_vertical_margin {
-  margin: 15px 0;
+  margin: 25px 0;
 }
 
 * {
@@ -38,8 +38,8 @@ header {
 
 .region-header-first {
   position: relative;
-  height: 90px;
-  padding: 0 3%;
+  height: auto;
+  padding: 0 5%;
   background: rgba(0, 0, 0, 0.3);
   color: white;
   &:after {
@@ -48,7 +48,23 @@ header {
     clear: both;
   }
   #block-bookbtn-branding {
-    float: left
+    margin-top: 3px;
+    float: left;
+    .site-name {
+      a {
+        text-decoration: none;
+        font-size: 2em;
+        color: white;
+        cursor: pointer;
+        -webkit-transition: all 0.3s linear;
+        -moz-transition: all 0.3s linear;
+        -o-transition: all 0.3s linear;
+        transition: all 0.3s linear;
+        &:hover {
+          color: #4d4d4d;
+        }
+      }
+    }
   }
   #block-bookbtn-blockheadertop {
     float: right;
@@ -62,21 +78,21 @@ header {
       a {
         text-decoration: none;
         color: white;
-        line-height: 7em;
+        line-height: 3em;
         cursor: pointer;
         -webkit-transition: all 0.3s linear;
         -moz-transition: all 0.3s linear;
         -o-transition: all 0.3s linear;
         transition: all 0.3s linear;
         &:hover {
-          color: #2f2f2f;
+          color: #4d4d4d;
         }
       }
     }
   }
   #block-languageswitcher {
     height: auto;
-    width: 200px;
+    width: 250px;
     position: absolute;
     top: 100%;
     right: 0;
@@ -114,9 +130,9 @@ header {
 
 .region-header-second {
   position: relative;
-  padding-top: 150px;
+  padding-top: 190px;
   width: 100%;
-  height: 360px;
+  height: 265px;
 
   #block-logoandicons {
     margin: auto;
@@ -130,7 +146,7 @@ header {
           img {
             margin-right: 35px;
             float: right;
-            height: 170px;
+            height: 150px;
             width: auto;
           }
         }
@@ -142,7 +158,7 @@ header {
         .field--name-field-slogan {
           margin-bottom: 12px;
           color: #fff;
-          font-size: 2em;
+          font-size: 1.5em;
           text-transform: uppercase;
         }
         .field--name-field-icons-text {
@@ -167,7 +183,7 @@ header {
     bottom: 0;
     left: 0;
     min-height: 76px;
-    background-color: rgba(0, 0, 0, .6);
+    background-color: transparent;
   }
 
   form {
@@ -453,7 +469,7 @@ blockquote footer {
     margin: auto;
     padding: 2%;
     height: auto;
-    width: 60%;
+    width: 70%;
     position: relative;
     background: #fff;
     -webkit-border-radius: 10px;
@@ -466,6 +482,11 @@ blockquote footer {
       clear: both;
     }
 
+    .field--name-title {
+      text-transform: uppercase;
+      color: #3D0800;
+    }
+
     a {
       pointer-events: none;
       &:hover {
@@ -475,7 +496,7 @@ blockquote footer {
 
     .image-wrapper.left-col {
       display: block;
-      width: 40%;
+      width: 55%;
       float: left;
 
       .field--name-field-image {
@@ -564,15 +585,14 @@ blockquote footer {
       position: relative;
       margin-left: 25px;
       display: inline-block;
-      width: 50%;
+      width: 40%;
       float: left;
-
       fieldset {
-        padding: 0;
+        padding: 20px 0;
+        padding-bottom: 0;
         border: none;
         border-top: 1px solid #b8b6b6;
       }
-
       legend {
         text-align: center;
         text-transform: uppercase;
@@ -585,22 +605,16 @@ blockquote footer {
 
         .room-conf {
           @extend %field_vertical_margin;
+          margin-top: 7px;
           & > div {
             display: inline-block;
 
           }
         }
 
-        .field--name-title {
-          display: none;
-          margin: 15px 0;
-          font-size: 22px;
-          font-weight: 400;
-          color: #3D0800;
-        }
-
         .field--name-field-description {
           @extend %field_vertical_margin;
+          margin-top: 10px;
 
           .field__label {
             display: none;
@@ -905,9 +919,8 @@ blockquote footer {
 
   .product-hidden {
     .right-col {
-      margin-left: 0;
-      width: 100%;
-      height: 100px;
+      margin-left: 0 !important;
+      width: 100% !important;
     }
   }
 
@@ -991,11 +1004,11 @@ blockquote footer {
 }
 
 @media screen and (max-width: 425px) {
-  .field--name-field-currency-language {
-    a:first-child {
-      display: none;
-    }
-  }
+  //.field--name-field-currency-language {
+  //  a:first-child {
+  //    display: none;
+  //  }
+  //}
   .region-header-second {
     padding-top: 90px;
     height: 460px;

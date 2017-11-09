@@ -65,17 +65,9 @@
   display: none;
 }
 
-.commerce-product--view-mode-mobile-version .group-right {
-  float: left;
-}
-
 .commerce-product--view-mode-mobile-version .group-right .field--name-field-amenities .field__label {
   text-transform: uppercase;
   color: #837a7a;
-}
-
-.commerce-product--view-mode-mobile-version .group-footer {
-  margin-top: 195px;
 }
 
 .commerce-product--view-mode-mobile-version .group-footer .field--name-product-id {
@@ -86,7 +78,7 @@
   font-size: 15px;
   font-weight: 700;
   line-height: 1em;
-  color: #3D0800;
+  color: #837a7a;
 }
 
 .commerce-product--view-mode-mobile-version .group-footer .field--name-price .field__item {
