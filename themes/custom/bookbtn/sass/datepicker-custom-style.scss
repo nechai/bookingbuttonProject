@@ -21,10 +21,9 @@
   border: none;
 }
 
-.ui-datepicker,
-.ui-datepicker {
+#ui-datepicker-div {
   padding: 0;
-  width: 45em !important;
+  width: 22em;
 }
 
 .ui-datepicker-header {
@@ -60,7 +59,6 @@
 }
 
 .ui-datepicker table {
-  margin: 0 5px;
   width: 100%;
 }
 
@@ -165,4 +163,13 @@
 .ui-datepicker .ui-datepicker-title {
   line-height: 1.5em;
   font-size: 15px;
+}
+
+@media screen and (max-width: 425px) {
+  .ui-datepicker {
+    width: 100%;
+  }
+  .ui-datepicker-group {
+    width: 100%;
+  }
 }
