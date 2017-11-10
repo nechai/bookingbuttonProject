@@ -1,122 +1,4 @@
 @charset "UTF-8";
-/*
-    Flaticon icon font: Flaticon
-    Creation date: 08/11/2017 21:31
-    */
-@font-face {
-  font-family: "Flaticon";
-  src: url("./Flaticon.eot");
-  src: url("./Flaticon.eot?#iefix") format("embedded-opentype"), url("./Flaticon.woff") format("woff"), url("./Flaticon.ttf") format("truetype"), url("./Flaticon.svg#Flaticon") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  @font-face {
-    font-family: "Flaticon";
-    src: url("./Flaticon.svg#Flaticon") format("svg");
-  }
-}
-
-.fi:before {
-  display: inline-block;
-  font-family: "Flaticon";
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  line-height: 1;
-  text-decoration: inherit;
-  text-rendering: optimizeLegibility;
-  text-transform: none;
-  -moz-osx-font-smoothing: grayscale;
-  -webkit-font-smoothing: antialiased;
-  font-smoothing: antialiased;
-}
-
-.flaticon-signs-1:before {
-  content: "\f100";
-}
-
-.flaticon-big-bed-with-one-pillow:before {
-  content: "\f101";
-}
-
-.flaticon-kings-size-bed-for-three:before {
-  content: "\f102";
-}
-
-.flaticon-time:before {
-  content: "\f103";
-}
-
-.flaticon-cutlery:before {
-  content: "\f104";
-}
-
-.flaticon-restaurant:before {
-  content: "\f105";
-}
-
-.flaticon-parking-sign:before {
-  content: "\f106";
-}
-
-.flaticon-connection:before {
-  content: "\f107";
-}
-
-.flaticon-internet:before {
-  content: "\f108";
-}
-
-.flaticon-short-broom:before {
-  content: "\f109";
-}
-
-.flaticon-delivery:before {
-  content: "\f10a";
-}
-
-.flaticon-signs:before {
-  content: "\f10b";
-}
-
-.flaticon-sofa-set:before {
-  content: "\f10c";
-}
-
-.flaticon-photo-of-a-landscape:before {
-  content: "\f10d";
-}
-
-.flaticon-bathtub-with-opened-shower:before {
-  content: "\f10e";
-}
-
-.flaticon-king-size-bed-with-two-pillows:before {
-  content: "\f10f";
-}
-
-.flaticon-medical:before {
-  content: "\f110";
-}
-
-.flaticon-cleaning:before {
-  content: "\f111";
-}
-
-.flaticon-wifi:before {
-  content: "\f112";
-}
-
-.flaticon-shower:before {
-  content: "\f113";
-}
-
-.flaticon-snowflake:before {
-  content: "\f114";
-}
-
 /* Header icons */
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:before {
   margin: auto;
@@ -138,32 +20,32 @@
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(1):before {
   /* 24 hours */
-  content: "";
+  content: '\f10a';
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(2):before {
   /* Daily cleaning */
-  content: "";
+  content: "\f109";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(3):before {
   /* Free WIFI internet */
-  content: "";
+  content: "\f108";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(4):before {
   /* Parking */
-  content: "";
+  content: "\f106";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(5):before {
   /* Breakfast available */
-  content: "";
+  content: "\f105";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(6):before {
   /* Breakfast available */
-  content: "";
+  content: "\f100";
 }
 
 /* Product icons */
