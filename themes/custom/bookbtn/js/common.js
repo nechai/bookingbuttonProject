@@ -63,6 +63,7 @@
             $(function () {
                 $('.field--name-field-currency-language a').removeAttr('href');
                 $('#block-bookbtn-branding a').removeAttr('title');
+                $('.field--name-field-amenities i').removeAttr('aria-hidden');
             });
         }
     };

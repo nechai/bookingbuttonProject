@@ -1,0 +1,82 @@
+.product-item {
+  .field--name-field-amenities {
+    .field__item {
+      display: none;
+    }
+    .field__item:nth-child(1),
+    .field__item:nth-child(2),
+    .field__item:nth-child(3),
+    .field__item:nth-child(4),
+    .field__item:nth-child(5){
+      width: 10px;
+      display: inline-flex;
+      visibility: hidden;
+      & i {
+        visibility: visible;
+        //display: inline-flex;
+      }
+    }
+  }
+}
+.field--name-field-amenities {
+  .field__items {
+    line-height: 1.8em;
+    .field__item {
+      position: relative;
+      padding-left: 23px;
+      i {
+        position: absolute;
+        top: 1px;
+        left: 0;
+        width: 15px;
+        height: 15px;
+        display: inline-block;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .wireless-internet {
+        background-image: url("icons/png/008-wifi.png");
+      }
+      .flat-screen-tv {
+        background-image: url("icons/png/037-monitor.png");
+      }
+      .housekeeping {
+        background-image: url("icons/png/026-cleaning-service.png");
+      }
+      .warm-floor {
+        background-image: url("icons/png/029-floor.png");
+      }
+      .iron-free {
+        background-image: url("icons/png/007-electric-iron.png");
+      }
+      .high-chair-available {
+        background-image: url("icons/png/035-feeding-chair.png");
+      }
+      .hob-induction {
+        background-image: url("icons/png/038-hob.png");
+      }
+      .fridge {
+        background-image: url("icons/png/033-fridge.png");
+      }
+      .linen-and-towels-provided {
+        background-image: url("icons/png/034-towel.png");
+      }
+      .free-toiletries {
+        background-image: url("icons/png/027-toiletries.png");
+      }
+      .shower {
+        background-image: url("icons/png/036-shower.png");
+      }
+      .en-suite-bathroom-heating {
+        background-image: url("icons/png/025-tool.png");
+      }
+      .hairdryer {
+        background-image: url("icons/png/032-hairdryer.png");
+      }
+      .washing {
+        background-image: url("icons/png/030-bubble.png");
+      }
+    }
+  }
+}

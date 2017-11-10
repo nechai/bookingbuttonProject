@@ -362,7 +362,6 @@ main .layout-content .views-row article .product-item .right-col .field--name-fi
 }
 
 main .layout-content .views-row article .product-item .right-col .field--name-field-amenities .field__item {
-  display: inline-block;
   float: none;
 }
 
@@ -766,12 +765,7 @@ blockquote footer {
   border-radius: 4px;
 }
 
-.region-footer-first #block-aboutus .field--name-field-image-gallery .field__item:nth-child(1) img {
-  width: 100%;
-  height: auto;
-}
-
-.region-footer-first #block-aboutus .field--name-field-image-gallery .field__item:nth-child(2) img {
+.region-footer-first #block-aboutus .field--name-field-image-gallery .field__item:nth-child(1) img, .region-footer-first #block-aboutus .field--name-field-image-gallery .field__item:nth-child(3) img, .region-footer-first #block-aboutus .field--name-field-image-gallery .field__item:nth-child(4) img {
   width: 100%;
   height: auto;
 }

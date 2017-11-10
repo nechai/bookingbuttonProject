@@ -3,6 +3,7 @@ global-styling:
     theme:
       css/common.css: {}
       css/icons-style.css: {}
+      css/icon-amenities.css: {}
       css/datepicker-custom-style.css: {}
       css/cart-form.css: {}
       css/mobile-product-page.css: {}
