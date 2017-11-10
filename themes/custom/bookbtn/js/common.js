@@ -107,7 +107,6 @@
     Drupal.behaviors.myBehavior_one = {
         attach: function (context, settings) {
             if ($(window).width() <= 425) {
-                $('.product-hidden').removeClass('product-hidden');
                 $('article .product-item a').css('pointer-events', 'auto');
             } else {
                 //pop-up after clicking on img
@@ -179,7 +178,7 @@
                         minDate: currDate,
                         defaultDate: currDate,
                         changeMonth: false,
-                        numberOfMonths: 2
+                        numberOfMonths: 1
                     })
                         .on( "change", function() {
                             to.datepicker( "option", "minDate", getDate( this ) );
@@ -192,7 +191,7 @@
                         dateFormat: dateFormat,
                         defaultDate: "+1d",
                         changeMonth: false,
-                        numberOfMonths: 2
+                        numberOfMonths: 1
                     })
                         .on( "change", function() {
                             from.datepicker( "option", "maxDate", getDate( this ) );
@@ -210,6 +209,13 @@
                     }
 
                     return date;
+                }
+
+                if ($(window).width() <= 425) {
+                    // $("#edit-field-check-out-date-value").on("change", function () {
+                    $("#edit-field-check-out-date-value").datepicker("option", "numberOfMonths", 1);
+                    // });
+                    $("#edit-field-check-in-date-value").datepicker("option", "numberOfMonths", 1);
                 }
 
                 // Set default values for input fields

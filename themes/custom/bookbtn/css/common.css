@@ -130,9 +130,9 @@ header {
 
 .region-header-second {
   position: relative;
-  padding-top: 190px;
+  padding-top: 220px;
   width: 100%;
-  height: 265px;
+  height: 225px;
 }
 
 .region-header-second #block-logoandicons {
@@ -464,6 +464,7 @@ blockquote footer {
 .popup-block div.product-hidden {
   margin: auto;
   padding: 2%;
+  padding-top: 12px;
   height: auto;
   width: 70%;
   position: relative;
@@ -480,6 +481,8 @@ blockquote footer {
 }
 
 .popup-block div.product-hidden .field--name-title {
+  margin: 0;
+  margin-bottom: 5px;
   text-transform: uppercase;
   color: #3D0800;
 }
@@ -930,13 +933,23 @@ blockquote footer {
 }
 
 @media (max-width: 565px) {
+  .region-header-second {
+    padding-top: 190px;
+    height: 270px;
+  }
+  #block-logoandicons .block-content--type-logo-icons {
+    width: 100% !important;
+  }
   #block-logoandicons .block-content--type-logo-icons .group-right {
+    padding-left: 0 !important;
     border: none !important;
   }
   #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-slogan {
     display: none;
   }
   #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text {
+    margin: auto;
+    width: 300px;
     display: flex;
     flex-wrap: wrap;
   }
@@ -947,7 +960,15 @@ blockquote footer {
     visibility: visible;
   }
   .bef-exposed-form .form--inline > .form-item {
-    float: none;
+    margin-top: 0;
+    margin-bottom: 5px;
+    margin-right: 1em;
+    display: block;
+    width: 45%;
+  }
+  .bef-exposed-form .form--inline > .form-item select,
+  .bef-exposed-form .form--inline > .form-item input {
+    width: 100%;
   }
   main .layout-content .views-row .variations-custom .variations-custom-wrap {
     right: -90px;
@@ -955,9 +976,13 @@ blockquote footer {
 }
 
 @media screen and (max-width: 425px) {
-  .region-header-second {
-    padding-top: 90px;
-    height: 460px;
+  #block-bookbtn-blockheadertop {
+    margin-bottom: -4px;
+    padding-right: 0 !important;
+  }
+  #block-languageswitcher {
+    width: 100% !important;
+    text-align: center;
   }
 }
 
