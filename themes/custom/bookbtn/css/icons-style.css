@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Header icons */
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:before {
   margin: auto;
@@ -20,32 +19,32 @@
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(1):before {
   /* 24 hours */
-  content: "";
+  content: "\f120";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(2):before {
   /* Daily cleaning */
-  content: "";
+  content: "\f113";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(3):before {
   /* Free WIFI internet */
-  content: "";
+  content: "\f123";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(4):before {
   /* Parking */
-  content: "";
+  content: "\f122";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(5):before {
   /* Breakfast available */
-  content: "";
+  content: "\f106";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(6):before {
   /* Location */
-  content: "";
+  content: "\f116";
 }
 
 /* Right sidebar icons */
@@ -167,32 +166,32 @@
 }
 
 .field--name-field-queen-bed::after {
-  content: "";
+  content: "\f103";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-single-bed::after {
-  content: "";
+  content: "\f102";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-sofa-bed::after {
-  content: "";
+  content: "\f10e";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-bathroom::after {
-  content: "";
+  content: "\f107";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-outside-view::after {
-  content: "";
+  content: "\f109";
   border-right: 1px solid #bcc4c5;
 }
 
 .field--name-field-smoking::after {
-  content: "";
+  content: "\f115";
 }
 
 @media screen and (max-width: 425px) {

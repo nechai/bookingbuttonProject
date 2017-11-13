@@ -61,22 +61,22 @@ $font-Flaticon-dust: "\f124";
         }
 
         .field__item:nth-child(1):before { /* 24 hours */
-          content: $font-Flaticon-clock;
+          content: "\f120";
         }
         .field__item:nth-child(2):before { /* Daily cleaning */
-          content: $font-Flaticon-cleaning-service;
+          content: "\f113";
         }
         .field__item:nth-child(3):before { /* Free WIFI internet */
-          content: $font-Flaticon-internet;
+          content: "\f123";
         }
         .field__item:nth-child(4):before { /* Parking */
-          content: $font-Flaticon-square;
+          content: "\f122";
         }
         .field__item:nth-child(5):before { /* Breakfast available */
-          content: $font-Flaticon-restaurant;
+          content: "\f106";
         }
         .field__item:nth-child(6):before { /* Location */
-          content: $font-Flaticon-signs;
+          content: "\f116";
         }
       }
     }
@@ -284,37 +284,38 @@ $font-Flaticon-dust: "\f124";
 
 .field--name-field-queen-bed {
   &::after {
-    content: $font-Flaticon-sleep;
+    content: "\f103";
     border-right: 1px solid #bcc4c5;
   }
 }
 .field--name-field-single-bed {
   &::after {
-    content: $font-Flaticon-sleeping;
+    content: "\f102";
+  ;
     border-right: 1px solid #bcc4c5;
   }
 }
 .field--name-field-sofa-bed {
   &::after {
-    content: $font-Flaticon-null;
+    content: "\f10e";
     border-right: 1px solid #bcc4c5;
   }
 }
 .field--name-field-bathroom {
   &::after {
-    content: $font-Flaticon-furniture;
+    content: "\f107";
     border-right: 1px solid #bcc4c5;
   }
 }
 .field--name-field-outside-view {
   &::after {
-    content: $font-Flaticon-photo;
+    content: "\f109";
     border-right: 1px solid #bcc4c5;
   }
 }
 .field--name-field-smoking {
   &::after {
-    content: $font-Flaticon-signs-1;
+    content: "\f115";
   }
 }
 
