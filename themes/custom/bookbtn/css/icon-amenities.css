@@ -95,3 +95,15 @@
 .field--name-field-amenities .field__items .field__item .washing {
   background-image: url("icons/png/030-bubble.png");
 }
+
+.field--name-field-amenities .field__items .field__item .air-conditioned {
+  background-image: url("icons/png/028-air-conditioner.png");
+}
+
+.field--name-field-amenities .field__items .field__item .two-plasma-tvs {
+  background-image: url("icons/png/024-flatscreen-tv.png");
+}
+
+.field--name-field-amenities .field__items .field__item .washing-machine {
+  background-image: url("icons/png/031-washing-machine.png");
+}

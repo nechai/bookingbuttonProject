@@ -1,4 +1,3 @@
-@charset "UTF-8";
 /* Header icons */
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:before {
   margin: auto;
@@ -48,56 +47,142 @@
   content: "\f100";
 }
 
-/* Product icons */
-.field--name-field-queen-bed:before,
-.field--name-field-sofa-bed:before,
-.field--name-field-bathroom:before,
-.field--name-field-outside-view:before,
-.field--name-field-smoking:before {
-  padding: 0 10px;
-  font-family: "Flaticon";
-  color: #000;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 18px;
-  /* Preferred icon size */
+/* Right sidebar icons */
+#block-contactlocationv1 .field--name-field-address::before,
+#block-contactlocationv1 .field--name-field-parking::before,
+#block-contactlocationv1 .field--name-field-reception-phone::before,
+#block-contactlocationv1 .field--name-field-reservation-phone::before,
+#block-contactlocationv1 .field--name-field-email::before,
+#block-contactlocationv1 .field--name-field-visit-website::before,
+#block-contactlocationv1 .field--name-field-google-maps::before {
+  content: '';
+  margin-right: 8px;
   display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  letter-spacing: normal;
-  word-wrap: normal;
-  white-space: nowrap;
-  direction: ltr;
-  /* Support for all WebKit browsers. */
-  -webkit-font-smoothing: antialiased;
-  /* Support for Safari and Chrome. */
-  text-rendering: optimizeLegibility;
-  /* Support for Firefox. */
-  -moz-osx-font-smoothing: grayscale;
-  /* Support for IE. */
-  font-feature-settings: 'liga';
+  height: 15px;
+  width: 15px;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 
-.field--name-field-queen-bed:before {
-  content: "";
+#block-contactlocationv1 .field--name-field-address::before {
+  background-image: url("icons/png/006-home.png");
+}
+
+#block-contactlocationv1 .field--name-field-parking::before {
+  background-image: url("icons/png/011-square.png");
+}
+
+#block-contactlocationv1 .field--name-field-parking p::before {
+  content: '';
+  margin-right: 8px;
+  display: inline-block;
+  height: 15px;
+  width: 15px;
+  background-image: url("icons/png/011-square.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#block-contactlocationv1 .field--name-field-reception-phone::before {
+  background-image: url("icons/png/004-telephone.png");
+}
+
+#block-contactlocationv1 .field--name-field-reservation-phone::before {
+  background-image: url("icons/png/005-technology.png");
+}
+
+#block-contactlocationv1 .field--name-field-email::before {
+  background-image: url("icons/png/003-mail-black-envelope-symbol.png");
+}
+
+#block-contactlocationv1 .field--name-field-visit-website::before {
+  background-image: url("icons/png/002-earth-globe.png");
+}
+
+#block-contactlocationv1 .field--name-field-google-maps {
+  position: relative;
+}
+
+#block-contactlocationv1 .field--name-field-google-maps::before {
+  position: absolute;
+  top: 15px;
+  height: 40px;
+  width: 40px;
+  background-image: url("icons/png/001-google.png");
+}
+
+/* Product icons */
+.room-conf {
+  display: flex;
+  width: 50%;
+  min-width: 400px;
+}
+
+.room-conf .field--name-field-queen-bed,
+.room-conf .field--name-field-single-bed {
+  flex: 1;
+  padding: 4px 0;
+}
+
+.room-conf .field--name-field-queen-bed .field__item,
+.room-conf .field--name-field-single-bed .field__item {
+  margin-left: 5px;
+  padding: 0 20% 0 0 !important;
+  display: inline-block !important;
+  font-size: 16px;
+  line-height: 22px;
+  width: 40px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position-x: 13px;
   border-right: 1px solid #bcc4c5;
 }
 
-.field--name-field-sofa-bed:before {
-  content: "";
+.room-conf .field--name-field-queen-bed .field__item {
+  background-image: url("icons/png/015-sleep.png");
+}
+
+.room-conf .field--name-field-single-bed .field__item {
+  background-image: url("icons/png/014-sleeping.png");
+}
+
+.room-conf .field--name-field-sofa-bed,
+.room-conf .field--name-field-bathroom,
+.room-conf .field--name-field-outside-view,
+.room-conf .field--name-field-smoking {
+  flex: 1;
+}
+
+.room-conf .field--name-field-sofa-bed::after,
+.room-conf .field--name-field-bathroom::after,
+.room-conf .field--name-field-outside-view::after,
+.room-conf .field--name-field-smoking::after {
+  content: '';
+  padding: 0 12px !important;
+  height: 25px;
+  width: 30px;
+  visibility: visible;
+  display: inline-block;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
   border-right: 1px solid #bcc4c5;
 }
 
-.field--name-field-bathroom:before {
-  content: "";
-  border-right: 1px solid #bcc4c5;
+.room-conf .field--name-field-sofa-bed::after {
+  background-image: url("icons/png/020-null.png");
+  background-position-y: 2px;
 }
 
-.field--name-field-outside-view:before {
-  content: "";
-  border-right: 1px solid #bcc4c5;
+.room-conf .field--name-field-bathroom::after {
+  background-image: url("icons/png/018-furniture.png");
 }
 
-.field--name-field-smoking:before {
-  content: "";
+.room-conf .field--name-field-outside-view::after {
+  background-image: url("icons/png/017-photo.png");
+}
+
+.room-conf .field--name-field-smoking::after {
+  background-image: url("icons/png/021-signs-1.png");
+  border: none;
 }

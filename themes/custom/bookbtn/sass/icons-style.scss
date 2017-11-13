@@ -1,4 +1,3 @@
-@import "../css/flaticon/font/_flaticon.scss";
 
 /* Header icons */
 #block-logoandicons {
@@ -25,114 +24,233 @@
         }
 
         .field__item:nth-child(1):before { /* 24 hours */
-          content: $font-Flaticon-delivery;
+          content: '\f10a';
         }
         .field__item:nth-child(2):before { /* Daily cleaning */
-          content: $font-Flaticon-short-broom;
+          content: "\f109";
         }
         .field__item:nth-child(3):before { /* Free WIFI internet */
-          content: $font-Flaticon-internet;
+          content: "\f108";
         }
         .field__item:nth-child(4):before { /* Parking */
-          content: $font-Flaticon-parking-sign;
+          content: "\f106";
         }
         .field__item:nth-child(5):before { /* Breakfast available */
-          content: $font-Flaticon-restaurant;
+          content: "\f105";
         }
         .field__item:nth-child(6):before { /* Breakfast available */
-          content: $font-Flaticon-signs-1;
+          content: "\f100";
         }
       }
     }
   }
 }
 
+/* Right sidebar icons */
+#block-contactlocationv1 {
+  .field--name-field-address,
+  .field--name-field-parking,
+  .field--name-field-reception-phone,
+  .field--name-field-reservation-phone,
+  .field--name-field-email,
+  .field--name-field-visit-website,
+  .field--name-field-google-maps {
+    &::before {
+      content: '';
+      margin-right: 8px;
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+
+  }
+  .field--name-field-address::before {
+    background-image: url("icons/png/006-home.png");
+  }
+  .field--name-field-parking {
+    &::before {
+      background-image: url("icons/png/011-square.png");
+    }
+    p::before {
+      content: '';
+      margin-right: 8px;
+      display: inline-block;
+      height: 15px;
+      width: 15px;
+      background-image: url("icons/png/011-square.png");
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  }
+  .field--name-field-reception-phone::before {
+    background-image: url("icons/png/004-telephone.png");
+  }
+  .field--name-field-reservation-phone {
+    &::before {
+      background-image: url("icons/png/005-technology.png");
+    }
+  }
+  .field--name-field-email::before {
+    background-image: url("icons/png/003-mail-black-envelope-symbol.png");
+  }
+  .field--name-field-visit-website::before {
+    background-image: url("icons/png/002-earth-globe.png");
+  }
+  .field--name-field-google-maps {
+    position: relative;
+    &::before {
+      position: absolute;
+      top: 15px;
+      height: 40px;
+      width: 40px;
+      background-image: url("icons/png/001-google.png");
+    }
+  }
+
+}
+
 /* Product icons */
-.field--name-field-queen-bed,
-.field--name-field-sofa-bed,
-.field--name-field-bathroom,
-.field--name-field-outside-view,
-.field--name-field-smoking {
-  &:before {
-    padding: 0 10px;
-    font-family: "Flaticon";
-    color: #000;
-    font-weight: normal;
-    font-style: normal;
-    font-size: 18px;  /* Preferred icon size */
-    display: inline-block;
-    line-height: 1;
-    text-transform: none;
-    letter-spacing: normal;
-    word-wrap: normal;
-    white-space: nowrap;
-    direction: ltr;
+.room-conf {
+  display: flex;
+  width: 50%;
+  min-width: 400px;
 
-    /* Support for all WebKit browsers. */
-    -webkit-font-smoothing: antialiased;
-    /* Support for Safari and Chrome. */
-    text-rendering: optimizeLegibility;
+  .field--name-field-queen-bed,
+  .field--name-field-single-bed {
+    flex: 1;
+    padding: 4px 0;
+    .field__item {
+      margin-left: 5px;
+      padding: 0 20% 0 0 !important;
+      display: inline-block !important;
+      font-size: 16px;
+      line-height: 22px;
+      width: 40px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position-x: 13px;
+      border-right: 1px solid #bcc4c5;
+    }
+  }
 
-    /* Support for Firefox. */
-    -moz-osx-font-smoothing: grayscale;
+  .field--name-field-queen-bed {
+    .field__item {
+      background-image: url("icons/png/015-sleep.png");
+    }
+  }
 
-    /* Support for IE. */
-    font-feature-settings: 'liga';
+  .field--name-field-single-bed {
+    .field__item {
+      background-image: url("icons/png/014-sleeping.png");
+    }
+
+  }
+
+  .field--name-field-sofa-bed,
+  .field--name-field-bathroom,
+  .field--name-field-outside-view,
+  .field--name-field-smoking {
+    flex: 1;
+    &::after {
+      content: '';
+      padding: 0 12px !important;
+      height: 25px;
+      width: 30px;
+      visibility: visible;
+      display: inline-block;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      border-right: 1px solid #bcc4c5;
+    }
+  }
+
+  .field--name-field-sofa-bed::after {
+    background-image: url("icons/png/020-null.png");
+    background-position-y: 2px;
+
+  }
+  .field--name-field-bathroom::after {
+    background-image: url("icons/png/018-furniture.png");
+  }
+
+  .field--name-field-outside-view::after {
+    background-image: url("icons/png/017-photo.png");
+  }
+
+  .field--name-field-smoking::after {
+    background-image: url("icons/png/021-signs-1.png");
+    border: none;
   }
 }
-
-.field--name-field-queen-bed {
-  &:before {
-    content:  $font-Flaticon-king-size-bed-with-two-pillows;
-    border-right: 1px solid #bcc4c5;
-  }
-}
-
-.field--name-field-sofa-bed {
-  &:before {
-    content: $font-Flaticon-sofa-set;
-    border-right: 1px solid #bcc4c5;
-  }
-}
-
-.field--name-field-bathroom {
-  &:before {
-    content: $font-Flaticon-bathtub-with-opened-shower;
-    border-right: 1px solid #bcc4c5;
-  }
-}
-
-.field--name-field-outside-view {
-  &:before {
-    content: $font-Flaticon-photo-of-a-landscape;
-    border-right: 1px solid #bcc4c5;
-  }
-}
-
-.field--name-field-smoking {
-  &:before {
-    content: $font-Flaticon-signs;
-  }
-}
-
-
-//.field--name-field-amenities {
-//  .wireless-internet:before {
-//    content: $font-Flaticon-sofa-set;
-//    margin: auto;
-//    margin-bottom: 7px;
-//    display: table;
-//    text-align: center;
+//.field--name-field-sofa-bed,
+//.field--name-field-bathroom,
+//.field--name-field-outside-view,
+//.field--name-field-smoking {
+//  &:before {
+//    padding: 0 10px;
 //    font-family: "Flaticon";
 //    color: #000;
-//    font-size: 40px;
+//    font-weight: normal;
+//    font-style: normal;
+//    font-size: 18px;  /* Preferred icon size */
+//    display: inline-block;
+//    line-height: 1;
+//    text-transform: none;
+//    letter-spacing: normal;
+//    word-wrap: normal;
+//    white-space: nowrap;
+//    direction: ltr;
+//
 //    /* Support for all WebKit browsers. */
 //    -webkit-font-smoothing: antialiased;
 //    /* Support for Safari and Chrome. */
 //    text-rendering: optimizeLegibility;
+//
 //    /* Support for Firefox. */
 //    -moz-osx-font-smoothing: grayscale;
+//
 //    /* Support for IE. */
 //    font-feature-settings: 'liga';
 //  }
 //}
+////
+////.field--name-field-queen-bed {
+////  &:before {
+////    content:  $font-Flaticon-king-size-bed-with-two-pillows;
+////    border-right: 1px solid #bcc4c5;
+////  }
+////}
+//
+//.field--name-field-sofa-bed {
+//  &:before {
+//    content: $font-Flaticon-sofa-set;
+//    border-right: 1px solid #bcc4c5;
+//  }
+//}
+//
+//.field--name-field-bathroom {
+//  &:before {
+//    content: $font-Flaticon-bathtub-with-opened-shower;
+//    border-right: 1px solid #bcc4c5;
+//  }
+//}
+//
+//.field--name-field-outside-view {
+//  &:before {
+//    content: $font-Flaticon-photo-of-a-landscape;
+//    border-right: 1px solid #bcc4c5;
+//  }
+//}
+//
+//.field--name-field-smoking {
+//  &:before {
+//    content: $font-Flaticon-signs;
+//  }
+//}
+
+padding: 0 4px !important;
+height: 15px;
+width: 15px;
