@@ -175,11 +175,11 @@ header {
 
 .region-header-second #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item {
   flex: 1;
-  max-width: 105px;
+  max-width: 120px;
   min-width: 85px;
   text-align: center;
   color: #fff;
-  font-size: 1.4em;
+  font-size: 1em;
   word-spacing: 1px;
 }
 
@@ -897,7 +897,6 @@ blockquote footer {
   }
   main .layout-content .views-row .variations-custom .variations-custom-wrap {
     position: inherit;
-    float: right;
     top: 0;
     right: 0;
     transform: none;
@@ -905,8 +904,8 @@ blockquote footer {
   main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-price {
     margin-top: 13px;
     margin-left: 14px;
-    float: left;
-    margin-right: 20px;
+    float: right;
+    margin-right: 25px;
     padding-top: 4px;
   }
   main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-variations {
@@ -951,9 +950,6 @@ blockquote footer {
   .bef-exposed-form .form--inline > .form-item select,
   .bef-exposed-form .form--inline > .form-item input {
     width: 100%;
-  }
-  main .layout-content .views-row .variations-custom .variations-custom-wrap {
-    right: -90px;
   }
 }
 
