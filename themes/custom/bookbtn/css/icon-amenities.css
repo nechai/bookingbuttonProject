@@ -60,6 +60,10 @@
   background-image: url("icons/png/007-electric-iron.png");
 }
 
+.field--name-field-amenities .field__items .field__item .diving-room {
+  background-image: url("icons/png/023-table.png");
+}
+
 .field--name-field-amenities .field__items .field__item .high-chair-available {
   background-image: url("icons/png/035-feeding-chair.png");
 }
