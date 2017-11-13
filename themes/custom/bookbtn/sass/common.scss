@@ -274,6 +274,7 @@ main {
 
 
         .product-item {
+          padding-bottom: 10px;
           display: block;
           position: relative;
           background: #fff;
@@ -331,19 +332,6 @@ main {
               > div {
                 display: inline-block;
 
-              }
-              .field--name-field-square {
-                height: 17px;
-                margin-top: 4px;
-                margin-right: 8px;
-                padding: 3px 5px;
-                border-right: 1px solid #bcc4c5;
-                font-weight: normal;
-                font-style: normal;
-                font-size: 16px;
-                display: inline-block;
-                text-transform: none;
-                direction: ltr;
               }
 
               /* Поля конфігурації кімнати */
@@ -632,19 +620,6 @@ blockquote footer {
           display: none;
         }
 
-        .field--name-field-square {
-          margin-right: 8px;
-          padding: 10px 5px;
-          border-right: 1px solid #bcc4c5;
-          font-weight: normal;
-          font-style: normal;
-          font-size: 16px;
-          display: inline-block;
-          line-height: 1;
-          text-transform: none;
-          direction: ltr;
-        }
-
         /* Поля конфігурації кімнати */
         .field--label-above .field__label,
         .field--label-above .field__item {
@@ -931,11 +906,17 @@ blockquote footer {
   }
 
   main .layout-content .views-row .variations-custom {
-    margin-top: 35px;
+    position: inherit;
+    //margin-top: 35px;
     height: 70px !important;
     width: 100% !important;
     .variations-custom-wrap {
-      right: -70px;
+      //right: -210px !important;
+      position: inherit;
+      float: right;
+      top: 0;
+      right: 0;
+      transform: none;
       .field--name-price {
         margin-top: 13px;
         margin-left: 14px;

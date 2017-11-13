@@ -1,6 +1,6 @@
 	/*
   	Flaticon icon font: Flaticon
-  	Creation date: 08/11/2017 21:31
+  	Creation date: 13/11/2017 10:19
   	*/
 
 @font-face {
@@ -29,24 +29,40 @@ font-style: normal;
 margin-left: 20px;
 }
 
-.flaticon-signs-1:before { content: "\f100"; }
-.flaticon-big-bed-with-one-pillow:before { content: "\f101"; }
-.flaticon-kings-size-bed-for-three:before { content: "\f102"; }
-.flaticon-time:before { content: "\f103"; }
-.flaticon-cutlery:before { content: "\f104"; }
-.flaticon-restaurant:before { content: "\f105"; }
-.flaticon-parking-sign:before { content: "\f106"; }
-.flaticon-connection:before { content: "\f107"; }
-.flaticon-internet:before { content: "\f108"; }
-.flaticon-short-broom:before { content: "\f109"; }
-.flaticon-delivery:before { content: "\f10a"; }
-.flaticon-signs:before { content: "\f10b"; }
-.flaticon-sofa-set:before { content: "\f10c"; }
-.flaticon-photo-of-a-landscape:before { content: "\f10d"; }
-.flaticon-bathtub-with-opened-shower:before { content: "\f10e"; }
-.flaticon-king-size-bed-with-two-pillows:before { content: "\f10f"; }
-.flaticon-medical:before { content: "\f110"; }
-.flaticon-cleaning:before { content: "\f111"; }
-.flaticon-wifi:before { content: "\f112"; }
-.flaticon-shower:before { content: "\f113"; }
-.flaticon-snowflake:before { content: "\f114"; }
+.flaticon-table:before { content: "\f100"; }
+.flaticon-electric-iron:before { content: "\f101"; }
+.flaticon-sleeping:before { content: "\f102"; }
+.flaticon-sleep:before { content: "\f103"; }
+.flaticon-buildings:before { content: "\f104"; }
+.flaticon-technology:before { content: "\f105"; }
+.flaticon-restaurant:before { content: "\f106"; }
+.flaticon-furniture:before { content: "\f107"; }
+.flaticon-telephone:before { content: "\f108"; }
+.flaticon-photo:before { content: "\f109"; }
+.flaticon-connection:before { content: "\f10a"; }
+.flaticon-tool:before { content: "\f10b"; }
+.flaticon-mail-black-envelope-symbol:before { content: "\f10c"; }
+.flaticon-flatscreen-tv:before { content: "\f10d"; }
+.flaticon-null:before { content: "\f10e"; }
+.flaticon-earth-globe:before { content: "\f10f"; }
+.flaticon-home:before { content: "\f110"; }
+.flaticon-monitor:before { content: "\f111"; }
+.flaticon-toiletries:before { content: "\f112"; }
+.flaticon-cleaning-service:before { content: "\f113"; }
+.flaticon-bubble:before { content: "\f114"; }
+.flaticon-signs-1:before { content: "\f115"; }
+.flaticon-signs:before { content: "\f116"; }
+.flaticon-shower:before { content: "\f117"; }
+.flaticon-feeding-chair:before { content: "\f118"; }
+.flaticon-towel:before { content: "\f119"; }
+.flaticon-fridge:before { content: "\f11a"; }
+.flaticon-wifi:before { content: "\f11b"; }
+.flaticon-hairdryer:before { content: "\f11c"; }
+.flaticon-washing-machine:before { content: "\f11d"; }
+.flaticon-hob:before { content: "\f11e"; }
+.flaticon-floor:before { content: "\f11f"; }
+.flaticon-clock:before { content: "\f120"; }
+.flaticon-air-conditioner:before { content: "\f121"; }
+.flaticon-square:before { content: "\f122"; }
+.flaticon-internet:before { content: "\f123"; }
+.flaticon-dust:before { content: "\f124"; }

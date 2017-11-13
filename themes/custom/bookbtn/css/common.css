@@ -273,6 +273,7 @@ main .layout-content .views-row article {
 }
 
 main .layout-content .views-row article .product-item {
+  padding-bottom: 10px;
   display: block;
   position: relative;
   background: #fff;
@@ -335,20 +336,6 @@ main .layout-content .views-row article .product-item .right-col .room-conf {
 
 main .layout-content .views-row article .product-item .right-col .room-conf > div {
   display: inline-block;
-}
-
-main .layout-content .views-row article .product-item .right-col .room-conf .field--name-field-square {
-  height: 17px;
-  margin-top: 4px;
-  margin-right: 8px;
-  padding: 3px 5px;
-  border-right: 1px solid #bcc4c5;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  display: inline-block;
-  text-transform: none;
-  direction: ltr;
 }
 
 main .layout-content .views-row article .product-item .right-col .room-conf .field--label-above .field__label,
@@ -642,19 +629,6 @@ blockquote footer {
   display: none;
 }
 
-.popup-block div.product-hidden .right-col fieldset.description-fieldset .field--name-field-square {
-  margin-right: 8px;
-  padding: 10px 5px;
-  border-right: 1px solid #bcc4c5;
-  font-weight: normal;
-  font-style: normal;
-  font-size: 16px;
-  display: inline-block;
-  line-height: 1;
-  text-transform: none;
-  direction: ltr;
-}
-
 .popup-block div.product-hidden .right-col fieldset.description-fieldset .field--label-above .field__label,
 .popup-block div.product-hidden .right-col fieldset.description-fieldset .field--label-above .field__item {
   display: none;
@@ -917,12 +891,16 @@ blockquote footer {
     width: 100% !important;
   }
   main .layout-content .views-row .variations-custom {
-    margin-top: 35px;
+    position: inherit;
     height: 70px !important;
     width: 100% !important;
   }
   main .layout-content .views-row .variations-custom .variations-custom-wrap {
-    right: -70px;
+    position: inherit;
+    float: right;
+    top: 0;
+    right: 0;
+    transform: none;
   }
   main .layout-content .views-row .variations-custom .variations-custom-wrap .field--name-price {
     margin-top: 13px;

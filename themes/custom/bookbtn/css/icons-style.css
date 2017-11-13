@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Header icons */
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:before {
   margin: auto;
@@ -19,32 +20,32 @@
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(1):before {
   /* 24 hours */
-  content: '\f10a';
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(2):before {
   /* Daily cleaning */
-  content: "\f109";
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(3):before {
   /* Free WIFI internet */
-  content: "\f108";
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(4):before {
   /* Parking */
-  content: "\f106";
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(5):before {
   /* Breakfast available */
-  content: "\f105";
+  content: "";
 }
 
 #block-logoandicons .block-content--type-logo-icons .group-right .field--name-field-icons-text .field__item:nth-child(6):before {
-  /* Breakfast available */
-  content: "\f100";
+  /* Location */
+  content: "";
 }
 
 /* Right sidebar icons */
@@ -112,77 +113,95 @@
 }
 
 /* Product icons */
-.room-conf {
-  display: flex;
-  width: 50%;
-  min-width: 400px;
+/* Product price field */
+.field--name-field-square {
+  height: 17px;
+  margin-top: 4px;
+  margin-right: 8px;
+  padding: 0 5px;
+  border-right: 1px solid #bcc4c5;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 16px;
+  display: inline-block;
+  text-transform: none;
+  direction: ltr;
 }
 
-.room-conf .field--name-field-queen-bed,
-.room-conf .field--name-field-single-bed {
-  flex: 1;
-  padding: 4px 0;
-}
-
-.room-conf .field--name-field-queen-bed .field__item,
-.room-conf .field--name-field-single-bed .field__item {
-  margin-left: 5px;
-  padding: 0 20% 0 0 !important;
+.field--name-field-queen-bed .field__item,
+.field--name-field-single-bed .field__item {
   display: inline-block !important;
   font-size: 16px;
   line-height: 22px;
-  width: 40px;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position-x: 13px;
-  border-right: 1px solid #bcc4c5;
+  width: 0;
 }
 
-.room-conf .field--name-field-queen-bed .field__item {
-  background-image: url("icons/png/015-sleep.png");
-}
-
-.room-conf .field--name-field-single-bed .field__item {
-  background-image: url("icons/png/014-sleeping.png");
-}
-
-.room-conf .field--name-field-sofa-bed,
-.room-conf .field--name-field-bathroom,
-.room-conf .field--name-field-outside-view,
-.room-conf .field--name-field-smoking {
-  flex: 1;
-}
-
-.room-conf .field--name-field-sofa-bed::after,
-.room-conf .field--name-field-bathroom::after,
-.room-conf .field--name-field-outside-view::after,
-.room-conf .field--name-field-smoking::after {
-  content: '';
-  padding: 0 12px !important;
-  height: 25px;
-  width: 30px;
-  visibility: visible;
+.field--name-field-queen-bed::after,
+.field--name-field-single-bed::after,
+.field--name-field-sofa-bed::after,
+.field--name-field-bathroom::after,
+.field--name-field-outside-view::after,
+.field--name-field-smoking::after {
+  padding: 0 10px;
+  font-family: "Flaticon";
+  color: #000;
+  font-weight: normal;
+  font-style: normal;
+  font-size: 18px;
+  /* Preferred icon size */
   display: inline-block;
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.field--name-field-queen-bed::after {
+  content: "";
   border-right: 1px solid #bcc4c5;
 }
 
-.room-conf .field--name-field-sofa-bed::after {
-  background-image: url("icons/png/020-null.png");
-  background-position-y: 2px;
+.field--name-field-single-bed::after {
+  content: "";
+  border-right: 1px solid #bcc4c5;
 }
 
-.room-conf .field--name-field-bathroom::after {
-  background-image: url("icons/png/018-furniture.png");
+.field--name-field-sofa-bed::after {
+  content: "";
+  border-right: 1px solid #bcc4c5;
 }
 
-.room-conf .field--name-field-outside-view::after {
-  background-image: url("icons/png/017-photo.png");
+.field--name-field-bathroom::after {
+  content: "";
+  border-right: 1px solid #bcc4c5;
 }
 
-.room-conf .field--name-field-smoking::after {
-  background-image: url("icons/png/021-signs-1.png");
-  border: none;
+.field--name-field-outside-view::after {
+  content: "";
+  border-right: 1px solid #bcc4c5;
+}
+
+.field--name-field-smoking::after {
+  content: "";
+}
+
+@media screen and (max-width: 425px) {
+  .field--name-field-queen-bed::after,
+  .field--name-field-single-bed::after,
+  .field--name-field-sofa-bed::after,
+  .field--name-field-bathroom::after,
+  .field--name-field-outside-view::after,
+  .field--name-field-smoking::after {
+    padding: 0 5px;
+  }
 }
