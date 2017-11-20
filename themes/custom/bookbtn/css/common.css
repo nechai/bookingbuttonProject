@@ -20,8 +20,8 @@ body {
 }
 
 header {
-  background-image: url("img/background_header.jpg");
-  -webkit-background-image: url("img/background_header.jpg");
+  background-image: url("img/background_header_light.jpeg");
+  -webkit-background-image: url("img/background_header_light.jpeg");
   background-position: 50%;
   background-size: cover;
 }
@@ -867,10 +867,26 @@ blockquote footer {
 }
 
 @media (max-width: 925px) {
-  #block-logoandicons .group-left {
-    display: none;
+  .region-header-second {
+    padding-top: 75px;
+    height: 350px;
   }
-  #block-logoandicons .group-left .field--name-field-slogan {
+  .region-header-second .block-content--type-logo-icons {
+    flex-wrap: wrap;
+  }
+  .region-header-second .block-content--type-logo-icons .group-left {
+    flex: none !important;
+    display: block;
+    margin: auto;
+    margin-bottom: 30px;
+    width: 301px;
+  }
+  .region-header-second .block-content--type-logo-icons .group-left img {
+    margin-right: 0;
+    margin-left: 12px !important;
+    float: none !important;
+  }
+  .region-header-second .block-content--type-logo-icons .field--name-field-slogan {
     font-size: 1.1em;
   }
   .image-wrapper.left-col {
@@ -913,13 +929,6 @@ blockquote footer {
 }
 
 @media (max-width: 565px) {
-  .region-header-second {
-    padding-top: 190px;
-    height: 270px;
-  }
-  #block-logoandicons .block-content--type-logo-icons {
-    width: 100% !important;
-  }
   #block-logoandicons .block-content--type-logo-icons .group-right {
     padding-left: 0 !important;
     border: none !important;
