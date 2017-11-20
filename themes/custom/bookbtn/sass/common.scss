@@ -943,7 +943,16 @@ blockquote footer {
     }
   }
 }
-
+@media (max-width: 768px) {
+  #block-languageswitcher {
+    ul {
+      margin: 0 0 0 20px !important;
+      li {
+        line-height: 2em !important;
+      }
+    }
+  }
+}
 @media (max-width: 565px) {
   //.region-header-second {
   //  padding-top: 190px;

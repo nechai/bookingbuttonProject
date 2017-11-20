@@ -928,6 +928,15 @@ blockquote footer {
   }
 }
 
+@media (max-width: 768px) {
+  #block-languageswitcher ul {
+    margin: 0 0 0 20px !important;
+  }
+  #block-languageswitcher ul li {
+    line-height: 2em !important;
+  }
+}
+
 @media (max-width: 565px) {
   #block-logoandicons .block-content--type-logo-icons .group-right {
     padding-left: 0 !important;
