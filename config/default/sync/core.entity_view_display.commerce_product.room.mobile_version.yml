@@ -5,7 +5,6 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.room
     - core.entity_view_mode.commerce_product.mobile_version
-    - field.field.commerce_product.room.field_amenities
     - field.field.commerce_product.room.field_bathroom
     - field.field.commerce_product.room.field_book_dates
     - field.field.commerce_product.room.field_description
@@ -67,13 +66,6 @@ targetEntityType: commerce_product
 bundle: room
 mode: mobile_version
 content:
-  field_amenities:
-    type: list_default
-    weight: 8
-    region: right
-    label: above
-    settings: {  }
-    third_party_settings: {  }
   field_bathroom:
     type: number_integer
     weight: 4

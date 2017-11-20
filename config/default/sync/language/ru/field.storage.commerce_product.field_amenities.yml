@@ -1,31 +1,38 @@
 settings:
   allowed_values:
-    0:
-      label: '24-часовая Рецепция'
-    1:
-      label: Кондиционер
-    2:
-      label: Парковка
-    3:
-      label: 'Скоросной Интернет'
-    4:
-      label: 'Для некурящих'
-    6:
-      label: Прибирание
-    7:
-      label: Балкон
-    8: {  }
-    9:
-      label: Кухня
-    10:
-      label: Холодильник
-    11:
-      label: Душ
-    12:
-      label: Фен
-    13:
-      label: 'Стиральная машинка'
-    14:
-      label: 'Туалетные принадлежности'
-    15:
-      label: Туалет
+    -
+      label: '<i class="air-conditioned" aria-hidden="true"></i>Кондиционер'
+    -
+      label: '<i class="wireless-internet" aria-hidden="true"></i>WIFI'
+    -
+      label: '<i class="two-plasma-tvs" aria-hidden="true"></i>Два плазменных телевизора'
+    -
+      label: '<i class="flat-screen-tv" aria-hidden="true"></i>Плазменный телевизор'
+    -
+      label: '<i class="housekeeping" aria-hidden="true"></i>Уборка номеров'
+    -
+      label: '<i class="warm-floor" aria-hidden="true"></i>Тёплый пол'
+    -
+      label: '<i class="iron-free" aria-hidden="true"></i>Утюг'
+    -
+      label: '<i class="diving-room" aria-hidden="true"></i>Столовая'
+    -
+      label: '<i class="high-chair-available" aria-hidden="true"></i>Высокий детский стул'
+    -
+      label: '<i class="hob-induction" aria-hidden="true"></i>Индукционная плитка'
+    -
+      label: '<i class="fridge" aria-hidden="true"></i>Холодильник'
+    -
+      label: '<i class="linen-and-towels-provided" aria-hidden="true"></i>Белье и полотенца'
+    -
+      label: '<i class="washing-machine" aria-hidden="true"></i>Стиральная машина'
+    -
+      label: '<i class="free-toiletries" aria-hidden="true"></i>Бесплатные туалетные принадлежности'
+    -
+      label: '<i class="shower" aria-hidden="true"></i>Душ'
+    -
+      label: '<i class="en-suite-bathroom-heating" aria-hidden="true"></i>Ванная комната с отоплением'
+    -
+      label: '<i class="hairdryer" aria-hidden="true"></i>Фен'
+    -
+      label: '<i class="washing" aria-hidden="true"></i>Стирка (за дополнительную плату)'

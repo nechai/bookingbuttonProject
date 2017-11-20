@@ -5,8 +5,6 @@ display:
         field_max_adults_value:
           expose:
             label: Дорослі
-          group_info:
-            description: ''
         field_max_children_value:
           expose:
             label: Діти

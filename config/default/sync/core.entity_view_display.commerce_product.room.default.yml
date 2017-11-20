@@ -15,6 +15,7 @@ dependencies:
     - field.field.commerce_product.room.field_more_information
     - field.field.commerce_product.room.field_outside_view
     - field.field.commerce_product.room.field_queen_bed
+    - field.field.commerce_product.room.field_single_bed
     - field.field.commerce_product.room.field_smoking
     - field.field.commerce_product.room.field_sofa_bed
     - field.field.commerce_product.room.field_square
@@ -33,7 +34,7 @@ bundle: room
 mode: default
 content:
   field_amenities:
-    weight: 9
+    weight: 12
     label: above
     settings: {  }
     third_party_settings: {  }
@@ -41,7 +42,7 @@ content:
     region: content
   field_bathroom:
     weight: 6
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -87,14 +88,23 @@ content:
     region: content
   field_outside_view:
     weight: 7
-    label: inline
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_queen_bed:
     weight: 4
-    label: inline
+    label: above
+    settings:
+      thousand_separator: ''
+      prefix_suffix: true
+    third_party_settings: {  }
+    type: number_integer
+    region: content
+  field_single_bed:
+    weight: 13
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true
@@ -103,14 +113,14 @@ content:
     region: content
   field_smoking:
     weight: 8
-    label: inline
+    label: above
     settings: {  }
     third_party_settings: {  }
     type: list_default
     region: content
   field_sofa_bed:
     weight: 5
-    label: inline
+    label: above
     settings:
       thousand_separator: ''
       prefix_suffix: true

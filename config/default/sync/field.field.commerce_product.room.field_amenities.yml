@@ -1,4 +1,4 @@
-uuid: 7c7ce3da-6e56-45ee-97de-6563dded8384
+uuid: 173673f9-4c8b-4087-a516-28ddf07bb515
 langcode: en
 status: true
 dependencies:
@@ -14,7 +14,7 @@ bundle: room
 label: Amenities
 description: ''
 required: false
-translatable: true
+translatable: false
 default_value: {  }
 default_value_callback: ''
 settings: {  }

@@ -14,8 +14,11 @@ bundle: logo_icons
 label: Slogan
 description: ''
 required: false
-translatable: false
-default_value: {  }
+translatable: true
+default_value:
+  -
+    value: "<p>Бронюйте кімнату через наш вебсайт</p>\r\n\r\n<p>та оцініть наші переваги</p>\r\n"
+    format: basic_html
 default_value_callback: ''
 settings: {  }
 field_type: text_long

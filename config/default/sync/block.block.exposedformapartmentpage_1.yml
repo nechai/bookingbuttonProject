@@ -1,4 +1,4 @@
-uuid: 9d5b1d5c-3063-40f7-9527-b1053d33eed4
+uuid: 6f4e079e-98f7-4e8c-89bb-f22552507a80
 langcode: en
 status: true
 dependencies:
@@ -18,6 +18,6 @@ settings:
   id: 'views_exposed_filter_block:apartment-page_1'
   label: ''
   provider: views
-  label_display: visible
+  label_display: '0'
   views_label: ''
 visibility: {  }

@@ -4,8 +4,13 @@ status: true
 dependencies:
   config:
     - commerce_product.commerce_product_variation_type.room_simple
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: true
 id: commerce_product_variation.room_simple
 target_entity_type_id: commerce_product_variation
 target_bundle: room_simple
 default_langcode: site_default
-language_alterable: false
+language_alterable: true

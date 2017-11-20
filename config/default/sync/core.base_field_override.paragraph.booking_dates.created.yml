@@ -1,0 +1,18 @@
+uuid: 7a36c6e1-a590-4b6b-9686-11a31f423a8c
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.booking_dates
+id: paragraph.booking_dates.created
+field_name: created
+entity_type: paragraph
+bundle: booking_dates
+label: Створено
+description: 'The time that the Paragraph was created.'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings: {  }
+field_type: created

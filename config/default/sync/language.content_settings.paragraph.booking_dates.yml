@@ -1,0 +1,16 @@
+uuid: f57b3002-1fc5-48f7-8e9c-59835218f92b
+langcode: uk
+status: true
+dependencies:
+  config:
+    - paragraphs.paragraphs_type.booking_dates
+  module:
+    - content_translation
+third_party_settings:
+  content_translation:
+    enabled: false
+id: paragraph.booking_dates
+target_entity_type_id: paragraph
+target_bundle: booking_dates
+default_langcode: site_default
+language_alterable: false

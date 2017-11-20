@@ -1,31 +1,38 @@
 settings:
   allowed_values:
-    0:
-      label: '24-годинна Рецепція'
-    1:
-      label: Кондиціонер
-    2:
-      label: Парковка
-    3:
-      label: 'Швидкісний інтернет'
-    4:
-      label: 'Для некурців'
-    5: {  }
-    7:
-      label: Балкон
-    12:
-      label: Фен
-    13:
-      label: 'Пральна машинка'
-    14:
-      label: 'Туалетні приналежності'
-    15:
-      label: Туалет
-    6:
-      label: Прибирання
-    9:
-      label: Кухня
-    10:
-      label: Холодильник
-    11:
-      label: Душ
+    -
+      label: '<i class="air-conditioned" aria-hidden="true"></i>Кондиціонування'
+    -
+      label: '<i class="wireless-internet" aria-hidden="true"></i>WIFI'
+    -
+      label: '<i class="two-plasma-tvs" aria-hidden="true"></i>Два плазмових телевізори'
+    -
+      label: '<i class="flat-screen-tv" aria-hidden="true"></i>Плазмовий телевізор'
+    -
+      label: '<i class="housekeeping" aria-hidden="true"></i>Прибирання номерів'
+    -
+      label: '<i class="warm-floor" aria-hidden="true"></i>Тепла підлога'
+    -
+      label: '<i class="iron-free" aria-hidden="true"></i>Праска безкоштовно'
+    -
+      label: '<i class="diving-room" aria-hidden="true"></i>Столова'
+    -
+      label: '<i class="high-chair-available" aria-hidden="true"></i>Високий дитячий стілець'
+    -
+      label: '<i class="hob-induction" aria-hidden="true"></i>Індукційна плитка'
+    -
+      label: '<i class="fridge" aria-hidden="true"></i>Холодильник'
+    -
+      label: '<i class="linen-and-towels-provided" aria-hidden="true"></i>Білизна та рушники'
+    -
+      label: '<i class="washing-machine" aria-hidden="true"></i>Пральна машина'
+    -
+      label: '<i class="free-toiletries" aria-hidden="true"></i>Безкоштовні туалетні приналежності'
+    -
+      label: '<i class="shower" aria-hidden="true"></i>Душ'
+    -
+      label: '<i class="en-suite-bathroom-heating" aria-hidden="true"></i>Ванна кімната з опаленням'
+    -
+      label: '<i class="hairdryer" aria-hidden="true"></i>Фен'
+    -
+      label: '<i class="washing" aria-hidden="true"></i>Прання (за додаткову плату)'

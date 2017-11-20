@@ -1,0 +1,14 @@
+settings:
+  allowed_values:
+    -
+      label: '24/7 Рецепция'
+    -
+      label: 'Ежедневная уборка'
+    -
+      label: 'Бесплатный WIFI'
+    -
+      label: Парковка
+    -
+      label: Завтраки
+    -
+      label: 'Центральное расположение'

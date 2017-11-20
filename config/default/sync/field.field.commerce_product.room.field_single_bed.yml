@@ -1,0 +1,25 @@
+uuid: a35c52f9-a1c9-4646-b38f-5dd07efd9ff9
+langcode: en
+status: true
+dependencies:
+  config:
+    - commerce_product.commerce_product_type.room
+    - field.storage.commerce_product.field_single_bed
+id: commerce_product.room.field_single_bed
+field_name: field_single_bed
+entity_type: commerce_product
+bundle: room
+label: 'Single bed'
+description: ''
+required: false
+translatable: false
+default_value:
+  -
+    value: 0
+default_value_callback: ''
+settings:
+  min: 0
+  max: null
+  prefix: ''
+  suffix: ''
+field_type: integer

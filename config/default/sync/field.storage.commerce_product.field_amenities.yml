@@ -1,4 +1,4 @@
-uuid: 98095b0a-64ff-48bd-a1b0-c5105543f305
+uuid: c3037f6c-54b3-48b1-9bee-2b62acd72fa9
 langcode: en
 status: true
 dependencies:
@@ -12,53 +12,59 @@ type: list_string
 settings:
   allowed_values:
     -
-      value: '24-hour reception'
-      label: '24-hour reception'
+      value: Air-conditioned
+      label: '<i class="air-conditioned" aria-hidden="true"></i>Air-conditioned'
     -
-      value: Conditioner
-      label: Conditioner
+      value: 'Wireless Internet'
+      label: '<i class="wireless-internet" aria-hidden="true"></i>Wireless Internet'
     -
-      value: Parking
-      label: Parking
+      value: 'Two Plasma TVs'
+      label: '<i class="two-plasma-tvs" aria-hidden="true"></i>Two Plasma TVs'
     -
-      value: 'Broadband Internet access'
-      label: 'Broadband Internet access'
-    -
-      value: Non-smoking
-      label: Non-smoking
-    -
-      value: Wifi
-      label: Wifi
+      value: 'Flat Screen TV'
+      label: '<i class="flat-screen-tv" aria-hidden="true"></i>Flat Screen TV'
     -
       value: Housekeeping
-      label: Housekeeping
+      label: '<i class="housekeeping" aria-hidden="true"></i>Housekeeping'
     -
-      value: Balcony
-      label: Balcony
+      value: 'Warm floor'
+      label: '<i class="warm-floor" aria-hidden="true"></i>Warm floor'
     -
-      value: TV
-      label: TV
+      value: Iron-free
+      label: '<i class="iron-free" aria-hidden="true"></i>Iron-free'
     -
-      value: Kitchen
-      label: Kitchen
+      value: 'Diving room'
+      label: '<i class="diving-room" aria-hidden="true"></i>Diving room'
+    -
+      value: 'High Chair Available'
+      label: '<i class="high-chair-available" aria-hidden="true"></i>High Chair Available'
+    -
+      value: 'Hob induction'
+      label: '<i class="hob-induction" aria-hidden="true"></i>Hob induction'
     -
       value: Fridge
-      label: Fridge
+      label: '<i class="fridge" aria-hidden="true"></i>Fridge'
     -
-      value: Shower
-      label: Shower
+      value: 'Linen and Towels Provided'
+      label: '<i class="linen-and-towels-provided" aria-hidden="true"></i>Linen and Towels Provided'
     -
-      value: Hairdryer
-      label: Hairdryer
-    -
-      value: Washer
-      label: Washer
+      value: 'Washing machine'
+      label: '<i class="washing-machine" aria-hidden="true"></i>Washing machine'
     -
       value: 'Free Toiletries'
-      label: 'Free Toiletries'
+      label: '<i class="free-toiletries" aria-hidden="true"></i>Free Toiletries'
     -
-      value: Toilet
-      label: Toilet
+      value: Shower
+      label: '<i class="shower" aria-hidden="true"></i>Shower'
+    -
+      value: 'En-suite Bathroom Heating'
+      label: '<i class="en-suite-bathroom-heating" aria-hidden="true"></i>En-suite Bathroom Heating'
+    -
+      value: Hairdryer
+      label: '<i class="hairdryer" aria-hidden="true"></i>Hairdryer'
+    -
+      value: 'Washing (for an additional fee)'
+      label: '<i class="washing" aria-hidden="true"></i>Washing (for an additional fee)'
   allowed_values_function: ''
 module: options
 locked: false

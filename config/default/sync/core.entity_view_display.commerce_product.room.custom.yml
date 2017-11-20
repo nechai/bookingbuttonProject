@@ -5,8 +5,8 @@ dependencies:
   config:
     - commerce_product.commerce_product_type.room
     - core.entity_view_mode.commerce_product.custom
-    - field.field.commerce_product.room.field_amenities
     - field.field.commerce_product.room.field_bathroom
+    - field.field.commerce_product.room.field_book_dates
     - field.field.commerce_product.room.field_description
     - field.field.commerce_product.room.field_image
     - field.field.commerce_product.room.field_max_adults
@@ -42,13 +42,6 @@ content:
       past_format: '@interval ago'
       granularity: 2
     third_party_settings: {  }
-  field_amenities:
-    weight: 13
-    label: above
-    settings: {  }
-    third_party_settings: {  }
-    type: list_default
-    region: content
   field_bathroom:
     weight: 10
     label: inline
@@ -181,4 +174,5 @@ content:
       combine: true
     third_party_settings: {  }
     region: content
-hidden: {  }
+hidden:
+  field_book_dates: true

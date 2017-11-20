@@ -18,7 +18,7 @@ id: commerce_product.room.field_image
 field_name: field_image
 entity_type: commerce_product
 bundle: room
-label: Image
+label: Зображення
 description: ''
 required: false
 translatable: true

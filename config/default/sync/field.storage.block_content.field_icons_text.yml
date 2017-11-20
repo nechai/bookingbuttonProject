@@ -26,6 +26,9 @@ settings:
     -
       value: 'Breakfast available'
       label: 'Breakfast available'
+    -
+      value: 'Central location'
+      label: 'Central location'
   allowed_values_function: ''
 module: options
 locked: false
