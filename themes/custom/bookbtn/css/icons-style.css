@@ -111,13 +111,12 @@
   background-image: url("icons/png/001-google.png");
 }
 
-/* Product icons */
-/* Product price field */
 .field--name-field-square {
   height: 17px;
   margin-top: 4px;
   margin-right: 8px;
-  padding: 0 5px;
+  padding: 0;
+  padding-right: 5px;
   border-right: 1px solid #bcc4c5;
   font-weight: normal;
   font-style: normal;
@@ -195,12 +194,15 @@
 }
 
 @media screen and (max-width: 425px) {
+  .field--name-field-square {
+    margin-right: 0;
+  }
   .field--name-field-queen-bed::after,
   .field--name-field-single-bed::after,
   .field--name-field-sofa-bed::after,
   .field--name-field-bathroom::after,
   .field--name-field-outside-view::after,
   .field--name-field-smoking::after {
-    padding: 0 5px;
+    padding: 0 8px;
   }
 }

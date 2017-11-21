@@ -148,87 +148,12 @@ $font-Flaticon-dust: "\f124";
 
 }
 
-/* Product icons */
-//.room-conf {
-//  display: flex;
-//  width: 50%;
-//  min-width: 400px;
-//
-//  .field--name-field-queen-bed,
-//  .field--name-field-single-bed {
-//    flex: 1;
-//    padding: 4px 0;
-//    .field__item {
-//      margin-left: 5px;
-//      padding: 0 20% 0 0 !important;
-//      display: inline-block !important;
-//      font-size: 16px;
-//      line-height: 22px;
-//      width: 40px;
-//      background-repeat: no-repeat;
-//      background-size: contain;
-//      background-position-x: 13px;
-//      border-right: 1px solid #bcc4c5;
-//    }
-//  }
-//
-//  .field--name-field-queen-bed {
-//    .field__item {
-//      background-image: url("icons/png/015-sleep.png");
-//    }
-//  }
-//
-//  .field--name-field-single-bed {
-//    .field__item {
-//      background-image: url("icons/png/014-sleeping.png");
-//    }
-//
-//  }
-//
-//  .field--name-field-sofa-bed,
-//  .field--name-field-bathroom,
-//  .field--name-field-outside-view,
-//  .field--name-field-smoking {
-//    flex: 1;
-//    &::after {
-//      content: '';
-//      padding: 0 12px !important;
-//      height: 25px;
-//      width: 30px;
-//      visibility: visible;
-//      display: inline-block;
-//      background-repeat: no-repeat;
-//      background-size: contain;
-//      background-position: center;
-//      border-right: 1px solid #bcc4c5;
-//    }
-//  }
-//
-//  .field--name-field-sofa-bed::after {
-//    background-image: url("icons/png/020-null.png");
-//    background-position-y: 2px;
-//
-//  }
-//  .field--name-field-bathroom::after {
-//    background-image: url("icons/png/018-furniture.png");
-//  }
-//
-//  .field--name-field-outside-view::after {
-//    background-image: url("icons/png/017-photo.png");
-//  }
-//
-//  .field--name-field-smoking::after {
-//    background-image: url("icons/png/021-signs-1.png");
-//    border: none;
-//  }
-//}
-
-/* Product price field */
 .field--name-field-square {
   height: 17px;
   margin-top: 4px;
   margin-right: 8px;
-  padding: 0 5px;
+  padding: 0;
+  padding-right: 5px;
   border-right: 1px solid #bcc4c5;
   font-weight: normal;
   font-style: normal;
@@ -321,6 +246,9 @@ $font-Flaticon-dust: "\f124";
 
 
 @media screen and (max-width: 425px) {
+  .field--name-field-square {
+    margin-right: 0;
+  }
   .field--name-field-queen-bed,
   .field--name-field-single-bed,
   .field--name-field-sofa-bed,
@@ -328,7 +256,7 @@ $font-Flaticon-dust: "\f124";
   .field--name-field-outside-view,
   .field--name-field-smoking {
     &::after {
-      padding: 0 5px;
+      padding: 0 8px;
     }
   }
 }
