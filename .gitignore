@@ -49,6 +49,7 @@ sites/simpletest
 
 .idea/workspace.xml
 sites/default/hotel.dev.test
+stores/
 
 # Gulp files
 themes/custom/bookbtn/node_modules
@@ -57,3 +58,7 @@ themes/custom/bookbtn/package.json
 
 # I cant delete it
 themes/custom/bookbtn/bookbtn.libraries.yml___jb_old___
+
+# Ignore configuration folder
+.idea/
+.idea/*

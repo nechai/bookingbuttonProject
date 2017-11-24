@@ -27,3 +27,7 @@ function hand_change_commerce_custom_submit(&$form, \Drupal\Core\Form\FormStateI
     $url = Drupal\Core\Url::fromRoute('commerce_cart.page');
     $form_state->setRedirectUrl($url);
 }
+
+//function hand_change_commerce_preprocess_html(&$variables) {
+//    $variables['head_title']['title'] = t('Hotel Space Rent');
+//}
